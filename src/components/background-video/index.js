@@ -1,7 +1,7 @@
 export default function BackgroundVideo() {
     return (
-      <div>
-        <video autoPlay loop >
+      <div className="z-1">
+        <video autoPlay loop muted>
           <source src="/video/landing_video.mp4" type="video/mp4" />
         </video>
       </div>
