@@ -1,7 +1,6 @@
-import BackgroundVideo from '@/components/background-video'
+import BackgroundVideo from "@/components/background-video";
+// import SampleWeb from "@/components/sample-web";
 
 export default function Home() {
-  return (
-    <BackgroundVideo />
-  )
+  return <BackgroundVideo />;
 }
