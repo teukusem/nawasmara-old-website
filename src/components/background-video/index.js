@@ -10,8 +10,11 @@ export default function BackgroundVideo() {
   // });
 
   return (
-    <div className="z-1">
-      <video
+    <div
+      className="z-1"
+      dangerouslySetInnerHTML={{
+        __html: `
+        <video
         id="backgroundMusic"
         src="/video/landing_video.mp4"
         className="video"
@@ -20,7 +23,7 @@ export default function BackgroundVideo() {
         muted
         playsinline
       />
-      <style jsx>{`
+      <style jsx>{'
         .video {
           object-fit: cover;
           width: 100vw;
@@ -28,7 +31,9 @@ export default function BackgroundVideo() {
           position: fixed;
           top: 0;
         }
-      `}</style>
-    </div>
+      '}</style>
+    `,
+      }}
+    ></div>
   );
 }
