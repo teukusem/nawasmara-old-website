@@ -1,7 +1,4 @@
-import { useEffect } from "react";
-
 export default function BackgroundVideo() {
-
   // useEffect(() => {
   //   document.addEventListener(
   //     "click",
@@ -14,9 +11,15 @@ export default function BackgroundVideo() {
 
   return (
     <div className="z-1">
-      <video autoPlay loop muted playsinline className="video" id="backgroundMusic">
-        <source src="/video/landing_video.mp4" type="video/mp4" />
-      </video>
+      <video
+        id="backgroundMusic"
+        src="/video/landing_video.mp4"
+        className="video"
+        autoPlay
+        loop
+        muted
+        playsinline
+      />
       <style jsx>{`
         .video {
           object-fit: cover;
