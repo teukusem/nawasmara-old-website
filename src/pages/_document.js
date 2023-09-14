@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
-  const title = "Arief &amp; Nabila - Nawasmara.id";
+  const title = "Arief & Nabila - Nawasmara.id";
   const description =
     "Hai, Kamu diundang pada acara pesta pernikahan kami - Pernikahan Arief &amp; Nabila - Sabtu, 09 Oktober 2023";
   return (
