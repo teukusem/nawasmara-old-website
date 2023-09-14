@@ -1,13 +1,12 @@
 import { Html, Head, Main, NextScript } from "next/document";
+import { data } from "@/constants/ariefnabila";
 
 export default function Document() {
-  const title = "Arief & Nabila - Nawasmara.id";
-  const description =
-    "Hai, Kamu diundang pada acara pesta pernikahan kami - Pernikahan Arief &amp; Nabila - Sabtu, 09 Oktober 2023";
+  const { title, description } = data;
+
   return (
     <Html lang="en">
       <Head>
-        <title>{title}</title>
         <meta name="title" content={title} />
         <meta name="description" content={description} />
         <meta property="og:type" content="website" />

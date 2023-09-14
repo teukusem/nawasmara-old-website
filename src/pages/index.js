@@ -1,6 +1,28 @@
+import Head from "next/head";
+import { useEffect } from "react";
+import { useGlobalAudioPlayer } from "react-use-audio-player";
+
 import BackgroundVideo from "@/components/background-video";
-import SampleWeb from "@/components/sample-web";
+import { data } from "@/constants/ariefnabila";
 
 export default function Home() {
-  return <BackgroundVideo />;
+  const { load } = useGlobalAudioPlayer();
+  const { title } = data;
+
+  useEffect(() => {
+    load("/audio/soundtrack.mp3", {
+      autoplay: true,
+    });
+  }, []);
+
+  return (
+    <>
+      <Head>
+        <title>{title}</title>
+      </Head>
+      <div>
+        <BackgroundVideo />
+      </div>
+    </>
+  );
 }
