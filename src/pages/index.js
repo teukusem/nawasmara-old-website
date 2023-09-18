@@ -10,16 +10,10 @@ export default function Home() {
   const { title } = data;
 
   useEffect(() => {
-   
-  }, []);
-
-
-  useEffect(() => {
     const timer = setTimeout(() => {
       load("/audio/soundtrack.mp3", {
         autoplay: true,
       });
-      console.log('adasdasdsad')
     }, 1000);
     return () => clearTimeout(timer);
   }, []);
@@ -30,7 +24,7 @@ export default function Home() {
         <title>{title}</title>
       </Head>
       <div>
-        <BackgroundVideo />
+        <BackgroundVideo id="backgroundMusic" />
       </div>
     </>
   );
