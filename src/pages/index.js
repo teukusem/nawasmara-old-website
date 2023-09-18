@@ -10,9 +10,18 @@ export default function Home() {
   const { title } = data;
 
   useEffect(() => {
-    load("/audio/soundtrack.mp3", {
-      autoplay: true,
-    });
+   
+  }, []);
+
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      load("/audio/soundtrack.mp3", {
+        autoplay: true,
+      });
+      console.log('adasdasdsad')
+    }, 1000);
+    return () => clearTimeout(timer);
   }, []);
 
   return (
