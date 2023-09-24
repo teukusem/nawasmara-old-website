@@ -5,7 +5,10 @@ import { useGlobalAudioPlayer } from "react-use-audio-player";
 
 import { data } from "@/constants/ariefnabila";
 import LandingPage from "@/components/landing-page";
-import FirstSection from "@/components/sections/first";
+import dynamic from "next/dynamic";
+// import FirstSection from "@/components/sections/first";
+const FirstSection = dynamic(() => import('@/components/sections/first'))
+
 // import SecondSection from "@/components/sections/second";
 
 export default function Home() {
