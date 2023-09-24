@@ -9,12 +9,13 @@ export default function Document() {
       <Head>
         <meta name="title" content={title} />
         <meta name="description" content={description} />
-        {/* <!-- Chrome, Firefox OS and Opera --> */}
+         {/*
+         <!-- Chrome, Firefox OS and Opera -->
         <meta name="theme-color" content="#cccccc" />
-        {/* <!-- Windows Phone (microsoft) --> */}
+        <!-- Windows Phone (microsoft) -->
         <meta name="msapplication-navbutton-color" content="#cccccc" />
-        {/* <!-- iOS Safari (apple) --> */}
-        <meta name="apple-mobile-web-app-status-bar-style" content="#cccccc" />
+         <!-- iOS Safari (apple) -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#cccccc" /> */}
         <meta property="og:type" content="website" />
         <meta property="og:site_name" content="Nawasmara.id" />
         <meta property="og:url" content="https://nawasmara.com" />
