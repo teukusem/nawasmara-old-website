@@ -26,23 +26,26 @@ body {
     rgb(var(--background-start-rgb)); */
   background: #f2edeb;
 }
-/* video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-} */
 
 video {
   border-radius: 20px;
   width: 82vw;
   height: 92vh;
   object-fit: cover;
-  /* width: 100vw; */
-  /* height: 100vh; */
-  /* position: fixed; */
-  /* top: 0; */
-  /* left: 0; */
+}
+
+.blink_me {
+  animation: blinker 1s linear infinite;
+}
+
+.blink_me2 {
+  animation: blinker 1s linear infinite;
+  animation-delay: 0.15s;
+}
+
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
