@@ -29,9 +29,12 @@ body {
 
 video {
   border-radius: 20px;
-  width: 82vw;
   height: 92vh;
   object-fit: cover;
+
+  @media only screen and (max-width: 600px) {
+    width: 82vw;
+  }
 }
 
 .blink_me {
@@ -42,7 +45,6 @@ video {
   animation: blinker 1s linear infinite;
   animation-delay: 0.15s;
 }
-
 
 @keyframes blinker {
   50% {

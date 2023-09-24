@@ -4,7 +4,7 @@ import BackgroundVideo from "../../background-video";
 export default function FirstSection() {
   const styles = {
     container: `w-screen h-screen bg-white text-[#504533] md:px-[30vw]`,
-    content: `h-screen bg-[#F2EDEB]`,
+    content: `h-screen bg-[#F2EDEB] relative`,
     frame1: `absolute`,
     frame2: `absolute rotate-180 right-0 bottom-0`,
     arrow1: `blink_me flex absolute w-full h-full justify-center items-center pt-[80vh]`,
