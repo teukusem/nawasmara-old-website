@@ -29,12 +29,12 @@ body {
 
 video {
   border-radius: 20px;
-  height: 92vh;
+  height: 95vh;
   object-fit: cover;
   border: solid 2px #745f47;
 
   @media only screen and (max-width: 600px) {
-    width: 82vw;
+    width: 86vw;
   }
 }
 
