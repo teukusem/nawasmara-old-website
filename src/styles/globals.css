@@ -31,7 +31,7 @@ video {
   /* height: 95vh;  */
   object-fit: cover;
   border-radius: 20px;
-  border: solid 1px #745f47;
+  /* border: solid 1px #745f47; */
 
   @media only screen and (max-width: 600px) {
     /* width: 98vw; */

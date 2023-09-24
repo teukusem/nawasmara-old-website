@@ -3,7 +3,7 @@ import BackgroundVideo from "../../background-video";
 
 export default function FirstSection() {
   const styles = {
-    container: `flex relative p-2 bg-[#F2EDEB] text-[#504533]`,
+    container: `flex relative p-8 bg-[#F2EDEB] text-[#504533]`,
     frame1: `absolute left-0 top-[-40px] rotate-180`,
     frame2: `absolute right-0 bottom-[-30px]`,
     arrow1: `absolute blink_me flex absolute w-full h-full justify-center items-center pt-[70vh]`,
@@ -20,7 +20,7 @@ export default function FirstSection() {
           height={200}
         />
       </div>
-      <BackgroundVideo className="flex justify-center items-center" />
+      <BackgroundVideo className="flex justify-center items-center shadow-lg rounded-3xl" />
 
       <div className={styles.frame2}>
         <Image
@@ -30,7 +30,7 @@ export default function FirstSection() {
           height={200}
         />
       </div>
-      <div className={styles.arrow1}>
+      {/* <div className={styles.arrow1}>
         <Image
           src="/assets/arrow-double.svg"
           alt="arrow"
@@ -45,7 +45,7 @@ export default function FirstSection() {
           width={24}
           height={24}
         />
-      </div>
+      </div> */}
 
     </div>
     </>
