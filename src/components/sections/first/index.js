@@ -5,8 +5,8 @@ export default function FirstSection() {
   const styles = {
     container: `w-screen h-screen bg-white text-[#504533] md:px-[30vw]`,
     content: `h-screen bg-[#F2EDEB] relative`,
-    frame1: `absolute`,
-    frame2: `absolute rotate-180 right-0 bottom-0`,
+    frame1: `absolute rotate-180`,
+    frame2: `absolute right-0 bottom-0`,
     arrow1: `blink_me flex absolute w-full h-full justify-center items-center pt-[80vh]`,
     arrow2: `blink_me2 flex absolute w-full h-full justify-center items-center pt-[82vh]`,
   };
@@ -15,18 +15,18 @@ export default function FirstSection() {
       <div className={styles.content}>
         <div className={styles.frame1}>
           <Image
-            src="/assets/video-frame.svg"
+            src="/assets/pink-flower.svg"
             alt="frame-2"
-            width={250}
-            height={250}
+            width={150}
+            height={150}
           />
         </div>
         <div className={styles.frame2}>
           <Image
-            src="/assets/video-frame.svg"
+            src="/assets/pink-flower.svg"
             alt="frame-2"
-            width={250}
-            height={250}
+            width={150}
+            height={150}
           />
         </div>
         <div className={styles.arrow1}>
