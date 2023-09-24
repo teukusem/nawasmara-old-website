@@ -11,7 +11,7 @@ import FirstSection from "@/components/sections/first";
 export default function Home() {
   const router = useRouter();
   const { load } = useGlobalAudioPlayer();
-  const [isOpenInvitation, setOpenInvitation] = useState(true);
+  const [isOpenInvitation, setOpenInvitation] = useState(false);
   const { title } = data;
 
   const recieverName = router.query.to || "Rijalul";
