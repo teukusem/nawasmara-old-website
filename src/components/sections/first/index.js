@@ -3,50 +3,52 @@ import BackgroundVideo from "../../background-video";
 
 export default function FirstSection() {
   const styles = {
-    container: `w-screen h-screen bg-white text-[#504533] md:px-[30vw]`,
-    content: `h-screen bg-[#F2EDEB] relative`,
-    frame1: `absolute rotate-180`,
-    frame2: `absolute right-0 bottom-0`,
-    arrow1: `blink_me flex absolute w-full h-full justify-center items-center pt-[80vh]`,
-    arrow2: `blink_me2 flex absolute w-full h-full justify-center items-center pt-[82vh]`,
+    container: `flex relative p-2 bg-[#F2EDEB] text-[#504533]`,
+    frame1: `absolute left-0 top-[-40px] rotate-180`,
+    frame2: `absolute right-0 bottom-[-30px]`,
+    arrow1: `absolute blink_me flex absolute w-full h-full justify-center items-center pt-[70vh]`,
+    arrow2: `absolute blink_me2 flex absolute w-full h-full justify-center items-center pt-[74vh]`,
   };
   return (
+    <>
     <div className={styles.container}>
-      <div className={styles.content}>
-        <div className={styles.frame1}>
-          <Image
-            src="/assets/pink-flower.svg"
-            alt="frame-2"
-            width={150}
-            height={150}
-          />
-        </div>
-        <div className={styles.frame2}>
-          <Image
-            src="/assets/pink-flower.svg"
-            alt="frame-2"
-            width={150}
-            height={150}
-          />
-        </div>
-        <div className={styles.arrow1}>
-          <Image
-            src="/assets/arrow-double.svg"
-            alt="arrow"
-            width={24}
-            height={24}
-          />
-        </div>
-        <div className={styles.arrow2}>
-          <Image
-            src="/assets/arrow-double.svg"
-            alt="arrow"
-            width={24}
-            height={24}
-          />
-        </div>
-        <BackgroundVideo />
+      <div className={styles.frame1}>
+        <Image
+          src="/assets/pink-flower.svg"
+          alt="frame-2"
+          width={200}
+          height={200}
+        />
       </div>
+      <BackgroundVideo className="flex justify-center items-center" />
+
+      <div className={styles.frame2}>
+        <Image
+          src="/assets/pink-flower.svg"
+          alt="frame-2"
+          width={200}
+          height={200}
+        />
+      </div>
+      <div className={styles.arrow1}>
+        <Image
+          src="/assets/arrow-double.svg"
+          alt="arrow"
+          width={24}
+          height={24}
+        />
+      </div>
+      <div className={styles.arrow2}>
+        <Image
+          src="/assets/arrow-double.svg"
+          alt="arrow"
+          width={24}
+          height={24}
+        />
+      </div>
+
     </div>
+    </>
+
   );
 }

@@ -14,7 +14,7 @@ export default function Home() {
   const [isOpenInvitation, setOpenInvitation] = useState(false);
   const { title } = data;
 
-  const recieverName = router.query.to || "Rijalul";
+  const recieverName = router.query.to || "";
 
   function openInvitation() {
     load("/audio/soundtrack.mp3", {
