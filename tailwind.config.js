@@ -25,6 +25,7 @@ module.exports = {
           "LibreCaslonText-Italic",
           "LibreCaslonText-Regular",
         ],
+        libre: ["var(--font-libre)"],
         bethaine: ["var(--font-bethaine)"],
         playfair: ["var(--font-playfair)"],
       },

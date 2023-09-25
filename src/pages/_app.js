@@ -8,6 +8,27 @@ const playfair = Playfair_Display({
   variable: "--font-playfair",
 });
 
+const libre = localFont({
+  src: [
+    {
+      path: "../../public/fonts/LibreCaslonText-Bold.ttf",
+      weight: "bold",
+      style: "normal",
+    },
+    {
+      path: "../../public/fonts/LibreCaslonText-Italic.ttf",
+      weight: "300",
+      style: "italic",
+    },
+    {
+      path: "../../public/fonts/LibreCaslonText-Regular.ttf",
+      weight: "300",
+      style: "normal",
+    },
+  ],
+  variable: "--font-libre",
+});
+
 const fonts = localFont({
   src: [
     {
@@ -21,7 +42,7 @@ const fonts = localFont({
 
 export default function App({ Component, pageProps }) {
   return (
-    <main className={`${fonts.variable} ${playfair.variable}`}>
+    <main className={`${fonts.variable} ${playfair.variable} ${libre.variable}`}>
       <Component {...pageProps} />;
     </main>
   );
