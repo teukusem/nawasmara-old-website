@@ -17,6 +17,7 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         home: "url('/images/bg-home.png')",
+        building: "url('/assets/building.svg')"
       },
       fontFamily: {
         libreCaslon: [
