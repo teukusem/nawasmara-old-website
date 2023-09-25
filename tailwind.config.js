@@ -9,7 +9,7 @@ module.exports = {
     extend: {
       colors: {
         brown: {
-          600: '#1E1E1E',
+          600: "#1E1E1E",
         },
       },
       backgroundImage: {
@@ -24,8 +24,10 @@ module.exports = {
           "LibreCaslonText-Italic",
           "LibreCaslonText-Regular",
         ],
-        bethaine: ["Bethaine-Regular"],
+        bethaine: ["var(--font-bethaine)"],
+        playfair: ["var(--font-playfair)"],
       },
+
     },
   },
   plugins: [],
