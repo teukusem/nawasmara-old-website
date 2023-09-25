@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function SecondSection() {
   return (
     <div className="">
-      <div className="flex w-full">
+      <div className="flex w-full justify-center">
         <Image
           src="/assets/check-it.svg"
           alt="check-it"
@@ -18,7 +18,6 @@ export default function SecondSection() {
         width={600}
         height={300}
         className="!w-full"
-        objectFit="cover"
       />
     </div>
   );
