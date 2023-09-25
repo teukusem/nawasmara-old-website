@@ -5,16 +5,13 @@ import { useGlobalAudioPlayer } from "react-use-audio-player";
 
 import { data } from "@/constants/ariefnabila";
 import LandingPage from "@/components/landing-page";
-import dynamic from "next/dynamic";
-// import FirstSection from "@/components/sections/first";
-const FirstSection = dynamic(() => import('@/components/sections/first'))
-
-// import SecondSection from "@/components/sections/second";
+import FirstSection from "@/components/sections/first";
+import SecondSection from "@/components/sections/second";
 
 export default function Home() {
   const router = useRouter();
   const { load } = useGlobalAudioPlayer();
-  const [isOpenInvitation, setOpenInvitation] = useState(false);
+  const [isOpenInvitation, setOpenInvitation] = useState(true);
   const { title } = data;
 
   const recieverName = router.query.to || "";
@@ -39,7 +36,7 @@ export default function Home() {
       ) : (
         <>
           <FirstSection />
-          {/* <SecondSection /> */}
+          <SecondSection />
         </>
       )}
     </>

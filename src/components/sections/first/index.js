@@ -11,26 +11,26 @@ export default function FirstSection() {
   };
   return (
     <>
-    <div className={styles.container}>
-      <div className={styles.frame1}>
-        <Image
-          src="/assets/pink-flower.svg"
-          alt="frame-2"
-          width={200}
-          height={200}
-        />
-      </div>
-      <BackgroundVideo className="flex justify-center items-center shadow-lg rounded-3xl" />
+      <div className={styles.container}>
+        <div className={styles.frame1}>
+          <Image
+            src="/assets/pink-flower.svg"
+            alt="frame-2"
+            width={200}
+            height={200}
+          />
+        </div>
+        <BackgroundVideo className="flex justify-center items-center shadow-lg rounded-3xl" />
 
-      <div className={styles.frame2}>
-        <Image
-          src="/assets/pink-flower.svg"
-          alt="frame-2"
-          width={200}
-          height={200}
-        />
-      </div>
-      {/* <div className={styles.arrow1}>
+        <div className={styles.frame2}>
+          <Image
+            src="/assets/pink-flower.svg"
+            alt="frame-2"
+            width={200}
+            height={200}
+          />
+        </div>
+        {/* <div className={styles.arrow1}>
         <Image
           src="/assets/arrow-double.svg"
           alt="arrow"
@@ -46,9 +46,7 @@ export default function FirstSection() {
           height={24}
         />
       </div> */}
-
-    </div>
+      </div>
     </>
-
   );
 }

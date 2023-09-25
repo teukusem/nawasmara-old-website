@@ -1,5 +1,5 @@
 export default function BackgroundVideo({ className }) {
-  const html = `<video id="backgroundMusic" src="/video/landing_video.mp4" classname="video" autoplay loop muted playsinline>`;
+  const html = `<video preload="none" id="backgroundMusic" src="/video/landing_video.mp4" classname="video" autoplay loop muted playsinline>`;
   return (
     <div
       className={className}
