@@ -20,6 +20,7 @@ module.exports = {
         building: "url('/assets/building.svg')",
         std: "url('/assets/save-date.svg')",
         paperBird: "url('/assets/paper-bird.png')",
+        ayat: "url('/assets/ayat.png')",
       },
       fontFamily: {
         libreCaslon: [

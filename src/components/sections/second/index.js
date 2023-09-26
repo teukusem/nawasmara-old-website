@@ -55,13 +55,31 @@ export default function SecondSection() {
         <p className="font-playfair text-center text-[#504533]">
           13 Oktober 2023
         </p>
-        <Image
+
+          <div className="bg-ayat bg-no-repeat bg-center bg-contain min-h-[500px] text-center px-16">
+            <div className="pt-44" />
+            <p className="text-[#504533] text-[16px]">
+              وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا
+              لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً
+              وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
+            </p>
+            <p className="text-[#504533] text-[12px] pt-2">
+              “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+              pasangan-pasangan untukmu dari jenismu sendiri, agar kamu
+              cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
+              antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu
+              benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang
+              berpikir.” (Qs. Ar-Rum:21)
+            </p>
+          </div>
+
+        {/* <Image
           src="/assets/ayat.png"
           alt="ayat"
           width={600}
           height={700}
           className="!w-full pt-20"
-        />
+        /> */}
         <div className="flex w-full justify-center pb-10">
           <Image
             src="/assets/check-it.svg"
