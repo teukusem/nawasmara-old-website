@@ -17,7 +17,9 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         home: "url('/images/bg-home.png')",
-        building: "url('/assets/building.svg')"
+        building: "url('/assets/building.svg')",
+        std: "url('/assets/save-date.svg')",
+        paperBird: "url('/assets/paper-bird.png')",
       },
       fontFamily: {
         libreCaslon: [
@@ -29,7 +31,6 @@ module.exports = {
         bethaine: ["var(--font-bethaine)"],
         playfair: ["var(--font-playfair)"],
       },
-
     },
   },
   plugins: [],

@@ -1,3 +1,4 @@
+import { useCountdown } from "@/hooks/useCountdown";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -8,6 +9,7 @@ const yahooCalendar =
 
 export default function SecondSection() {
   const router = useRouter();
+  const [days, hours, minutes, seconds] = useCountdown("2023-10-13");
 
   return (
     <div className="">
@@ -142,40 +144,139 @@ export default function SecondSection() {
         </p>
       </Link>
 
-      <div className="flex items-end justify-center">
-        <h1 className="text-[#504533] text-5xl font-bethaine text-center pt-36">
-          Save The Date
-        </h1>
-        <Image src="/assets/pena.svg" alt="test" width={40} height={60} />
-      </div>
-      <p className="font-playfair text-center text-[#504533]">
-        13 Oktober 2023
-      </p>
-      <div className="flex">
-        <Image
-          src="/assets/save-date.svg"
-          alt="test"
-          width={40}
-          height={60}
-          className="!w-full"
-        />
-      </div>
-      <button className="flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide">
-        <a href={googleCalendar} target="_blank">
-          Add to Calendar
-        </a>
-      </button>
+      {/* start save the date */}
+      <div className="pb-10">
+        <div className="flex items-end justify-center">
+          <h1 className="text-[#504533] text-5xl font-bethaine text-center pt-36">
+            Save The Date
+          </h1>
+          <Image src="/assets/pena.svg" alt="test" width={40} height={60} />
+        </div>
+        <p className="font-playfair text-center text-[#504533]">
+          13 Oktober 2023
+        </p>
 
-      <h1 className="text-[#504533] text-5xl font-bethaine text-center pt-36">
+        <div className="flex gap-8 justify-center items-center px-4 bg-std bg-no-repeat bg-center bg-contain relative min-h-[180px] pt-10 ">
+          <div>
+            <p className="font-libre text-[#504533] text-[32px] text-center">
+              {days}
+            </p>
+            <p className="font-libre text-[#504533] text-[12px] text-center">
+              Hari
+            </p>
+          </div>
+
+          <div>
+            <p className="font-libre text-[#504533] text-[32px] text-center">
+              {hours}
+            </p>
+            <p className="font-libre text-[#504533] text-[12px] text-center">
+              Jam
+            </p>
+          </div>
+
+          <div>
+            <p className="font-libre text-[#504533] text-[32px] text-center">
+              {minutes}
+            </p>
+            <p className="font-libre text-[#504533] text-[12px] text-center">
+              Menit
+            </p>
+          </div>
+
+          <div>
+            <p className="font-libre text-[#504533] text-[32px] text-center">
+              {seconds}
+            </p>
+            <p className="font-libre text-[#504533] text-[12px] text-center">
+              Detik
+            </p>
+          </div>
+        </div>
+
+        <button className=" mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide">
+          <a href={googleCalendar} target="_blank">
+            Add to Calendar
+          </a>
+        </button>
+      </div>
+
+      {/* end save the date */}
+
+      {/* <h1 className="text-[#504533] text-5xl font-bethaine text-center pt-36">
         RSVP
       </h1>
       <Image
-          src="/assets/rsvp.svg"
-          alt="test2"
-          width={300}
-          height={300}
-          className="!w-full"
-        />
+        src="/assets/rsvp.svg"
+        alt="test2"
+        width={300}
+        height={300}
+        className="!w-full"
+      /> */}
+
+      {/* start event detail */}
+      <div className="bg-paperBird bg-no-repeat bg-cover min-h-[1550px]">
+        <h1 className="text-[#504533] text-6xl font-bethaine text-center">
+          <div className="pt-[600px]" />
+          Wedding Day!
+        </h1>
+
+        <div className="flex flex-col px-16">
+          <div className="flex flex-col items-center text-[#504533] text-center">
+            <Image src="/assets/ring.svg" alt="ring" width={70} height={70} />
+            <h1 className="font-libre text-[20px]">Akad Nikah</h1>
+            <p>Jumat, 13 Oktober 2023</p>
+            <p>08:00 - 09:00 WIB</p>
+            <p>Mesjid Raya Baiturrahman, Banda Aceh</p>
+          </div>
+
+          <div className="flex flex-col items-center text-[#504533] text-center pt-10">
+            <Image src="/assets/cheers.svg" alt="ring" width={70} height={70} />
+            <h1 className="font-libre text-[20px] text-[#504533]">Resepsi</h1>
+            <p className="!text-[#89565C] text-[16px] font-bold">
+              Preh Linto Baro:
+            </p>
+            <p>Sabtu, 14 Oktober 2023</p>
+            <p>11.00 - 13.00 WIB</p>
+            <p>
+              Jl. H. Bintang No. 152, Merpati V, Blang Oi, Meuraxa, Banda Aceh
+            </p>
+            <button className=" mt-4 flex m-auto bg-[#504533] px-5 py-1.5 !text-white font-libre rounded-lg text-sm tracking-wide">
+              <a
+                href="https://maps.app.goo.gl/V1gseiETsT5RxHUKA"
+                target="_blank"
+              >
+                View Map
+              </a>
+            </button>
+            <p className="!text-[#89565C] text-[16px] font-bold pt-10">
+              Preh Dara Baro:
+            </p>
+            <p>Kamis, 19 Oktober 2023 </p>
+            <p>11.00-13.00 WIB </p>
+            <p>
+              Jl. Mutiara 14 No. 1, Komplek Mutiara Indah, Alue Awe, Lhokseumawe
+            </p>
+            <button className="!text-white mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide">
+              <a
+                href="https://maps.app.goo.gl/kHnAQMpugTzHvzxS6"
+                target="_blank"
+              >
+                View Map
+              </a>
+            </button>
+          </div>
+        </div>
+      </div>
+      {/* end event detail */}
+
+      {/* end our story */}
+      <div>
+        <h1 className="text-[#504533] text-6xl font-bethaine text-center">
+          Our Story
+        </h1>
+      </div>
+      {/* end our story */}
     </div>
   );
 }
