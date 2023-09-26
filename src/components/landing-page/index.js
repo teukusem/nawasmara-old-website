@@ -72,14 +72,14 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
           src="/assets/big-awan-left.svg"
           height={200}
           width={200}
-          className="absolute bottom-[40vw] md:bottom-[50vw]"
+          className="absolute bottom-0"
           alt="big-awan"
         />
         <Image
           src="/assets/big-awan.svg"
           height={200}
           width={200}
-          className="absolute left-[40%] bottom-[40vw] md:bottom-[50vw]"
+          className="absolute left-[40%] bottom-0"
           alt="big-awan2"
         />
         <div className="flex justify-center flex-col items-center !z-[99] absolute w-full h-[40vh] md:h-[30vh]">
