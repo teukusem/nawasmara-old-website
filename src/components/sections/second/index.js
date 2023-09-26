@@ -13,7 +13,7 @@ export default function SecondSection() {
   const [isCopied, setCopied] = useState(false);
 
   return (
-    <div className="">
+    <div>
       <div className="md:px-[30vw]">
         <div className="flex w-full justify-center">
           <Image
@@ -60,6 +60,7 @@ export default function SecondSection() {
           13 Oktober 2023
         </p>
 
+        {/* start prayer */}
         <div className="bg-ayat bg-no-repeat bg-center bg-contain min-h-[500px] text-center px-16">
           <div className="pt-44" />
           <p className="text-[#504533] text-[16px]">
@@ -76,6 +77,7 @@ export default function SecondSection() {
             (Qs. Ar-Rum:21)
           </p>
         </div>
+        {/* end prayer */}
 
         <div className="flex w-full justify-center pb-10">
           <Image
@@ -99,6 +101,7 @@ export default function SecondSection() {
           dari Allah SWT, Kami dengan hormat mengundang Anda ke pernikahan:
         </p>
 
+        {/* bride  start*/}
         <div className="bg-building bg-no-repeat bg-contains relative flex justify-center">
           <Image
             className="absolute z-[-1] left-0"
@@ -139,7 +142,9 @@ export default function SecondSection() {
             @nmnabilla
           </p>
         </Link>
+        {/* bride  end*/}
 
+        {/* groom start */}
         <h1 className="text-[#504533] text-5xl font-bethaine text-center py-[100px]">
           &
         </h1>
@@ -180,6 +185,7 @@ export default function SecondSection() {
           </p>
         </Link>
       </div>
+      {/* groom end */}
 
       {/* start save the date */}
       <div className="pb-10">
@@ -309,7 +315,7 @@ export default function SecondSection() {
       {/* end event detail */}
 
       {/* end our story */}
-      <div className="pt-10 md:px-[35vw] px-16">
+      <div className="pt-10 md:px-[35vw]">
         <h1 className="text-[#504533] text-6xl font-bethaine text-center">
           Our Story
         </h1>
@@ -352,7 +358,7 @@ export default function SecondSection() {
       {/* end our story */}
 
       {/* start wedding gift */}
-      <div className="md:px-[35vw] px-16">
+      <div className="md:px-[35vw]">
         <div className="pt-20 bg-keyboard bg-start bg-no-repeat relative">
           <h1 className="text-[#504533] text-6xl font-bethaine text-center">
             Wedding Gift
@@ -384,7 +390,7 @@ export default function SecondSection() {
               <div className="bg-white rounded-lg px-4 py-2">
                 <p className="font-libre text-[12px] pt-2">Nomor Rekening</p>
                 <div className="flex justify-between">
-                  <p>6241548170</p>
+                  <p>1280496037</p>
 
                   <CopyToClipboard
                     text="6241548170"
