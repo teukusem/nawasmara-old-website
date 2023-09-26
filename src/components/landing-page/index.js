@@ -72,17 +72,17 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
           src="/assets/big-awan-left.svg"
           height={200}
           width={200}
-          className="absolute  bottom-36"
+          className="absolute bottom-[40vw] md:bottom-[50vw]"
           alt="big-awan"
         />
         <Image
           src="/assets/big-awan.svg"
           height={200}
           width={200}
-          className="absolute left-[40%] bottom-36"
+          className="absolute left-[40%] bottom-[40vw] md:bottom-[50vw]"
           alt="big-awan2"
         />
-        <div className="flex justify-center flex-col items-center !z-2 absolute w-full h-[40vh]">
+        <div className="flex justify-center flex-col items-center !z-[99] absolute w-full h-[40vh] md:h-[30vh]">
           <h1 className="text-[#504533] text-5xl font-bold font-bethaine text-center">
             Arief
             <br />
@@ -104,7 +104,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
           </button>
         </div>
       </div>
-      <div className="absolute bottom-0 w-full">
+      <div className="absolute bottom-0 w-full md:w-[30vw]">
         <h1 className="text-[#504533] text-lg font-bold font-libreCaslon text-center mt-7">
           13 Oktober 2023 <br />
           Banda Aceh
