@@ -104,13 +104,13 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
           </button>
         </div>
       </div>
-      <div className="absolute bottom-0 w-full md:w-[30vw]">
+      {/* <div className="absolute bottom-0 w-full md:w-[30vw]">
         <h1 className="text-[#504533] text-lg font-bold font-libreCaslon text-center mt-7">
           13 Oktober 2023 <br />
           Banda Aceh
         </h1>
         <Image src="/assets/check-it.svg" height={20} width={300} className="!w-full" alt="checkit0-2" />
-      </div>
+      </div> */}
     </div>
   );
 }
