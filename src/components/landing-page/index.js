@@ -15,7 +15,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
           </h1>
           <button
             onClick={handleOpenInvitations}
-            className="mt-5 bg-[#504533] px-5 py-1.5 font-libreCaslon rounded-lg text-md tracking-wide"
+            className="mt-5 bg-[#504533] px-5 py-1.5 font-libreCaslon rounded-lg text-md tracking-wide !text-white"
           >
             Buka Undangan
           </button>

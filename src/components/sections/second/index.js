@@ -237,7 +237,7 @@ export default function SecondSection() {
           </div>
         </div>
 
-        <button className=" mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide">
+        <button className=" mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide !text-white">
           <a href={googleCalendar} target="_blank">
             Add to Calendar
           </a>
@@ -285,7 +285,7 @@ export default function SecondSection() {
             <p>
               Jl. H. Bintang No. 152, Merpati V, Blang Oi, Meuraxa, Banda Aceh
             </p>
-            <button className=" mt-4 flex m-auto bg-[#504533] px-5 py-1.5 !text-white font-libre rounded-lg text-sm tracking-wide">
+            <button className=" mt-4 flex m-auto !text-white bg-[#504533] px-5 py-1.5 !text-white font-libre rounded-lg text-sm tracking-wide">
               <a
                 href="https://maps.app.goo.gl/V1gseiETsT5RxHUKA"
                 target="_blank"
@@ -320,7 +320,7 @@ export default function SecondSection() {
           Our Story
         </h1>
         <div className="bg-storyOne bg-no-repeat bg-contain min-h-[500px] relative pl-32 pr-5">
-          <div className="pt-[280px]" />
+          <div className="pt-[300px]" />
           <div>
             <p className="!text-[#504533] text-[16px] font-bold">First Meet</p>
             <p className="!text-[#504533] text-[14px] pt-2">
@@ -330,7 +330,7 @@ export default function SecondSection() {
           </div>
         </div>
         <div className="bg-storyTwo bg-no-repeat bg-contain min-h-[500px] relative pr-32 pl-4">
-          <div className="pt-[270px]" />
+          <div className="pt-[265px]" />
           <div>
             <p className="!text-[#504533] text-[16px] font-bold">
               Relationship
@@ -344,14 +344,15 @@ export default function SecondSection() {
           </div>
         </div>
         <div className="bg-storyThree bg-no-repeat bg-contain min-h-[500px] relative pl-32 pr-5">
-          <div className="pt-[250px]" />
+          <div className="pt-[260px]" />
           <div>
             <p className="!text-[#504533] text-[16px] font-bold">Menikah</p>
             <p className="!text-[#504533] text-[14px] pt-2">
               Tanggal 13 Oktober 2023, dengan izin Allah kami bermaksud untuk
               menyempurnakan perjalanan kami menjadi ibadah sepanjang hidup,
-              dalam ikatan pernikahan. Bismillaahirrahmaanirrahiim.
+              dalam ikatan pernikahan. 
             </p>
+            <p className="!text-[#504533] text-[14px] pt-2">Bismillaahirrahmaanirrahiim.</p>
           </div>
         </div>
       </div>
