@@ -55,34 +55,13 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
         />
 
         <Image
-          src="/assets/poon.png"
-          height={200}
-          width={300}
-          className="!w-full !z-[2] absolute"
-          alt="poon"
-        />
-        <Image
-          src="/assets/paper.png"
+          src="/assets/paper2.png"
           height={200}
           width={300}
           className="!w-full absolute top-[10%]"
           alt="paper"
         />
-        <Image
-          src="/assets/big-awan-left.svg"
-          height={200}
-          width={200}
-          className="absolute bottom-0"
-          alt="big-awan"
-        />
-        <Image
-          src="/assets/big-awan.svg"
-          height={200}
-          width={200}
-          className="absolute left-[40%] bottom-0"
-          alt="big-awan2"
-        />
-        <div className="flex justify-center flex-col items-center !z-[99] absolute w-full h-[40vh] md:h-[30vh]">
+        <div className="flex justify-between flex-col items-center !z-[99] absolute w-full h-[30vh] md:h-[20vh]">
           <h1 className="text-[#504533] text-5xl font-bold font-bethaine text-center">
             Arief
             <br />
@@ -104,8 +83,8 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
           </button>
         </div>
       </div>
-      {/* <div className="absolute bottom-0 w-full md:w-[30vw]">
-        <h1 className="text-[#504533] text-lg font-bold font-libreCaslon text-center mt-7">
+      {/* <div className="absolute bottom-0 md:w-[30vw] flex">
+        <h1 className="text-[#504533] text-lg font-libreCaslon text-center mt-7 !text-[14px]">
           13 Oktober 2023 <br />
           Banda Aceh
         </h1>
