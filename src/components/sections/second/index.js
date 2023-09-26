@@ -309,7 +309,7 @@ export default function SecondSection() {
       {/* end event detail */}
 
       {/* end our story */}
-      <div className="pt-10">
+      <div className="pt-10 md:px-[35vw] px-16">
         <h1 className="text-[#504533] text-6xl font-bethaine text-center">
           Our Story
         </h1>
@@ -352,82 +352,84 @@ export default function SecondSection() {
       {/* end our story */}
 
       {/* start wedding gift */}
-      <div className="pt-20 bg-keyboard bg-start bg-no-repeat relative">
-        <h1 className="text-[#504533] text-6xl font-bethaine text-center">
-          Wedding Gift
-        </h1>
-        <p className="font-libre text-[#504533] text-[12px] px-8 text-center">
-          Atas restu dan kedatangan kamu ke pesta pernikahan kami sudah cukup
-          bagi kami. Tapi jika kamu ingin memberi hadiah, kami menyediakan
-          Amplop Digital untuk memudahkan kamu. Terima kasih
-        </p>
-        <button
-          onClick={() => setShowGift((prev) => !prev)}
-          className=" mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide"
-        >
-          Kirim hadiah
-        </button>
-        {showGift && (
-          <div className="border border-1 border-[#504533] rounded-lg px-8 py-4 mx-4 mt-4 text-[#504533]">
-            <div className="py-4">
-              <Image src="assets/bca.svg" alt="bca" height={80} width={80} />
-            </div>
-            {isCopied && (
-              <div
-                class="p-4 mb-4 text-sm text-white rounded-lg bg-[#504533]  text-white"
-                role="alert"
-              >
-                <span class="font-medium">Rekening berhasil disalin !</span>
+      <div className="md:px-[35vw] px-16">
+        <div className="pt-20 bg-keyboard bg-start bg-no-repeat relative">
+          <h1 className="text-[#504533] text-6xl font-bethaine text-center">
+            Wedding Gift
+          </h1>
+          <p className="font-libre text-[#504533] text-[12px] px-8 text-center">
+            Atas restu dan kedatangan kamu ke pesta pernikahan kami sudah cukup
+            bagi kami. Tapi jika kamu ingin memberi hadiah, kami menyediakan
+            Amplop Digital untuk memudahkan kamu. Terima kasih
+          </p>
+          <button
+            onClick={() => setShowGift((prev) => !prev)}
+            className=" mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide"
+          >
+            Kirim hadiah
+          </button>
+          {showGift && (
+            <div className="border border-1 border-[#504533] rounded-lg px-8 py-4 mx-4 mt-4 text-[#504533]">
+              <div className="py-4">
+                <Image src="assets/bca.svg" alt="bca" height={80} width={80} />
               </div>
-            )}
-            <div className="bg-white rounded-lg px-4 py-2">
-              <p className="font-libre text-[12px] pt-2">Nomor Rekening</p>
-              <div className="flex justify-between">
-                <p>6241548170</p>
-
-                <CopyToClipboard
-                  text="6241548170"
-                  onCopy={() => {
-                    setCopied(true);
-                    setTimeout(() => setCopied(false), 2000);
-                  }}
+              {isCopied && (
+                <div
+                  class="p-4 mb-4 text-sm text-white rounded-lg bg-[#504533]  text-white"
+                  role="alert"
                 >
-                  <Image
-                    src="/assets/copy.svg"
-                    alt="copy"
-                    height={25}
-                    width={25}
-                  />
-                </CopyToClipboard>
-              </div>
+                  <span class="font-medium">Rekening berhasil disalin !</span>
+                </div>
+              )}
+              <div className="bg-white rounded-lg px-4 py-2">
+                <p className="font-libre text-[12px] pt-2">Nomor Rekening</p>
+                <div className="flex justify-between">
+                  <p>6241548170</p>
 
-              <p className="font-libre text-[12px] pt-2">Pemilik Rekening</p>
-              <p>Arief Ramadhana</p>
+                  <CopyToClipboard
+                    text="6241548170"
+                    onCopy={() => {
+                      setCopied(true);
+                      setTimeout(() => setCopied(false), 2000);
+                    }}
+                  >
+                    <Image
+                      src="/assets/copy.svg"
+                      alt="copy"
+                      height={25}
+                      width={25}
+                    />
+                  </CopyToClipboard>
+                </div>
+
+                <p className="font-libre text-[12px] pt-2">Pemilik Rekening</p>
+                <p>Arief Ramadhana</p>
+              </div>
+              <div className="py-4">
+                <Image
+                  src="/assets/linkaja.png"
+                  alt="linkaja"
+                  height={100}
+                  width={100}
+                />
+                <Image
+                  src="/assets/nabilla-linkaja.png"
+                  alt="linkaja"
+                  height={200}
+                  width={300}
+                  className=""
+                />
+              </div>
             </div>
-            <div className="py-4">
-              <Image
-                src="/assets/linkaja.png"
-                alt="linkaja"
-                height={100}
-                width={100}
-              />
-              <Image
-                src="/assets/nabilla-linkaja.png"
-                alt="linkaja"
-                height={200}
-                width={300}
-                className=""
-              />
-            </div>
+          )}
+          <div className="flex justify-center absolute left-[50%]">
+            <Image
+              alt="box-gift"
+              src="/assets/box-gift.svg"
+              width={200}
+              height={200}
+            />
           </div>
-        )}
-        <div className="flex justify-center absolute left-[50%]">
-          <Image
-            alt="box-gift"
-            src="/assets/box-gift.svg"
-            width={200}
-            height={200}
-          />
         </div>
       </div>
       {/* end wedding gift */}
