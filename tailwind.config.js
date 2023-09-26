@@ -21,6 +21,9 @@ module.exports = {
         std: "url('/assets/save-date.svg')",
         paperBird: "url('/assets/paper-bird.png')",
         ayat: "url('/assets/ayat.png')",
+        storyOne: "url('/assets/story-1.png')",
+        storyTwo: "url('/assets/story-2.png')",
+        storyThree: "url('/assets/story-3.png')",
       },
       fontFamily: {
         libreCaslon: [

@@ -56,30 +56,23 @@ export default function SecondSection() {
           13 Oktober 2023
         </p>
 
-          <div className="bg-ayat bg-no-repeat bg-center bg-contain min-h-[500px] text-center px-16">
-            <div className="pt-44" />
-            <p className="text-[#504533] text-[16px]">
-              وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا
-              لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً
-              وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
-            </p>
-            <p className="text-[#504533] text-[12px] pt-2">
-              “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
-              pasangan-pasangan untukmu dari jenismu sendiri, agar kamu
-              cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
-              antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu
-              benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang
-              berpikir.” (Qs. Ar-Rum:21)
-            </p>
-          </div>
+        <div className="bg-ayat bg-no-repeat bg-center bg-contain min-h-[500px] text-center px-16">
+          <div className="pt-44" />
+          <p className="text-[#504533] text-[16px]">
+            وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا
+            لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً
+            ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
+          </p>
+          <p className="text-[#504533] text-[12px] pt-2">
+            “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+            pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
+            dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
+            kasih dan sayang. Sungguh, pada yang demikian itu benar-benar
+            terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”
+            (Qs. Ar-Rum:21)
+          </p>
+        </div>
 
-        {/* <Image
-          src="/assets/ayat.png"
-          alt="ayat"
-          width={600}
-          height={700}
-          className="!w-full pt-20"
-        /> */}
         <div className="flex w-full justify-center pb-10">
           <Image
             src="/assets/check-it.svg"
@@ -295,6 +288,41 @@ export default function SecondSection() {
         <h1 className="text-[#504533] text-6xl font-bethaine text-center">
           Our Story
         </h1>
+        <div className="bg-storyOne bg-no-repeat bg-contain min-h-[500px] relative pl-32 pr-5">
+          <div className="pt-[280px]" />
+          <div>
+            <p className="!text-[#504533] text-[16px] font-bold">First Meet</p>
+            <p className="!text-[#504533] text-[14px] pt-4">
+              2020 adalah tahun pertemuan pertama kami, tepatnya pada program
+              kantor yang sama.
+            </p>
+          </div>
+        </div>
+        <div className="bg-storyTwo bg-no-repeat bg-contain min-h-[500px] relative pr-32 pl-4">
+          <div className="pt-[270px]" />
+          <div>
+            <p className="!text-[#504533] text-[16px] font-bold">
+              Relationship
+            </p>
+            <p className="!text-[#504533] text-[14px] pt-4">
+              Berjalannya waktu, kami saling mengenal dan terus memupuk komitmen
+              untuk masa depan. Pada awal tahun 2023, tepatnya pada 16 Februari,
+              keluarga Arief berkunjung ke kediaman keluarga Nabilla dengan
+              itikad baik ingin meneruskan hubungan ini ke jalan selanjutnya.
+            </p>
+          </div>
+        </div>
+        <div className="bg-storyThree bg-no-repeat bg-contain min-h-[500px] relative pl-32 pr-5">
+          <div className="pt-[270px]" />
+          <div>
+            <p className="!text-[#504533] text-[16px] font-bold">Menikah</p>
+            <p className="!text-[#504533] text-[14px] pt-4">
+              Tanggal 13 Oktober 2023, dengan izin Allah kami bermaksud untuk
+              menyempurnakan perjalanan kami menjadi ibadah sepanjang hidup,
+              dalam ikatan pernikahan. Bismillaahirrahmaanirrahiim.
+            </p>
+          </div>
+        </div>
       </div>
       {/* end our story */}
     </div>
