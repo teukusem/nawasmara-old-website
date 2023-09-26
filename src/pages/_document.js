@@ -23,20 +23,19 @@ export default function Document() {
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content="https://katsudoto.id/media/public/25047/19302/cover/thumb_md_191560_1692244782_1000_1000.jpeg"
+          content="https://www.nawasmara.com/assets/cover2.png"
         />
         <meta property="og:locale" content="in_ID" />
         <meta
           property="twitter:card"
-          content="https://katsudoto.id/media/public/25047/19302/cover/thumb_md_191560_1692244782_1000_1000.jpeg"
+          content="https://www.nawasmara.com/assets/cover2.png"
         />
         <meta property="twitter:url" content="https://nawasmara.com" />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta
           property="twitter:image"
-          content="https://katsudoto.id/media/public/25047/19302/cover/thumb_md_191560_1692244782_1000_1000.jpeg"
-        />
+          content="https://www.nawasmara.com/assets/cover2.png" />
       </Head>
       <body>
         <Main />

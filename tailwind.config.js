@@ -24,6 +24,8 @@ module.exports = {
         storyOne: "url('/assets/story-1.png')",
         storyTwo: "url('/assets/story-2.png')",
         storyThree: "url('/assets/story-3.png')",
+        keyboard: "url('/assets/keyboard.svg')",
+
       },
       fontFamily: {
         libreCaslon: [

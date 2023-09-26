@@ -325,6 +325,22 @@ export default function SecondSection() {
         </div>
       </div>
       {/* end our story */}
+
+      {/* start wedding gift */}
+      <div className="pt-20 bg-keyboard bg-start bg-no-repeat">
+        <h1 className="text-[#504533] text-6xl font-bethaine text-center">
+          Wedding Gift
+        </h1>
+        <p className="font-libre text-[#504533] text-[12px] px-8 text-center">
+          Atas restu dan kedatangan kamu ke pesta pernikahan kami sudah cukup
+          bagi kami. Tapi jika kamu ingin memberi hadiah, kami menyediakan
+          Amplop Digital untuk memudahkan kamu. Terima kasih
+        </p>
+        <button className=" mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide">
+          Kirim hadiah
+        </button>
+      </div>
+      {/* end wedding gift */}
     </div>
   );
 }
