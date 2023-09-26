@@ -10,7 +10,7 @@ export default function SecondSection() {
 
   return (
     <div className="">
-      <div className="md:px-[35vw] px-16">
+      <div className="md:px-[30vw]">
         <div className="flex w-full justify-center">
           <Image
             src="/assets/check-it.svg"
