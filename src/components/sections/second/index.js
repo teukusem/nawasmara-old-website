@@ -292,7 +292,7 @@ export default function SecondSection() {
           <div className="pt-[280px]" />
           <div>
             <p className="!text-[#504533] text-[16px] font-bold">First Meet</p>
-            <p className="!text-[#504533] text-[14px] pt-4">
+            <p className="!text-[#504533] text-[14px] pt-2">
               2020 adalah tahun pertemuan pertama kami, tepatnya pada program
               kantor yang sama.
             </p>
@@ -304,7 +304,7 @@ export default function SecondSection() {
             <p className="!text-[#504533] text-[16px] font-bold">
               Relationship
             </p>
-            <p className="!text-[#504533] text-[14px] pt-4">
+            <p className="!text-[#504533] text-[14px] pt-2">
               Berjalannya waktu, kami saling mengenal dan terus memupuk komitmen
               untuk masa depan. Pada awal tahun 2023, tepatnya pada 16 Februari,
               keluarga Arief berkunjung ke kediaman keluarga Nabilla dengan
@@ -316,7 +316,7 @@ export default function SecondSection() {
           <div className="pt-[270px]" />
           <div>
             <p className="!text-[#504533] text-[16px] font-bold">Menikah</p>
-            <p className="!text-[#504533] text-[14px] pt-4">
+            <p className="!text-[#504533] text-[14px] pt-2">
               Tanggal 13 Oktober 2023, dengan izin Allah kami bermaksud untuk
               menyempurnakan perjalanan kami menjadi ibadah sepanjang hidup,
               dalam ikatan pernikahan. Bismillaahirrahmaanirrahiim.
