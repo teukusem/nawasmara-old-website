@@ -25,6 +25,8 @@ module.exports = {
         storyTwo: "url('/assets/story-2.png')",
         storyThree: "url('/assets/story-3.png')",
         keyboard: "url('/assets/keyboard.svg')",
+        giftBox: "url('/assets/box-gift.svg')",
+
 
       },
       fontFamily: {

@@ -17,7 +17,7 @@ export default function Document() {
          <!-- iOS Safari (apple) -->
         <meta name="apple-mobile-web-app-status-bar-style" content="#cccccc" /> */}
         <meta property="og:type" content="website" />
-        <meta property="og:site_name" content="Nawasmara.id" />
+        <meta property="og:site_name" content="Nawasmara.com" />
         <meta property="og:url" content="https://nawasmara.com" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />

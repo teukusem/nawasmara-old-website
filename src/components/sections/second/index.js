@@ -1,12 +1,16 @@
 import { useCountdown } from "@/hooks/useCountdown";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
+import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const googleCalendar =
   "https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20231013T010000Z%2F20231013T020000Z&details=%20For%20more%20info%2C%20please%20visit%20-%3E%20https%3A%2F%2Fnawasmara.com&location=Masjid%20Raya%20Baiturrahman%20Banda%20Aceh&text=Akad%20Arief%20%26%20Nabilla";
 
 export default function SecondSection() {
   const [days, hours, minutes, seconds] = useCountdown("2023-10-13");
+  const [showGift, setShowGift] = useState(false);
+  const [isCopied, setCopied] = useState(false);
 
   return (
     <div className="">
@@ -298,7 +302,7 @@ export default function SecondSection() {
             </p>
           </div>
         </div>
-        <div className="bg-storyTwo bg-no-repeat bg-contain min-h-[500px] relative pr-32 pl-4">
+        <div className="bg-storyTwo bg-no-repeat bg-contain min-h-[500px] relative pr-24 pl-4">
           <div className="pt-[270px]" />
           <div>
             <p className="!text-[#504533] text-[16px] font-bold">
@@ -313,7 +317,7 @@ export default function SecondSection() {
           </div>
         </div>
         <div className="bg-storyThree bg-no-repeat bg-contain min-h-[500px] relative pl-32 pr-5">
-          <div className="pt-[270px]" />
+          <div className="pt-[250px]" />
           <div>
             <p className="!text-[#504533] text-[16px] font-bold">Menikah</p>
             <p className="!text-[#504533] text-[14px] pt-2">
@@ -327,7 +331,7 @@ export default function SecondSection() {
       {/* end our story */}
 
       {/* start wedding gift */}
-      <div className="pt-20 bg-keyboard bg-start bg-no-repeat">
+      <div className="pt-20 bg-keyboard bg-start bg-no-repeat relative">
         <h1 className="text-[#504533] text-6xl font-bethaine text-center">
           Wedding Gift
         </h1>
@@ -336,9 +340,74 @@ export default function SecondSection() {
           bagi kami. Tapi jika kamu ingin memberi hadiah, kami menyediakan
           Amplop Digital untuk memudahkan kamu. Terima kasih
         </p>
-        <button className=" mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide">
+        <button
+          onClick={() => setShowGift((prev) => !prev)}
+          className=" mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide"
+        >
           Kirim hadiah
         </button>
+        {showGift && (
+          <div className="border border-1 border-[#504533] rounded-lg px-8 py-4 mx-4 mt-4 text-[#504533]">
+            <div className="py-4">
+              <Image src="assets/bca.svg" alt="bca" height={80} width={80} />
+            </div>
+            {isCopied && (
+              <div
+                class="p-4 mb-4 text-sm text-white rounded-lg bg-[#504533]  text-white"
+                role="alert"
+              >
+                <span class="font-medium">Rekening berhasil disalin !</span>
+              </div>
+            )}
+            <div className="bg-white rounded-lg px-4 py-2">
+              <p className="font-libre text-[12px] pt-2">Nomor Rekening</p>
+              <div className="flex justify-between">
+                <p>6241548170</p>
+
+                <CopyToClipboard
+                  text="6241548170"
+                  onCopy={() => {
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 2000);
+                  }}
+                >
+                  <Image
+                    src="/assets/copy.svg"
+                    alt="copy"
+                    height={25}
+                    width={25}
+                  />
+                </CopyToClipboard>
+              </div>
+
+              <p className="font-libre text-[12px] pt-2">Pemilik Rekening</p>
+              <p>Arief Ramadhana</p>
+            </div>
+            <div className="py-4">
+              <Image
+                src="/assets/linkaja.png"
+                alt="linkaja"
+                height={100}
+                width={100}
+              />
+              <Image
+                src="/assets/nabilla-linkaja.png"
+                alt="linkaja"
+                height={200}
+                width={300}
+                className=""
+              />
+            </div>
+          </div>
+        )}
+        <div className="flex justify-center absolute left-[50%]">
+          <Image
+            alt="box-gift"
+            src="/assets/box-gift.svg"
+            width={200}
+            height={200}
+          />
+        </div>
       </div>
       {/* end wedding gift */}
     </div>
