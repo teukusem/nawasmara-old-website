@@ -188,7 +188,7 @@ export default function SecondSection() {
       {/* groom end */}
 
       {/* start save the date */}
-      <div className="pb-10">
+      <div className="pb-10 md:px-[30vw] px-16">
         <div className="flex items-end justify-center">
           <h1 className="text-[#504533] text-5xl font-bethaine text-center pt-36">
             Save The Date
