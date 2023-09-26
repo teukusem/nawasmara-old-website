@@ -14,7 +14,7 @@ export default function Home() {
   const [isOpenInvitation, setOpenInvitation] = useState(false);
   const { title } = data;
 
-  const recieverName = router.query.to || "";
+  const recieverName = router.query.to || "-";
 
   function openInvitation() {
     load("/audio/soundtrack.mp3", {
@@ -30,6 +30,7 @@ export default function Home() {
       </Head>
       {!isOpenInvitation ? (
         <LandingPage
+          to={router.query.to}
           handleOpenInvitations={openInvitation}
           recieverName={recieverName}
         />
