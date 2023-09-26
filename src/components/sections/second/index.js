@@ -99,16 +99,29 @@ export default function SecondSection() {
           dari Allah SWT, Kami dengan hormat mengundang Anda ke pernikahan:
         </p>
 
-        <div className="bg-building bg-no-repeat bg-contains relative">
+        <div className="bg-building bg-no-repeat bg-contains relative flex justify-center">
           <Image
-            src="/assets/nabilla.png"
-            alt="foto"
-            width={250}
+            className="absolute z-[-1] left-0"
+            src="/assets/mawar.svg"
+            alt="mawar"
+            width={200}
             height={200}
-            className="!w-full "
+          />
+          <Image
+            src="/assets/nabilla.svg"
+            alt="foto"
+            width={200}
+            height={200}
+          />
+          <Image
+            className="absolute z-[-1] left-[40%]"
+            src="/assets/pink-flower-mirror.svg"
+            alt="mawar"
+            width={200}
+            height={200}
           />
         </div>
-        <h1 className="text-[#504533] text-5xl font-bethaine text-center">
+        <h1 className="text-[#504533] text-5xl font-bethaine text-center pt-6">
           Nabilla Maharani
         </h1>
         <p className="font-libre text-[#504533] text-[12px] text-center mx-10">
@@ -131,16 +144,24 @@ export default function SecondSection() {
           &
         </h1>
 
-        <div className="bg-building bg-no-repeat bg-contains relative">
+        <div className="bg-building bg-no-repeat bg-contains relative flex justify-center">
           <Image
-            src="/assets/arief.png"
-            alt="foto"
-            width={250}
+            className="absolute z-[-1] left-[45%]"
+            src="/assets/mawar-mirror.svg"
+            alt="mawar"
+            width={200}
             height={200}
-            className="!w-full "
+          />
+          <Image src="/assets/arief.svg" alt="foto" width={200} height={200} />
+          <Image
+            className="absolute z-[-1] left-5 rotate-90"
+            src="/assets/pink-flower.svg"
+            alt="mawar"
+            width={200}
+            height={200}
           />
         </div>
-        <h1 className="text-[#504533] text-5xl font-bethaine text-center">
+        <h1 className="text-[#504533] text-5xl font-bethaine text-center pt-6">
           Arief Ramadhana
         </h1>
         <p className="font-libre text-[#504533] text-[12px] text-center mx-10">
@@ -302,7 +323,7 @@ export default function SecondSection() {
             </p>
           </div>
         </div>
-        <div className="bg-storyTwo bg-no-repeat bg-contain min-h-[500px] relative pr-24 pl-4">
+        <div className="bg-storyTwo bg-no-repeat bg-contain min-h-[500px] relative pr-32 pl-4">
           <div className="pt-[270px]" />
           <div>
             <p className="!text-[#504533] text-[16px] font-bold">
