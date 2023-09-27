@@ -22,7 +22,7 @@ export default function FirstSection() {
           />
         </div>
 
-        <BackgroundVideo className="flex justify-center items-center shadow-lg rounded-3xl h-full w-full" />
+        <BackgroundVideo className="flex justify-center items-center shadow-lg rounded-3xl min-h-[550px] w-full" />
 
         <div className={styles.frame2}>
           <Image
