@@ -17,6 +17,7 @@ export default function SecondSection() {
       <div className="md:px-[30vw]">
         <div className="flex w-full justify-center">
           <Image
+            data-aos="fade-up"
             src="/assets/check-it.svg"
             alt="check-it"
             width={200}
@@ -24,17 +25,22 @@ export default function SecondSection() {
           />
         </div>
         <Image
+          data-aos="fade-right"
           src="/assets/branch-bird.svg"
           alt="branch-bird"
           width={600}
           height={300}
           className="!w-full"
         />
-        <h1 className="font-bethaine text-[#504533] text-5xl mt-10 text-center">
+        <h1
+          data-aos="fade-up"
+          className="font-bethaine text-[#504533] text-5xl mt-10 text-center"
+        >
           Arief & Nabilla
         </h1>
         <div className="bg-building bg-no-repeat bg-contains min-h-[520px] relative">
           <Image
+            data-aos="zoom-in"
             src="/assets/foto.svg"
             alt="foto"
             width={300}
@@ -42,6 +48,7 @@ export default function SecondSection() {
             className="!w-full bottom-0 absolute"
           />
           <Image
+            data-aos="zoom-in-right"
             className="absolute top-0 z-[-1] rotate-90"
             src="/assets/pink-flower.svg"
             alt="frame-2"
@@ -49,6 +56,7 @@ export default function SecondSection() {
             height={200}
           />
           <Image
+            data-aos="zoom-in-left"
             className="absolute bottom-5 right-5 z-[-1]"
             src="/assets/pink-flower-mirror.svg"
             alt="frame-2"
@@ -61,7 +69,10 @@ export default function SecondSection() {
         </p>
 
         {/* start prayer */}
-        <div className="bg-ayat bg-no-repeat bg-center bg-contain min-h-[500px] text-center px-16">
+        <div
+          data-aos="fade-up"
+          className="bg-ayat bg-no-repeat bg-center bg-contain min-h-[500px] text-center px-16"
+        >
           <div className="pt-44" />
           <p className="text-[#504533] text-[16px]">
             وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا
@@ -79,7 +90,7 @@ export default function SecondSection() {
         </div>
         {/* end prayer */}
 
-        <div className="flex w-full justify-center pb-10">
+        <div data-aos="fade-up" className="flex w-full justify-center pb-10">
           <Image
             src="/assets/check-it.svg"
             alt="check-it"
@@ -88,7 +99,7 @@ export default function SecondSection() {
           />
         </div>
 
-        <div className="flex w-full justify-center">
+        <div data-aos="fade-up" className="flex w-full justify-center">
           <Image
             src="/assets/bismillah.svg"
             alt="check-it"
@@ -96,7 +107,10 @@ export default function SecondSection() {
             height={300}
           />
         </div>
-        <p className="font-libre text-[#504533] text-[12px] p-4 text-center">
+        <p
+          data-aos="fade-up"
+          className="font-libre text-[#504533] text-[12px] p-4 text-center"
+        >
           Assalamualaikum Warahmatullahi Wabarakatuh, dengan berkah dan rahmat
           dari Allah SWT, Kami dengan hormat mengundang Anda ke pernikahan:
         </p>
@@ -104,6 +118,7 @@ export default function SecondSection() {
         {/* bride  start*/}
         <div className="bg-building bg-no-repeat bg-contains relative flex justify-center">
           <Image
+            data-aos="zoom-in"
             className="absolute z-[-1] left-0"
             src="/assets/mawar.svg"
             alt="mawar"
@@ -111,12 +126,14 @@ export default function SecondSection() {
             height={200}
           />
           <Image
+            data-aos="zoom-in"
             src="/assets/nabilla.svg"
             alt="foto"
             width={200}
             height={200}
           />
           <Image
+            data-aos="zoom-in"
             className="absolute z-[-1] left-[40%]"
             src="/assets/pink-flower-mirror.svg"
             alt="mawar"
@@ -124,16 +141,26 @@ export default function SecondSection() {
             height={200}
           />
         </div>
-        <h1 className="text-[#504533] text-5xl font-bethaine text-center pt-6">
+        <h1
+          data-aos="fade-up"
+          className="text-[#504533] text-5xl font-bethaine text-center pt-6"
+        >
           Nabilla Maharani
         </h1>
-        <p className="font-libre text-[#504533] text-[12px] text-center mx-10">
+        <p
+          data-aos="fade-up"
+          className="font-libre text-[#504533] text-[12px] text-center mx-10"
+        >
           Putri kedua dari Bapak Fazli Usman (alm)
         </p>
-        <p className="font-libre text-[#504533] text-[12px] text-center mx-10 pb-2">
+        <p
+          data-aos="fade-up"
+          className="font-libre text-[#504533] text-[12px] text-center mx-10 pb-2"
+        >
           Dan ibu Cut Meutia
         </p>
         <Link
+          data-aos="fade-up"
           href="https://instagram.com/nmnabilla"
           className="flex justify-center"
         >
@@ -145,20 +172,31 @@ export default function SecondSection() {
         {/* bride  end*/}
 
         {/* groom start */}
-        <h1 className="text-[#504533] text-5xl font-bethaine text-center py-[100px]">
+        <h1
+          data-aos="fade-up"
+          className="text-[#504533] text-5xl font-bethaine text-center py-[100px]"
+        >
           &
         </h1>
 
         <div className="bg-building bg-no-repeat bg-contains relative flex justify-center">
           <Image
+            data-aos="zoom-in"
             className="absolute z-[-1] left-[45%]"
             src="/assets/mawar-mirror.svg"
             alt="mawar"
             width={200}
             height={200}
           />
-          <Image src="/assets/arief.svg" alt="foto" width={200} height={200} />
           <Image
+            data-aos="zoom-in"
+            src="/assets/arief.svg"
+            alt="foto"
+            width={200}
+            height={200}
+          />
+          <Image
+            data-aos="zoom-in"
             className="absolute z-[-1] left-5 rotate-90"
             src="/assets/pink-flower.svg"
             alt="mawar"
@@ -166,16 +204,26 @@ export default function SecondSection() {
             height={200}
           />
         </div>
-        <h1 className="text-[#504533] text-5xl font-bethaine text-center pt-6">
+        <h1
+          data-aos="fade-up"
+          className="text-[#504533] text-5xl font-bethaine text-center pt-6"
+        >
           Arief Ramadhana
         </h1>
-        <p className="font-libre text-[#504533] text-[12px] text-center mx-10">
+        <p
+          data-aos="fade-up"
+          className="font-libre text-[#504533] text-[12px] text-center mx-10"
+        >
           Putra ketiga dari Bapak Tarmizi
         </p>
-        <p className="font-libre text-[#504533] text-[12px] text-center mx-10 pb-2">
+        <p
+          data-aos="fade-up"
+          className="font-libre text-[#504533] text-[12px] text-center mx-10 pb-2"
+        >
           Dan Ibu Jasmaniah
         </p>
         <Link
+          data-aos="fade-up"
           href="https://instagram.com/ariefrmdh"
           className="flex justify-center"
         >
@@ -190,17 +238,32 @@ export default function SecondSection() {
       {/* start save the date */}
       <div className="pb-10 md:px-[30vw]">
         <div className="flex items-end justify-center">
-          <h1 className="text-[#504533] text-5xl font-bethaine text-center pt-36">
+          <h1
+            data-aos="fade-right"
+            className="text-[#504533] text-5xl font-bethaine text-center pt-36"
+          >
             Save The Date
           </h1>
-          <Image src="/assets/pena.svg" alt="test" width={40} height={60} />
+          <Image
+            data-aos="fade-left"
+            src="/assets/pena.svg"
+            alt="test"
+            width={40}
+            height={60}
+          />
         </div>
-        <p className="font-playfair text-center text-[#504533]">
+        <p
+          data-aos="fade-up"
+          className="font-playfair text-center text-[#504533]"
+        >
           13 Oktober 2023
         </p>
 
-        <div className="flex gap-8 justify-center items-center px-4 bg-std bg-no-repeat bg-center bg-contain relative min-h-[180px] pt-10 ">
-          <div>
+        <div
+          data-aos="fade-up"
+          className="flex gap-8 justify-center items-center px-4 bg-std bg-no-repeat bg-center bg-contain relative min-h-[180px] pt-10 "
+        >
+          <div data-aos="fade-up">
             <p className="font-libre text-[#504533] text-[32px] text-center">
               {days}
             </p>
@@ -209,7 +272,7 @@ export default function SecondSection() {
             </p>
           </div>
 
-          <div>
+          <div data-aos="fade-down">
             <p className="font-libre text-[#504533] text-[32px] text-center">
               {hours}
             </p>
@@ -218,7 +281,7 @@ export default function SecondSection() {
             </p>
           </div>
 
-          <div>
+          <div data-aos="fade-up">
             <p className="font-libre text-[#504533] text-[32px] text-center">
               {minutes}
             </p>
@@ -227,7 +290,7 @@ export default function SecondSection() {
             </p>
           </div>
 
-          <div>
+          <div data-aos="fade-down">
             <p className="font-libre text-[#504533] text-[32px] text-center">
               {seconds}
             </p>
