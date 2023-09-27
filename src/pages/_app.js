@@ -2,6 +2,9 @@ import localFont from "next/font/local";
 import { Playfair_Display } from "next/font/google";
 
 import "@/styles/globals.css";
+import { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -41,8 +44,13 @@ const fonts = localFont({
 });
 
 export default function App({ Component, pageProps }) {
+  useEffect(() => {
+    AOS.init({ duration: 2200 });
+  });
   return (
-    <main className={`${fonts.variable} ${playfair.variable} ${libre.variable}`}>
+    <main
+      className={`${fonts.variable} ${playfair.variable} ${libre.variable}`}
+    >
       <Component {...pageProps} />;
     </main>
   );

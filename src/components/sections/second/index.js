@@ -24,18 +24,22 @@ export default function SecondSection() {
           />
         </div>
         <Image
+          data-aos="fade-right"
           src="/assets/branch-bird.svg"
           alt="branch-bird"
           width={600}
           height={300}
           className="!w-full"
         />
-        <h1 className="font-bethaine text-[#504533] text-5xl mt-10 text-center">
+        <h1
+          data-aos="fade-left"
+          className="font-bethaine text-[#504533] text-5xl mt-10 text-center"
+        >
           Arief & Nabilla
         </h1>
         <div className="bg-building bg-no-repeat bg-contains min-h-[520px] relative">
           <Image
-            src="/assets/foto.png"
+            src="/assets/foto.svg"
             alt="foto"
             width={300}
             height={300}
@@ -350,9 +354,11 @@ export default function SecondSection() {
             <p className="!text-[#504533] text-[14px] pt-2">
               Tanggal 13 Oktober 2023, dengan izin Allah kami bermaksud untuk
               menyempurnakan perjalanan kami menjadi ibadah sepanjang hidup,
-              dalam ikatan pernikahan. 
+              dalam ikatan pernikahan.
             </p>
-            <p className="!text-[#504533] text-[14px] pt-2">Bismillaahirrahmaanirrahiim.</p>
+            <p className="!text-[#504533] text-[14px] pt-2">
+              Bismillaahirrahmaanirrahiim.
+            </p>
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ export default function Document() {
       <Head>
         <meta name="title" content={title} />
         <meta name="description" content={description} />
-         {/*
+        {/*
          <!-- Chrome, Firefox OS and Opera -->
         <meta name="theme-color" content="#cccccc" />
         <!-- Windows Phone (microsoft) -->
@@ -35,7 +35,9 @@ export default function Document() {
         <meta property="twitter:description" content={description} />
         <meta
           property="twitter:image"
-          content="https://www.nawasmara.com/assets/cover2.png" />
+          content="https://www.nawasmara.com/assets/cover2.png"
+        />
+        <script>document.documentElement.classList.add('js')</script>
       </Head>
       <body>
         <Main />
