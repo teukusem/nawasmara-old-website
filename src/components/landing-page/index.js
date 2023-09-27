@@ -70,16 +70,17 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
             alt="paper"
           />
         </div>
+        <div className="flex w-full absolute justify-center">
+          <Image
+            data-aos="zoom-in"
+            src="/assets/paper-awan.svg"
+            height={200}
+            width={300}
+            alt="paper"
+          />
+        </div>
 
-        <Image
-          data-aos="zoom-in"
-          src="/assets/paper-awan.svg"
-          height={200}
-          width={300}
-          className="absolute top-[20%] !w-full"
-          alt="paper"
-        />
-        <div className="flex flex-col absolute justify-between w-full top-[35vh] min-h-[30vh]">
+        <div className="flex flex-col absolute justify-between w-full top-[40vh] min-h-[40vh]">
           <div>
             <h1
               data-aos="fade-down"
@@ -92,7 +93,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
             </h1>
             <h1
               data-aos="zoom-in"
-              className="text-[#504533] text-lg font-libreCaslon text-center !text-[14px]"
+              className="text-[#504533] text-lg font-libreCaslon text-center mt-4 !text-[14px]"
             >
               13 Oktober 2023 <br />
               Banda Aceh
