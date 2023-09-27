@@ -52,7 +52,7 @@ export default function FooterSection() {
               className="flex justify-center"
             >
               <Image src="/assets/ig.svg" alt="ig" width={12} height={12} />
-              <p className="font-libre text-[16px] text-[#504533]">nawasmawa</p>
+              <p className="font-libre text-[16px] text-[#504533]">nawasmara</p>
             </Link>
           </div>
           <Image
