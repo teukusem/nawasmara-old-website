@@ -119,7 +119,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
             {recieverName.length > 1 && (
               <h1
                 data-aos="zoom-in"
-                className="text-[#504533] text-lg font-bold font-libreCaslon text-center"
+                className="text-[#504533] text-lg font-bold font-libreCaslon text-center px-12"
               >
                 Teruntuk <br />
                 {recieverName}
