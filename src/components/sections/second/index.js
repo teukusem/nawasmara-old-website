@@ -24,17 +24,13 @@ export default function SecondSection() {
           />
         </div>
         <Image
-          data-aos="fade-right"
           src="/assets/branch-bird.svg"
           alt="branch-bird"
           width={600}
           height={300}
           className="!w-full"
         />
-        <h1
-          data-aos="fade-left"
-          className="font-bethaine text-[#504533] text-5xl mt-10 text-center"
-        >
+        <h1 className="font-bethaine text-[#504533] text-5xl mt-10 text-center">
           Arief & Nabilla
         </h1>
         <div className="bg-building bg-no-repeat bg-contains min-h-[520px] relative">
