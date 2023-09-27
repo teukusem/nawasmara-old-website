@@ -37,7 +37,6 @@ export default function Document() {
           property="twitter:image"
           content="https://www.nawasmara.com/assets/cover2.png"
         />
-        <script>document.documentElement.classList.add('js')</script>
       </Head>
       <body>
         <Main />
