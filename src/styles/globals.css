@@ -52,3 +52,23 @@ video {
     opacity: 0;
   }
 }
+
+.fcloud01 {
+  top: 0;
+  z-index: 100;
+  animation: drift 10s linear infinite;
+}
+.fcloud02 {
+	top: 0;
+	z-index: 500;
+	animation: drift 10s 4s linear infinite both;
+} 
+
+@keyframes drift {
+  from {
+    transform: translateX(-100px);
+  }
+  to {
+    transform: translateX(400px);
+  }
+}

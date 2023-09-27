@@ -32,15 +32,22 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
     <div className="md:px-[30vw]">
       <div className="bg-[#f2edeb] h-screen relative">
         <div className="flex justify-between relative">
-          <Image
-            className="absolute"
+          {/* <Image
+            className="fcloud01 absolute"
             src="/assets/awan.svg"
             height={200}
             width={150}
             alt="awan"
+          /> */}
+          <Image
+            className="fcloud02 absolute"
+            src="/assets/awan-2.svg"
+            height={200}
+            width={200}
+            alt="awan-2"
           />
           <Image
-            className="absolute left-[40%]"
+            className="fcloud01 absolute"
             src="/assets/awan-2.svg"
             height={200}
             width={200}
@@ -82,16 +89,25 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
           />
         </div>
 
-        <div className="flex flex-col absolute justify-between w-full top-[40vh] min-h-[40vh]">
+        <div className="flex flex-col absolute justify-between w-full top-[30vh] min-h-[40vh]">
           <div>
             <h1
               data-aos="fade-down"
               className="text-[#504533] text-5xl font-bold font-bethaine text-center"
             >
-              Arief & Nabilla
-              {/* <br />
-              & <br />
-              Nabilla */}
+              Arief
+            </h1>
+            <h1
+              data-aos="zoom-in"
+              className="text-[#504533] text-5xl font-bold font-bethaine text-center"
+            >
+              &
+            </h1>
+            <h1
+              data-aos="fade-up"
+              className="text-[#504533] text-5xl font-bold font-bethaine text-center"
+            >
+              Nabilla
             </h1>
             <h1
               data-aos="zoom-in"
