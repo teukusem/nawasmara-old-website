@@ -25,7 +25,7 @@ export default function SecondSection() {
           />
         </div>
         <Image
-          data-aos="fade-right"
+          data-aos="fade-left"
           src="/assets/branch-bird.svg"
           alt="branch-bird"
           width={600}
@@ -48,7 +48,7 @@ export default function SecondSection() {
             className="!w-full bottom-0 absolute"
           />
           <Image
-            data-aos="zoom-in-right"
+            data-aos="zoom-in"
             className="absolute top-0 z-[-1] rotate-90"
             src="/assets/pink-flower.svg"
             alt="frame-2"
@@ -56,7 +56,7 @@ export default function SecondSection() {
             height={200}
           />
           <Image
-            data-aos="zoom-in-left"
+            data-aos="zoom-in"
             className="absolute bottom-5 right-5 z-[-1]"
             src="/assets/pink-flower-mirror.svg"
             alt="frame-2"
@@ -239,7 +239,7 @@ export default function SecondSection() {
       <div className="pb-10 md:px-[30vw]">
         <div className="flex items-end justify-center">
           <h1
-            data-aos="fade-right"
+            data-aos="fade-up"
             className="text-[#504533] text-5xl font-bethaine text-center pt-36"
           >
             Save The Date
