@@ -48,6 +48,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
           />
         </div>
         <Image
+          data-aos="fade-right"
           src="/assets/landing-branch.svg"
           height={200}
           width={300}
@@ -62,20 +63,24 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
           alt="paper"
         />
         <div className="flex justify-between flex-col items-center !z-[99] absolute w-full h-[30vh] md:h-[20vh]">
-          <h1 className="text-[#504533] text-5xl font-bold font-bethaine text-center">
+          <h1
+            data-aos="fade-down"
+            className="text-[#504533] text-5xl font-bold font-bethaine text-center"
+          >
             Arief
             <br />
             & <br />
             Nabilla
           </h1>
           {recieverName.length > 1 && (
-            <h1 className="text-[#504533] text-lg font-bold font-libreCaslon text-center mt-7">
+            <h1 data-aos="zoom-in" className="text-[#504533] text-lg font-bold font-libreCaslon text-center mt-7">
               Teruntuk <br />
               {recieverName}
             </h1>
           )}
 
           <button
+            data-aos="fade-up"
             onClick={handleOpenInvitations}
             className="mt-5 bg-[#504533] px-5 py-1.5 font-libreCaslon rounded-lg text-md tracking-wide !text-white"
           >
