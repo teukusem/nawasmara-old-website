@@ -79,7 +79,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
             alt="paper"
           />
         </div>
-        <div className="flex w-full absolute justify-center top-[26%]">
+        <div className="flex w-full absolute justify-center top-[22%]">
           <Image
             data-aos="zoom-in"
             src="/assets/paper-awan.svg"
