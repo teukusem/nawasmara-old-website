@@ -111,7 +111,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
             </h1>
             <h1
               data-aos="zoom-in"
-              className="text-[#504533] text-lg font-libreCaslon text-center mt-4 !text-[14px]"
+              className="text-[#504533] text-lg font-libreCaslon text-center !text-[14px]"
             >
               13 Oktober 2023 <br />
               Banda Aceh
@@ -119,7 +119,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
             {recieverName.length > 1 && (
               <h1
                 data-aos="zoom-in"
-                className="text-[#504533] text-lg font-bold font-libreCaslon text-center mt-7"
+                className="text-[#504533] text-lg font-bold font-libreCaslon text-center"
               >
                 Teruntuk <br />
                 {recieverName}
