@@ -47,14 +47,16 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
             alt="awan-2"
           />
         </div>
-        <Image
-          data-aos="fade-right"
-          src="/assets/landing-branch.svg"
-          height={200}
-          width={300}
-          alt="anding-b"
-        />
-        <div className="flex justify-between !w-full absolute">
+        <div>
+          <Image
+            data-aos="fade-right"
+            src="/assets/landing-branch.svg"
+            height={200}
+            width={300}
+            alt="anding-b"
+          />
+        </div>
+        <div className="flex justify-between !w-full absolute top-[10%]">
           <Image
             data-aos="zoom-in"
             src="/assets/poon1.svg"
