@@ -14,16 +14,19 @@ export default function FirstSection() {
       <div className={styles.container}>
         <div className={styles.frame1}>
           <Image
+            data-aos="fade-up"
             src="/assets/pink-flower.svg"
             alt="frame-2"
             width={200}
             height={200}
           />
         </div>
-        <BackgroundVideo className="flex justify-center items-center shadow-lg rounded-3xl" />
+
+        <BackgroundVideo className="flex justify-center items-center shadow-lg rounded-3xl h-full w-full" />
 
         <div className={styles.frame2}>
           <Image
+            data-aos="fade-up"
             src="/assets/pink-flower.svg"
             alt="frame-2"
             width={200}
