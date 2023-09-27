@@ -54,38 +54,69 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
           width={300}
           alt="anding-b"
         />
+        <div className="flex justify-between !w-full absolute">
+          <Image
+            data-aos="zoom-in"
+            src="/assets/poon1.svg"
+            height={100}
+            width={200}
+            alt="paper"
+          />
+          <Image
+            data-aos="zoom-in"
+            src="/assets/poon2.svg"
+            height={100}
+            width={200}
+            alt="paper"
+          />
+        </div>
 
         <Image
-          src="/assets/paper2.png"
+          data-aos="zoom-in"
+          src="/assets/paper-awan.svg"
           height={200}
           width={300}
-          className="!w-full absolute top-[10%]"
+          className="absolute top-[20%] !w-full"
           alt="paper"
         />
-        <div className="flex justify-between flex-col items-center !z-[99] absolute w-full h-[30vh] md:h-[20vh]">
-          <h1
-            data-aos="fade-down"
-            className="text-[#504533] text-5xl font-bold font-bethaine text-center"
-          >
-            Arief
-            <br />
-            & <br />
-            Nabilla
-          </h1>
-          {recieverName.length > 1 && (
-            <h1 data-aos="zoom-in" className="text-[#504533] text-lg font-bold font-libreCaslon text-center mt-7">
-              Teruntuk <br />
-              {recieverName}
+        <div className="flex flex-col absolute justify-between top-[35vh] left-[18vw] min-h-[30vh]">
+          <div>
+            <h1
+              data-aos="fade-down"
+              className="text-[#504533] text-5xl font-bold font-bethaine text-center"
+            >
+              Arief & Nabilla
+              {/* <br />
+              & <br />
+              Nabilla */}
             </h1>
-          )}
+            <h1
+              data-aos="zoom-in"
+              className="text-[#504533] text-lg font-libreCaslon text-center !text-[14px]"
+            >
+              13 Oktober 2023 <br />
+              Banda Aceh
+            </h1>
+            {recieverName.length > 1 && (
+              <h1
+                data-aos="zoom-in"
+                className="text-[#504533] text-lg font-bold font-libreCaslon text-center mt-7"
+              >
+                Teruntuk <br />
+                {recieverName}
+              </h1>
+            )}
+          </div>
 
-          <button
-            data-aos="fade-up"
-            onClick={handleOpenInvitations}
-            className="mt-5 bg-[#504533] px-5 py-1.5 font-libreCaslon rounded-lg text-md tracking-wide !text-white"
-          >
-            Buka Undangan
-          </button>
+          <div className="m-auto">
+            <button
+              data-aos="fade-up"
+              onClick={handleOpenInvitations}
+              className="mt-5 bg-[#504533] px-5 py-1.5 font-libreCaslon rounded-lg text-md tracking-wide !text-white"
+            >
+              Buka Undangan
+            </button>
+          </div>
         </div>
       </div>
       {/* <div className="absolute bottom-0 md:w-[30vw] flex">
