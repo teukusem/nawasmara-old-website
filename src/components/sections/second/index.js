@@ -15,7 +15,7 @@ export default function SecondSection() {
   return (
     <div>
       <div className="md:px-[30vw]">
-        <div className="flex w-full justify-center">
+        {/* <div className="flex w-full justify-center">
           <Image
             data-aos="fade-up"
             src="/assets/check-it.svg"
@@ -23,9 +23,9 @@ export default function SecondSection() {
             width={200}
             height={300}
           />
-        </div>
+        </div> */}
         <Image
-          data-aos="fade-left"
+          data-aos="zoom-in"
           src="/assets/branch-bird.svg"
           alt="branch-bird"
           width={600}
@@ -47,14 +47,17 @@ export default function SecondSection() {
             height={300}
             className="!w-full bottom-0 absolute"
           />
-          <Image
-            data-aos="zoom-in"
-            className="absolute top-0 z-[-1] rotate-90"
-            src="/assets/pink-flower.svg"
-            alt="frame-2"
-            width={200}
-            height={200}
-          />
+          <div className="absolute top-0 z-[-1] rotate-90">
+            <Image
+              data-aos="zoom-in"
+              className=""
+              src="/assets/pink-flower.svg"
+              alt="frame-2"
+              width={200}
+              height={200}
+            />
+          </div>
+
           <Image
             data-aos="zoom-in"
             className="absolute bottom-5 right-5 z-[-1]"
@@ -245,7 +248,7 @@ export default function SecondSection() {
             Save The Date
           </h1>
           <Image
-            data-aos="fade-left"
+            data-aos="fade-up"
             src="/assets/pena.svg"
             alt="test"
             width={40}
