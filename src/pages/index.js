@@ -7,6 +7,7 @@ import { data } from "@/constants/ariefnabila";
 import LandingPage from "@/components/landing-page";
 import FirstSection from "@/components/sections/first";
 import SecondSection from "@/components/sections/second";
+import FooterSection from "@/components/footer";
 
 export default function Home() {
   const router = useRouter();
@@ -38,6 +39,7 @@ export default function Home() {
         <>
           <FirstSection />
           <SecondSection />
+          <FooterSection />
         </>
       )}
     </>

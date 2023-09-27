@@ -425,7 +425,7 @@ export default function SecondSection() {
 
       {/* start wedding gift */}
       <div className="md:px-[35vw]">
-        <div className="pt-20 bg-keyboard bg-start bg-no-repeat relative">
+        <div className="pt-20 bg-keyboard bg-start bg-no-repeat relative pb-10">
           <h1 className="text-[#504533] text-6xl font-bethaine text-center">
             Wedding Gift
           </h1>
