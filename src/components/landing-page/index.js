@@ -79,7 +79,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
           className="absolute top-[20%] !w-full"
           alt="paper"
         />
-        <div className="flex flex-col absolute justify-between top-[35vh] left-[18vw] min-h-[30vh]">
+        <div className="flex flex-col absolute justify-between w-full top-[35vh] min-h-[30vh]">
           <div>
             <h1
               data-aos="fade-down"
