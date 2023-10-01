@@ -13,83 +13,82 @@ export default function SecondSection() {
   const [isCopied, setCopied] = useState(false);
 
   return (
-    <div>
+    <>
       <div className="md:px-[30vw]">
-        {/* <div className="flex w-full justify-center">
-          <Image
-            data-aos="fade-up"
-            src="/assets/check-it.svg"
-            alt="check-it"
-            width={200}
-            height={300}
-          />
-        </div> */}
-        <Image
-          data-aos="zoom-in"
-          src="/assets/branch-bird.svg"
-          alt="branch-bird"
-          width={600}
-          height={300}
-          className="!w-full"
-        />
-        <h1
-          data-aos="fade-up"
-          className="font-bethaine text-[#504533] text-5xl mt-10 text-center"
-        >
-          Arief & Nabilla
-        </h1>
-        <div className="bg-building bg-no-repeat bg-contains min-h-[520px] relative">
-          <Image
-            data-aos="zoom-in"
-            src="/assets/foto.svg"
-            alt="foto"
-            width={300}
-            height={300}
-            className="!w-full bottom-0 absolute"
-          />
-          <div className="absolute top-0 z-[-1] rotate-90">
+        <div className="md:px-16">
+          <div>
             <Image
               data-aos="zoom-in"
-              className=""
-              src="/assets/pink-flower.svg"
+              src="/assets/branch-bird.svg"
+              alt="branch-bird"
+              width={600}
+              height={300}
+              className="!w-full"
+            />
+          </div>
+
+          <h1
+            data-aos="fade-up"
+            className="font-bethaine text-[#504533] text-5xl mt-10 text-center md:mb-14"
+          >
+            Arief & Nabilla
+          </h1>
+
+          <div className="bg-building bg-no-repeat bg-cover min-h-[520px] relative">
+            <Image
+              data-aos="zoom-in"
+              src="/assets/foto.svg"
+              alt="foto"
+              width={300}
+              height={300}
+              className="!w-full bottom-0 absolute"
+            />
+            <div className="absolute top-0 z-[-1] rotate-90">
+              <Image
+                data-aos="zoom-in"
+                className=""
+                src="/assets/pink-flower.svg"
+                alt="frame-2"
+                width={200}
+                height={200}
+              />
+            </div>
+
+            <Image
+              data-aos="zoom-in"
+              className="absolute bottom-5 right-5 z-[-1]"
+              src="/assets/pink-flower-mirror.svg"
               alt="frame-2"
               width={200}
               height={200}
             />
           </div>
-
-          <Image
-            data-aos="zoom-in"
-            className="absolute bottom-5 right-5 z-[-1]"
-            src="/assets/pink-flower-mirror.svg"
-            alt="frame-2"
-            width={200}
-            height={200}
-          />
+          <p className="font-playfair text-center text-[#504533] my-10">
+            13 Oktober 2023
+          </p>
         </div>
-        <p className="font-playfair text-center text-[#504533]">
-          13 Oktober 2023
-        </p>
 
         {/* start prayer */}
         <div
           data-aos="fade-up"
-          className="bg-ayat bg-no-repeat bg-center bg-contain min-h-[500px] text-center px-16"
+          className="bg-ayat bg-no-repeat bg-center bg-contain min-h-[500px] text-center md:px-16"
         >
-          <div className="pt-44" />
-          <p className="text-[#504533] text-[16px]">
-            وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا
-            لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً
-            ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
-          </p>
-          <p className="text-[#504533] text-[12px] pt-2">
-            “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
-            pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
-            dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
-            kasih dan sayang. Sungguh, pada yang demikian itu benar-benar
-            terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.”
-            (Qs. Ar-Rum:21)
-          </p>
+          <div className="pt-44 md:pt-52" />
+          <div className="md:px-24 px-14">
+            <p className="text-[#504533] text-[16px]">
+              وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا
+              لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً
+              وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
+            </p>
+            <p className="text-[#504533] text-[12px] pt-2">
+              “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+              pasangan-pasangan untukmu dari jenismu sendiri, agar kamu
+              cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
+              antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu
+              benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang
+              berpikir.” (Qs. Ar-Rum:21)
+            </p>
+          </div>
         </div>
         {/* end prayer */}
 
@@ -102,76 +101,81 @@ export default function SecondSection() {
           />
         </div>
 
-        <div data-aos="fade-up" className="flex w-full justify-center">
-          <Image
-            src="/assets/bismillah.svg"
-            alt="check-it"
-            width={200}
-            height={300}
-          />
+        <div className="md:px-16 mb-10">
+          <div data-aos="fade-up" className="flex w-full justify-center">
+            <Image
+              src="/assets/bismillah.svg"
+              alt="check-it"
+              width={200}
+              height={300}
+            />
+          </div>
+          <p
+            data-aos="fade-up"
+            className="font-libre text-[#504533] text-[12px] p-4 text-center"
+          >
+            Assalamualaikum Warahmatullahi Wabarakatuh, dengan berkah dan rahmat
+            dari Allah SWT, Kami dengan hormat mengundang Anda ke pernikahan:
+          </p>
         </div>
-        <p
-          data-aos="fade-up"
-          className="font-libre text-[#504533] text-[12px] p-4 text-center"
-        >
-          Assalamualaikum Warahmatullahi Wabarakatuh, dengan berkah dan rahmat
-          dari Allah SWT, Kami dengan hormat mengundang Anda ke pernikahan:
-        </p>
 
         {/* bride  start*/}
-        <div className="bg-building bg-no-repeat bg-contains relative flex justify-center">
-          <Image
-            data-aos="zoom-in"
-            className="absolute z-[-1] left-0"
-            src="/assets/mawar.svg"
-            alt="mawar"
-            width={200}
-            height={200}
-          />
-          <Image
-            data-aos="zoom-in"
-            src="/assets/nabilla.svg"
-            alt="foto"
-            width={200}
-            height={200}
-          />
-          <Image
-            data-aos="zoom-in"
-            className="absolute z-[-1] left-[40%]"
-            src="/assets/pink-flower-mirror.svg"
-            alt="mawar"
-            width={200}
-            height={200}
-          />
-        </div>
-        <h1
-          data-aos="fade-up"
-          className="text-[#504533] text-5xl font-bethaine text-center pt-6"
-        >
-          Nabilla Maharani
-        </h1>
-        <p
-          data-aos="fade-up"
-          className="font-libre text-[#504533] text-[12px] text-center mx-10"
-        >
-          Putri kedua dari Bapak Fazli Usman (alm)
-        </p>
-        <p
-          data-aos="fade-up"
-          className="font-libre text-[#504533] text-[12px] text-center mx-10 pb-2"
-        >
-          Dan ibu Cut Meutia
-        </p>
-        <Link
-          data-aos="fade-up"
-          href="https://instagram.com/nmnabilla"
-          className="flex justify-center"
-        >
-          <Image src="/assets/ig.svg" alt="ig" width={12} height={12} />
-          <p className="font-libre text-[#504533] text-[12px] text-center underline ml-2 underline-offset-4">
-            @nmnabilla
+        <div className="relative md:px-16">
+          <div className="bg-building bg-no-repeat bg-cover flex justify-center relative">
+            <Image
+              data-aos="zoom-in"
+              className="absolute z-[-1] left-0 md:left-10"
+              src="/assets/mawar.svg"
+              alt="mawar"
+              width={200}
+              height={200}
+            />
+            <Image
+              data-aos="zoom-in"
+              src="/assets/nabilla.svg"
+              alt="foto"
+              width={200}
+              height={200}
+            />
+            <Image
+              data-aos="zoom-in"
+              className="absolute z-[-1] left-[40%]"
+              src="/assets/pink-flower-mirror.svg"
+              alt="mawar"
+              width={200}
+              height={200}
+            />
+          </div>
+          <h1
+            data-aos="fade-up"
+            className="text-[#504533] text-5xl font-bethaine text-center pt-6"
+          >
+            Nabilla Maharani
+          </h1>
+          <p
+            data-aos="fade-up"
+            className="font-libre text-[#504533] text-[12px] text-center mx-10"
+          >
+            Putri kedua dari Bapak Fazli Usman (alm)
           </p>
-        </Link>
+          <p
+            data-aos="fade-up"
+            className="font-libre text-[#504533] text-[12px] text-center mx-10 pb-2"
+          >
+            Dan ibu Cut Meutia
+          </p>
+          <Link
+            data-aos="fade-up"
+            href="https://instagram.com/nmnabilla"
+            className="flex justify-center"
+          >
+            <Image src="/assets/ig.svg" alt="ig" width={12} height={12} />
+            <p className="font-libre text-[#504533] text-[12px] text-center underline ml-2 underline-offset-4">
+              @nmnabilla
+            </p>
+          </Link>
+        </div>
+
         {/* bride  end*/}
 
         {/* groom start */}
@@ -182,59 +186,62 @@ export default function SecondSection() {
           &
         </h1>
 
-        <div className="bg-building bg-no-repeat bg-contains relative flex justify-center">
-          <Image
-            data-aos="zoom-in"
-            className="absolute z-[-1] left-[45%]"
-            src="/assets/mawar-mirror.svg"
-            alt="mawar"
-            width={200}
-            height={200}
-          />
-          <Image
-            data-aos="zoom-in"
-            src="/assets/arief.svg"
-            alt="foto"
-            width={200}
-            height={200}
-          />
-          <Image
-            data-aos="zoom-in"
-            className="absolute z-[-1] left-5 rotate-90"
-            src="/assets/pink-flower.svg"
-            alt="mawar"
-            width={200}
-            height={200}
-          />
-        </div>
-        <h1
-          data-aos="fade-up"
-          className="text-[#504533] text-5xl font-bethaine text-center pt-6"
-        >
-          Arief Ramadhana
-        </h1>
-        <p
-          data-aos="fade-up"
-          className="font-libre text-[#504533] text-[12px] text-center mx-10"
-        >
-          Putra ketiga dari Bapak Tarmizi
-        </p>
-        <p
-          data-aos="fade-up"
-          className="font-libre text-[#504533] text-[12px] text-center mx-10 pb-2"
-        >
-          Dan Ibu Jasmaniah
-        </p>
-        <Link
-          data-aos="fade-up"
-          href="https://instagram.com/ariefrmdh"
-          className="flex justify-center"
-        >
-          <Image src="/assets/ig.svg" alt="ig" width={12} height={12} />
-          <p className="font-libre text-[#504533] text-[12px] text-center underline ml-2 underline-offset-4">
-            @ariefrmdh
+        <div className="relative md:px-16">
+          <div className="bg-building bg-no-repeat bg-cover relative flex justify-center">
+            <Image
+              data-aos="zoom-in"
+              className="absolute z-[-1] left-[45%]"
+              src="/assets/mawar-mirror.svg"
+              alt="mawar"
+              width={200}
+              height={200}
+            />
+            <Image
+              data-aos="zoom-in"
+              src="/assets/arief.svg"
+              alt="foto"
+              width={200}
+              height={200}
+            />
+            <div className="absolute z-[-1] left-8 md:left-20 rotate-90">
+              <Image
+                data-aos="zoom-in"
+                src="/assets/pink-flower.svg"
+                alt="mawar"
+                width={200}
+                height={200}
+              />
+            </div>
+          </div>
+          <h1
+            data-aos="fade-up"
+            className="text-[#504533] text-5xl font-bethaine text-center pt-6"
+          >
+            Arief Ramadhana
+          </h1>
+          <p
+            data-aos="fade-up"
+            className="font-libre text-[#504533] text-[12px] text-center mx-10"
+          >
+            Putra ketiga dari Bapak Tarmizi
           </p>
-        </Link>
+          <p
+            data-aos="fade-up"
+            className="font-libre text-[#504533] text-[12px] text-center mx-10 pb-2"
+          >
+            Dan Ibu Jasmaniah
+          </p>
+          <Link
+            data-aos="fade-up"
+            href="https://instagram.com/ariefrmdh"
+            className="flex justify-center"
+          >
+            <Image src="/assets/ig.svg" alt="ig" width={12} height={12} />
+            <p className="font-libre text-[#504533] text-[12px] text-center underline ml-2 underline-offset-4">
+              @ariefrmdh
+            </p>
+          </Link>
+        </div>
       </div>
       {/* groom end */}
 
@@ -332,7 +339,7 @@ export default function SecondSection() {
         </h1>
 
         <div className="flex flex-col md:px-[35vw] px-16">
-          <div className="flex flex-col items-center text-[#504533] text-center">
+          <div className="flex flex-col items-center text-[#504533] text-center md:px-16">
             <Image src="/assets/ring.svg" alt="ring" width={70} height={70} />
             <h1 className="font-libre text-[20px]">Akad Nikah</h1>
             <p>Jumat, 13 Oktober 2023</p>
@@ -340,7 +347,7 @@ export default function SecondSection() {
             <p>Mesjid Raya Baiturrahman, Banda Aceh</p>
           </div>
 
-          <div className="flex flex-col items-center text-[#504533] text-center pt-10">
+          <div className="flex flex-col items-center text-[#504533] text-center pt-10 md:px-16">
             <Image src="/assets/cheers.svg" alt="ring" width={70} height={70} />
             <h1 className="font-libre text-[20px] text-[#504533]">Resepsi</h1>
             <p className="!text-[#89565C] text-[16px] font-bold">
@@ -387,7 +394,7 @@ export default function SecondSection() {
         </h1>
         <div className="bg-storyOne bg-no-repeat bg-contain min-h-[500px] relative pl-32 pr-5">
           <div className="pt-[300px]" />
-          <div>
+          <div className="md:mr-14">
             <p className="!text-[#504533] text-[16px] font-bold">First Meet</p>
             <p className="!text-[#504533] text-[14px] pt-2">
               2020 adalah tahun pertemuan pertama kami, tepatnya pada program
@@ -397,7 +404,7 @@ export default function SecondSection() {
         </div>
         <div className="bg-storyTwo bg-no-repeat bg-contain min-h-[500px] relative pr-32 pl-4">
           <div className="pt-[265px]" />
-          <div>
+          <div className="md:mr-16">
             <p className="!text-[#504533] text-[16px] font-bold">
               Relationship
             </p>
@@ -411,7 +418,7 @@ export default function SecondSection() {
         </div>
         <div className="bg-storyThree bg-no-repeat bg-contain min-h-[500px] relative pl-32 pr-5">
           <div className="pt-[260px]" />
-          <div>
+          <div className="md:mr-14 md:pt-6">
             <p className="!text-[#504533] text-[16px] font-bold">Menikah</p>
             <p className="!text-[#504533] text-[14px] pt-2">
               Tanggal 13 Oktober 2023, dengan izin Allah kami bermaksud untuk
@@ -428,11 +435,11 @@ export default function SecondSection() {
 
       {/* start wedding gift */}
       <div className="md:px-[35vw]">
-        <div className="pt-20 bg-keyboard bg-start bg-no-repeat relative pb-10">
+        <div className="pt-20 bg-keyboard bg-start bg-no-repeat relative pb-10 md:px-16">
           <h1 className="text-[#504533] text-6xl font-bethaine text-center">
             Wedding Gift
           </h1>
-          <p className="font-libre text-[#504533] text-[12px] px-8 text-center">
+          <p className="font-libre text-[#504533] text-[12px] px-8 text-center md:px-0">
             Atas restu dan kedatangan kamu ke pesta pernikahan kami sudah cukup
             bagi kami. Tapi jika kamu ingin memberi hadiah, kami menyediakan
             Amplop Digital untuk memudahkan kamu. Terima kasih
@@ -508,6 +515,6 @@ export default function SecondSection() {
         </div>
       </div>
       {/* end wedding gift */}
-    </div>
+    </>
   );
 }

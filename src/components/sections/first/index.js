@@ -10,7 +10,7 @@ export default function FirstSection() {
     arrow2: `absolute blink_me2 flex absolute w-full h-full justify-center items-center pt-[74vh]`,
   };
   return (
-    <div className="md:px-[30vw]">
+    <div className="md:px-[32vw]">
       <div className={styles.container}>
         <div className={styles.frame1}>
           <Image

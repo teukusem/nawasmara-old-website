@@ -6,8 +6,10 @@ import { useGlobalAudioPlayer } from "react-use-audio-player";
 import { data } from "@/constants/ariefnabila";
 import LandingPage from "@/components/landing-page";
 import FirstSection from "@/components/sections/first";
-import SecondSection from "@/components/sections/second";
 import FooterSection from "@/components/footer";
+import dynamic from "next/dynamic";
+
+const SecondSection = dynamic(import('@/components/sections/second'), { ssr: false})
 
 export default function Home() {
   const router = useRouter();
