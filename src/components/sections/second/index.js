@@ -469,7 +469,7 @@ export default function SecondSection() {
                   <p>1280496037</p>
 
                   <CopyToClipboard
-                    text="6241548170"
+                    text="1280496037"
                     onCopy={() => {
                       setCopied(true);
                       setTimeout(() => setCopied(false), 2000);
