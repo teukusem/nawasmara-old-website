@@ -12,8 +12,7 @@ export default function Maintenance() {
         </h1>
         <p className="text-lg text-gray-600">
           {`Sorry for the inconvenience but we're performing some maintenance at
-          the moment.
-          <br />`}
+          the moment.`}
           {`If you need to, you can always `}
           <a
             href="https://wa.link/926698"
