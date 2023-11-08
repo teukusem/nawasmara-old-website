@@ -1,49 +1,30 @@
 import Head from "next/head";
-import { useState } from "react";
-import { useRouter } from "next/router";
-import { useGlobalAudioPlayer } from "react-use-audio-player";
 
-import { data } from "@/constants/ariefnabila";
-import LandingPage from "@/components/landing-page";
-import FirstSection from "@/components/sections/first";
-import FooterSection from "@/components/footer";
-import dynamic from "next/dynamic";
-
-const SecondSection = dynamic(import('@/components/sections/second'), { ssr: false})
-
-export default function Home() {
-  const router = useRouter();
-  const { load } = useGlobalAudioPlayer();
-  const [isOpenInvitation, setOpenInvitation] = useState(false);
-  const { title } = data;
-
-  const recieverName = router.query.to || "-";
-
-  function openInvitation() {
-    load("/audio/soundtrack.mp3", {
-      autoplay: true,
-    });
-    setOpenInvitation(true);
-  }
-
+export default function Maintenance() {
   return (
-    <>
+    <div className="flex items-center justify-center h-screen bg-gray-100">
       <Head>
-        <title>{title}</title>
+        <title>Maintenance Mode</title>
       </Head>
-      {!isOpenInvitation ? (
-        <LandingPage
-          to={router.query.to}
-          handleOpenInvitations={openInvitation}
-          recieverName={recieverName}
-        />
-      ) : (
-        <>
-          <FirstSection />
-          <SecondSection />
-          <FooterSection />
-        </>
-      )}
-    </>
+      <div className="text-center">
+        <h1 className="text-4xl font-bold text-gray-800 mb-4">
+          We'll be back soon!
+        </h1>
+        <p className="text-lg text-gray-600">
+          Sorry for the inconvenience but we're performing some maintenance at
+          the moment.
+          <br />
+          If you need to, you can always{" "}
+          <a
+            href="https://wa.link/926698"
+            target="_blank"
+            className="text-blue-600 hover:underline"
+          >
+            contact us
+          </a>
+          , otherwise, we'll be back online shortly!
+        </p>
+      </div>
+    </div>
   );
 }
