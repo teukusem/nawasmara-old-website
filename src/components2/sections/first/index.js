@@ -3,52 +3,17 @@ import BackgroundVideo from "../../background-video";
 
 export default function FirstSection() {
   const styles = {
-    container: `flex relative p-8 bg-[#F2EDEB] text-[#504533]`,
-    frame1: `absolute left-0 top-[-40px] rotate-180`,
-    frame2: `absolute right-0 bottom-[-30px]`,
-    arrow1: `absolute blink_me flex absolute w-full h-full justify-center items-center pt-[70vh]`,
-    arrow2: `absolute blink_me2 flex absolute w-full h-full justify-center items-center pt-[74vh]`,
+    container: `flex flex-col relative p-8 bg-[#F2EDEB] text-[#504533] bg-bgPrimary2 bg-cover bg-no-repeat h-[80vh]`,
   };
   return (
     <div className="md:px-[32vw]">
       <div className={styles.container}>
-        <div className={styles.frame1}>
-          <Image
-            data-aos="fade-up"
-            src="/assets/pink-flower.svg"
-            alt="frame-2"
-            width={200}
-            height={200}
-          />
-        </div>
+        <p className="text-center text-[#507554] leading-6 h-max w-full text-[18px] font-crimson pt-10">WEDDING INVITATION</p>
 
-        <BackgroundVideo className="flex justify-center items-center shadow-lg rounded-3xl min-h-[550px] w-full" />
+        <p className="text-center text-[#3C5E50] leading-6 h-max w-full text-[40px] font-elwiss pt-24">Win & Vanilla</p>
 
-        <div className={styles.frame2}>
-          <Image
-            data-aos="fade-up"
-            src="/assets/pink-flower.svg"
-            alt="frame-2"
-            width={200}
-            height={200}
-          />
-        </div>
-        {/* <div className={styles.arrow1}>
-        <Image
-          src="/assets/arrow-double.svg"
-          alt="arrow"
-          width={24}
-          height={24}
-        />
-      </div>
-      <div className={styles.arrow2}>
-        <Image
-          src="/assets/arrow-double.svg"
-          alt="arrow"
-          width={24}
-          height={24}
-        />
-      </div> */}
+        <img src="/1/together2.svg" className="pt-10 w-[120vw]" />
+
       </div>
     </div>
   );

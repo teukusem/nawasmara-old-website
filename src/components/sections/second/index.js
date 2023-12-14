@@ -15,83 +15,29 @@ export default function SecondSection() {
   return (
     <>
       <div className="md:px-[30vw]">
-        <div className="md:px-16">
-          <div>
-            <Image
-              data-aos="zoom-in"
-              src="/assets/branch-bird.svg"
-              alt="branch-bird"
-              width={600}
-              height={300}
-              className="!w-full"
-            />
-          </div>
-
-          <h1
-            data-aos="fade-up"
-            className="font-bethaine text-[#504533] text-5xl mt-10 text-center md:mb-14"
-          >
-            Arief & Nabilla
-          </h1>
-
-          <div className="bg-building bg-no-repeat bg-cover min-h-[520px] relative">
-            <Image
-              data-aos="zoom-in"
-              src="/assets/foto.svg"
-              alt="foto"
-              width={300}
-              height={300}
-              className="!w-full bottom-0 absolute"
-            />
-            <div className="absolute top-0 z-[-1] rotate-90">
-              <Image
-                data-aos="zoom-in"
-                className=""
-                src="/assets/pink-flower.svg"
-                alt="frame-2"
-                width={200}
-                height={200}
-              />
-            </div>
-
-            <Image
-              data-aos="zoom-in"
-              className="absolute bottom-5 right-5 z-[-1]"
-              src="/assets/pink-flower-mirror.svg"
-              alt="frame-2"
-              width={200}
-              height={200}
-            />
-          </div>
-          <p className="font-playfair text-center text-[#504533] my-10">
-            13 Oktober 2023
-          </p>
+        {/* date */}
+        <div className="md:px-16 flex items-center justify-center py-2">
+          <img src="/1/small-leaf.svg" alt="small-leaf" />
+          <span className="font-crimson text-center text-[#507554] text-[18px] !leading-10">
+            Desember 16, 2023
+          </span>
+          <img
+            src="/1/small-leaf.svg"
+            alt="small-leaf"
+            className="rotate-180"
+          />
         </div>
 
-        {/* start prayer */}
-        <div
-          data-aos="fade-up"
-          className="bg-ayat bg-no-repeat bg-center bg-contain min-h-[500px] text-center md:px-16"
-        >
-          <div className="pt-44 md:pt-52" />
-          <div className="md:px-24 px-14">
-            <p className="text-[#504533] text-[16px]">
-              وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا
-              لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً
-              وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
-            </p>
-            <p className="text-[#504533] text-[12px] pt-2">
-              “Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
-              pasangan-pasangan untukmu dari jenismu sendiri, agar kamu
-              cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
-              antaramu rasa kasih dan sayang. Sungguh, pada yang demikian itu
-              benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang
-              berpikir.” (Qs. Ar-Rum:21)
-            </p>
-          </div>
+        {/* ayat */}
+        <div className="flex items-center justify-center flex-col px-10 bg-[#3C5E50] py-10">
+          <span className="text-white text-[16px] font-libre">1 Corinthians 13 : 7</span>
+          <span className="text-white text-[12px] font-libre pt-2 text-center leading-4">
+            “Love never gives up, never lose faith, is always helpful, and
+            endures through every circumstance”
+          </span>
         </div>
-        {/* end prayer */}
 
+        {/*   person   */}
         <div data-aos="fade-up" className="flex w-full justify-center pb-10">
           <Image
             src="/assets/check-it.svg"

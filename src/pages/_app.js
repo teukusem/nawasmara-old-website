@@ -1,5 +1,5 @@
 import localFont from "next/font/local";
-import { Playfair_Display, Elsie_Swash_Caps } from "next/font/google";
+import { Playfair_Display } from "next/font/google";
 
 import "@/styles/globals.css";
 import { useEffect } from "react";
@@ -10,13 +10,6 @@ const playfair = Playfair_Display({
   subsets: ["latin"],
   variable: "--font-playfair",
 });
-
-// const elsieSwashCaps = Elsie_Swash_Caps({
-//   weight: ["400", "900"],
-//   display: "swap",  
-//   subsets: ["latin"],
-//   variable: "--font-elwiss",
-// });
 
 const libre = localFont({
   src: [
@@ -67,13 +60,24 @@ const elsieSwashCaps = localFont({
   variable: "--font-elwiss",
 });
 
+const crimson = localFont({
+  src: [
+    {
+      path: "../../public/fonts/CrimsonText-Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+  ],
+  variable: "--font-crimson",
+});
+
 export default function App({ Component, pageProps }) {
   useEffect(() => {
     AOS.init({ duration: 2200 });
   });
   return (
     <main
-      className={`${fonts.variable} ${playfair.variable} ${libre.variable} ${elsieSwashCaps.variable}`}
+      className={`${fonts.variable} ${playfair.variable} ${libre.variable} ${elsieSwashCaps.variable} ${crimson.variable}`}
     >
       <Component {...pageProps} />;
     </main>

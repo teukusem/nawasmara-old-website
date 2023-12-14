@@ -24,7 +24,8 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb)); */
-  background: #f2edeb;
+  /* background: #f2edeb; */
+  background: #E9F1E4;
 }
 
 video {

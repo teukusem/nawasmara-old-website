@@ -31,6 +31,7 @@ module.exports = {
         keyboard: "url('/assets/keyboard.svg')",
         giftBox: "url('/assets/box-gift.svg')",
         arsellVanilla: "url('/1/bg-front.png')",
+        bgPrimary2: "url('/1/bg-primary.png')"
       },
       fontFamily: {
         libreCaslon: [
@@ -42,6 +43,7 @@ module.exports = {
         bethaine: ["var(--font-bethaine)"],
         elwiss: ["var(--font-elwiss)"],
         playfair: ["var(--font-playfair)"],
+        crimson: ["var(--font-crimson)"]
       },
     },
   },
