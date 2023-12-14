@@ -34,7 +34,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
                 data-aos="zoom-in"
                 className="text-[#504533] text-lg font-elwiss text-center !text-[18px] leading-[15px] !text-white"
               >
-                15 Desember 2023 <br />
+                15 December 2023 <br />
               </h1>
             </div>
 

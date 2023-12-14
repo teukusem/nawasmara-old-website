@@ -8,7 +8,7 @@ const googleCalendar =
   "https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20231013T010000Z%2F20231013T020000Z&details=%20For%20more%20info%2C%20please%20visit%20-%3E%20https%3A%2F%2Fnawasmara.com&location=Masjid%20Raya%20Baiturrahman%20Banda%20Aceh&text=Akad%20Arief%20%26%20Nabilla";
 
 export default function SecondSection() {
-  const [days, hours, minutes, seconds] = useCountdown("2023-10-13");
+  const [days, hours, minutes, seconds] = useCountdown("2023-12-16");
   const [showGift, setShowGift] = useState(false);
   const [isCopied, setCopied] = useState(false);
 
@@ -22,7 +22,7 @@ export default function SecondSection() {
         >
           <img src="/1/small-leaf.svg" alt="small-leaf" />
           <span className="font-crimson text-center text-[#507554] text-[18px] !leading-10">
-            Desember 16, 2023
+            December 16, 2023
           </span>
           <img
             src="/1/small-leaf.svg"
@@ -46,288 +46,218 @@ export default function SecondSection() {
         </div>
 
         {/*   person 1   */}
-        <div className="flex flex-col relative p-8 bg-[#F2EDEB] text-[#504533] bg-bgPrimary22 bg-cover bg-no-repeat h-[80vh]">
-          <div className="md:px-16">
-            <p
-              data-aos="fade-down"
-              className="font-libre text-[#504533] text-[12px] p-4 text-center leading-6 pt-10"
-            >
-              God creates everything beautiful in His time. Beautiful when He
-              brings together and grows affection, We cordially invite you to
-              the wedding:
-            </p>
+        <div className="flex flex-col relative bg-[#F2EDEB] text-[#504533] bg-bgPrimary22 bg-cover bg-no-repeat h-[80vh]">
+          <div className="w-full">
+            <img src="/1/daun-atas.png" alt="daun" className="w-full" />
           </div>
-          <img src="/1/vania.svg" alt="vania" />
-        </div>
-        {/*   person 2   */}
-        <div className="flex flex-col relative p-8 bg-[#F2EDEB] text-[#504533] bg-bgPrimary23 bg-cover bg-no-repeat h-[80vh] top-[-4px]">
-          <img src="/1/win.svg" alt="vania" />
-        </div>
+          <div className="px-8 relative">
+            <div className="md:px-16">
+              <p
+                data-aos="fade-down"
+                className="font-libre text-[#504533] text-[12px] p-4 text-center leading-6"
+              >
+                God creates everything beautiful in His time. Beautiful when He
+                brings together and grows affection, We cordially invite you to
+                the wedding:
+              </p>
+            </div>
+            <img
+              data-aos="zoom-in"
+              src="/1/vania.svg"
+              alt="vania"
+              className="w-full"
+            />
+            <div className="flex justify-center">
+              <h1
+                data-aos="fade-down"
+                className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center"
+              >
+                Vania Natali
+              </h1>
+              <p className="absolute bottom-[-50px] px-24 text-center text-[#B6968B] text-[14px]">
+                Only daughter the late (†) Mr. Lie Thian Kie and Lioe Kim Djin
+              </p>
 
-        {/* bride  start*/}
-        <div className="relative md:px-16">
-          <div className="bg-building bg-no-repeat bg-cover flex justify-center relative">
-            <Image
-              data-aos="zoom-in"
-              className="absolute z-[-1] left-0 md:left-10"
-              src="/assets/mawar.svg"
-              alt="mawar"
-              width={200}
-              height={200}
-            />
-            <Image
-              data-aos="zoom-in"
-              src="/assets/nabilla.svg"
-              alt="foto"
-              width={200}
-              height={200}
-            />
-            <Image
-              data-aos="zoom-in"
-              className="absolute z-[-1] left-[40%]"
-              src="/assets/pink-flower-mirror.svg"
-              alt="mawar"
-              width={200}
-              height={200}
-            />
-          </div>
-          <h1
-            data-aos="fade-up"
-            className="text-[#504533] text-5xl font-bethaine text-center pt-6"
-          >
-            Nabilla Maharani
-          </h1>
-          <p
-            data-aos="fade-up"
-            className="font-libre text-[#504533] text-[12px] text-center mx-10"
-          >
-            Putri kedua dari Bapak Fazli Usman (alm)
-          </p>
-          <p
-            data-aos="fade-up"
-            className="font-libre text-[#504533] text-[12px] text-center mx-10 pb-2"
-          >
-            Dan ibu Cut Meutia
-          </p>
-          <Link
-            data-aos="fade-up"
-            href="https://instagram.com/nmnabilla"
-            className="flex justify-center"
-          >
-            <Image src="/assets/ig.svg" alt="ig" width={12} height={12} />
-            <p className="font-libre text-[#504533] text-[12px] text-center underline ml-2 underline-offset-4">
-              @nmnabilla
-            </p>
-          </Link>
-        </div>
-
-        {/* bride  end*/}
-
-        {/* groom start */}
-        <h1
-          data-aos="fade-up"
-          className="text-[#504533] text-5xl font-bethaine text-center py-[100px]"
-        >
-          &
-        </h1>
-
-        <div className="relative md:px-16">
-          <div className="bg-building bg-no-repeat bg-cover relative flex justify-center">
-            <Image
-              data-aos="zoom-in"
-              className="absolute z-[-1] left-[45%]"
-              src="/assets/mawar-mirror.svg"
-              alt="mawar"
-              width={200}
-              height={200}
-            />
-            <Image
-              data-aos="zoom-in"
-              src="/assets/arief.svg"
-              alt="foto"
-              width={200}
-              height={200}
-            />
-            <div className="absolute z-[-1] left-8 md:left-20 rotate-90">
-              <Image
-                data-aos="zoom-in"
-                src="/assets/pink-flower.svg"
-                alt="mawar"
-                width={200}
-                height={200}
-              />
+              <a
+                target="_blank"
+                data-aos="fade-up"
+                href="https://instagram.com/ms.vanili"
+                className="flex justify-center absolute bottom-[-70px] px-24 underline underline-offset-6"
+              >
+                <Image src="/assets/ig.svg" alt="ig" width={12} height={20} />
+                <p className="text-center text-[#B6968B] font-playfair text-[12px]">
+                  ms.vanili
+                </p>
+              </a>
             </div>
           </div>
           <h1
             data-aos="fade-up"
-            className="text-[#504533] text-5xl font-bethaine text-center pt-6"
+            className="z-10 text-[#507554] text-6xl font-elwiss text-center pt-[180px]"
           >
-            Arief Ramadhana
+            &
           </h1>
-          <p
-            data-aos="fade-up"
-            className="font-libre text-[#504533] text-[12px] text-center mx-10"
-          >
-            Putra ketiga dari Bapak Tarmizi
-          </p>
-          <p
-            data-aos="fade-up"
-            className="font-libre text-[#504533] text-[12px] text-center mx-10 pb-2"
-          >
-            Dan Ibu Jasmaniah
-          </p>
-          <Link
-            data-aos="fade-up"
-            href="https://instagram.com/ariefrmdh"
-            className="flex justify-center"
-          >
-            <Image src="/assets/ig.svg" alt="ig" width={12} height={12} />
-            <p className="font-libre text-[#504533] text-[12px] text-center underline ml-2 underline-offset-4">
-              @ariefrmdh
-            </p>
-          </Link>
+        </div>
+
+        {/*   person 2   */}
+        <div className="flex flex-col relative p-8 bg-[#F2EDEB] text-[#504533] bg-bgPrimary23 bg-cover bg-no-repeat h-[80vh] top-[-4px] justify-center">
+          <div className="relative">
+            <img
+              data-aos="zoom-in"
+              src="/1/win.svg"
+              alt="vania"
+              className="w-full"
+            />
+            <div className="flex justify-center">
+              <h1
+                data-aos="fade-down"
+                className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center"
+              >
+                Win Iskandar
+              </h1>
+              <p className="absolute bottom-[-50px] px-24 text-center text-[#B6968B] text-[14px]">
+                First son of Mr. Iskandar Telu and mother Tan Tjun lan
+              </p>
+
+              <a
+                target="_blank"
+                data-aos="fade-up"
+                href="https://instagram.com/win.rz"
+                className="flex justify-center absolute bottom-[-70px] px-24 underline underline-offset-6"
+              >
+                <Image src="/assets/ig.svg" alt="ig" width={12} height={20} />
+                <p className="text-center text-[#B6968B] font-playfair text-[12px]">
+                  win.rz
+                </p>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="w-full relative">
+          <img
+            src="/1/daun-atas.png"
+            alt="daun"
+            className="w-full rotate-180 absolute top-[-100px]"
+          />
         </div>
       </div>
-      {/* groom end */}
 
       {/* start save the date */}
-      <div className="pb-10 md:px-[30vw]">
-        <div className="flex items-end justify-center">
+      <div className="">
+        <div className="flex flex-col items-center justify-center">
           <h1
             data-aos="fade-up"
-            className="text-[#504533] text-5xl font-bethaine text-center pt-36"
+            className="text-[#507554] text-4xl font-elwiss text-center pt-24"
           >
             Save The Date
           </h1>
-          <Image
-            data-aos="fade-up"
-            src="/assets/pena.svg"
-            alt="test"
-            width={40}
-            height={60}
-          />
+          <span className="font-crimson text-center text-[#507554] text-[18px] !leading-10">
+            December 16, 2023
+          </span>
         </div>
-        <p
-          data-aos="fade-up"
-          className="font-playfair text-center text-[#504533]"
-        >
-          13 Oktober 2023
-        </p>
 
         <div
           data-aos="fade-up"
-          className="flex gap-8 justify-center items-center px-4 bg-std bg-no-repeat bg-center bg-contain relative min-h-[180px] pt-10 "
+          className="flex gap-8 justify-center items-center relative"
         >
           <div data-aos="fade-up">
-            <p className="font-libre text-[#504533] text-[32px] text-center">
+            <p className="font-elwiss text-[#504533] text-[32px] text-center">
               {days}
             </p>
-            <p className="font-libre text-[#504533] text-[12px] text-center">
-              Hari
+            <p className="font-elwiss text-[#504533] text-[12px] text-center">
+              Days
             </p>
           </div>
 
           <div data-aos="fade-down">
-            <p className="font-libre text-[#504533] text-[32px] text-center">
+            <p className="font-elwiss text-[#504533] text-[32px] text-center">
               {hours}
             </p>
-            <p className="font-libre text-[#504533] text-[12px] text-center">
-              Jam
+            <p className="font-elwiss text-[#504533] text-[12px] text-center">
+              Hours
             </p>
           </div>
 
           <div data-aos="fade-up">
-            <p className="font-libre text-[#504533] text-[32px] text-center">
+            <p className="font-elwiss text-[#504533] text-[32px] text-center">
               {minutes}
             </p>
-            <p className="font-libre text-[#504533] text-[12px] text-center">
-              Menit
+            <p className="font-elwiss text-[#504533] text-[12px] text-center">
+              Minutes
             </p>
           </div>
 
           <div data-aos="fade-down">
-            <p className="font-libre text-[#504533] text-[32px] text-center">
+            <p className="font-elwiss text-[#504533] text-[32px] text-center">
               {seconds}
             </p>
-            <p className="font-libre text-[#504533] text-[12px] text-center">
-              Detik
+            <p className="font-elwiss text-[#504533] text-[12px] text-center">
+              Seconds
             </p>
           </div>
         </div>
 
-        <button className=" mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide !text-white">
+        <button className=" mt-4 flex m-auto bg-[#3C5E50] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide !text-white">
           <a href={googleCalendar} target="_blank">
             Add to Calendar
           </a>
         </button>
+        <div className="w-full">
+        {/* <img src="/1/rumah.png" alt="daun" className="w-full" />
+        <img src="/1/poon.png" alt="daun" className="w-full" className="h-max" /> */}
+
+          <img src="/1/grass.png" alt="daun" className="w-full" />
+
+        </div>
       </div>
       {/* end save the date */}
 
-      {/* start rsvp */}
-      {/* <h1 className="text-[#504533] text-5xl font-bethaine text-center pt-36">
-        RSVP
-      </h1>
-      <Image
-        src="/assets/rsvp.svg"
-        alt="test2"
-        width={300}
-        height={300}
-        className="!w-full"
-      /> */}
-      {/* end rsvp */}
+
 
       {/* start event detail */}
-      <div className="bg-paperBird bg-no-repeat bg-contain bg-center min-h-[1550px]">
-        <h1 className="text-[#504533] text-6xl font-bethaine text-center">
-          <div className="pt-[600px]" />
-          Wedding Day!
-        </h1>
+      <h1 className="text-[#504533] text-6xl font-bethaine text-center">
+        Wedding Day!
+      </h1>
 
-        <div className="flex flex-col md:px-[35vw] px-16">
-          <div className="flex flex-col items-center text-[#504533] text-center md:px-16">
-            <Image src="/assets/ring.svg" alt="ring" width={70} height={70} />
-            <h1 className="font-libre text-[20px]">Akad Nikah</h1>
-            <p>Jumat, 13 Oktober 2023</p>
-            <p>08:00 - 09:00 WIB</p>
-            <p>Mesjid Raya Baiturrahman, Banda Aceh</p>
-          </div>
+      <div className="flex flex-col md:px-[35vw] px-16">
+        <div className="flex flex-col items-center text-[#504533] text-center md:px-16">
+          <Image src="/assets/ring.svg" alt="ring" width={70} height={70} />
+          <h1 className="font-libre text-[20px]">Akad Nikah</h1>
+          <p>Jumat, 13 Oktober 2023</p>
+          <p>08:00 - 09:00 WIB</p>
+          <p>Mesjid Raya Baiturrahman, Banda Aceh</p>
+        </div>
 
-          <div className="flex flex-col items-center text-[#504533] text-center pt-10 md:px-16">
-            <Image src="/assets/cheers.svg" alt="ring" width={70} height={70} />
-            <h1 className="font-libre text-[20px] text-[#504533]">Resepsi</h1>
-            <p className="!text-[#89565C] text-[16px] font-bold">
-              Preh Linto Baro:
-            </p>
-            <p>Sabtu, 14 Oktober 2023</p>
-            <p>11.00 - 13.00 WIB</p>
-            <p>
-              Jl. H. Bintang No. 152, Merpati V, Blang Oi, Meuraxa, Banda Aceh
-            </p>
-            <button className=" mt-4 flex m-auto !text-white bg-[#504533] px-5 py-1.5 !text-white font-libre rounded-lg text-sm tracking-wide">
-              <a
-                href="https://maps.app.goo.gl/V1gseiETsT5RxHUKA"
-                target="_blank"
-              >
-                View Map
-              </a>
-            </button>
-            <p className="!text-[#89565C] text-[16px] font-bold pt-10">
-              Preh Dara Baro:
-            </p>
-            <p>Kamis, 19 Oktober 2023 </p>
-            <p>11.00-13.00 WIB </p>
-            <p>
-              Jl. Mutiara 14 No. 1, Komplek Mutiara Indah, Alue Awe, Lhokseumawe
-            </p>
-            <button className="!text-white mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide">
-              <a
-                href="https://maps.app.goo.gl/kHnAQMpugTzHvzxS6"
-                target="_blank"
-              >
-                View Map
-              </a>
-            </button>
-          </div>
+        <div className="flex flex-col items-center text-[#504533] text-center pt-10 md:px-16">
+          <Image src="/assets/cheers.svg" alt="ring" width={70} height={70} />
+          <h1 className="font-libre text-[20px] text-[#504533]">Resepsi</h1>
+          <p className="!text-[#89565C] text-[16px] font-bold">
+            Preh Linto Baro:
+          </p>
+          <p>Sabtu, 14 Oktober 2023</p>
+          <p>11.00 - 13.00 WIB</p>
+          <p>
+            Jl. H. Bintang No. 152, Merpati V, Blang Oi, Meuraxa, Banda Aceh
+          </p>
+          <button className=" mt-4 flex m-auto !text-white bg-[#504533] px-5 py-1.5 !text-white font-libre rounded-lg text-sm tracking-wide">
+            <a href="https://maps.app.goo.gl/V1gseiETsT5RxHUKA" target="_blank">
+              View Map
+            </a>
+          </button>
+          <p className="!text-[#89565C] text-[16px] font-bold pt-10">
+            Preh Dara Baro:
+          </p>
+          <p>Kamis, 19 Oktober 2023 </p>
+          <p>11.00-13.00 WIB </p>
+          <p>
+            Jl. Mutiara 14 No. 1, Komplek Mutiara Indah, Alue Awe, Lhokseumawe
+          </p>
+          <button className="!text-white mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide">
+            <a href="https://maps.app.goo.gl/kHnAQMpugTzHvzxS6" target="_blank">
+              View Map
+            </a>
+          </button>
         </div>
       </div>
       {/* end event detail */}
