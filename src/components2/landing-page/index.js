@@ -21,6 +21,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
                 Teruntuk <br />
                 {recieverName}
               </h1>
+              
             )}
           </div>
 
