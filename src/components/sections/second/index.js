@@ -16,7 +16,10 @@ export default function SecondSection() {
     <>
       <div className="md:px-[30vw]">
         {/* date */}
-        <div className="md:px-16 flex items-center justify-center py-2">
+        <div
+          data-aos="fade-up"
+          className="md:px-16 flex items-center justify-center py-2"
+        >
           <img src="/1/small-leaf.svg" alt="small-leaf" />
           <span className="font-crimson text-center text-[#507554] text-[18px] !leading-10">
             Desember 16, 2023
@@ -29,40 +32,36 @@ export default function SecondSection() {
         </div>
 
         {/* ayat */}
-        <div className="flex items-center justify-center flex-col px-10 bg-[#3C5E50] py-10">
-          <span className="text-white text-[16px] font-libre">1 Corinthians 13 : 7</span>
-          <span className="text-white text-[12px] font-libre pt-2 text-center leading-4">
+        <div
+          className="flex items-center justify-center flex-col px-10 bg-[#3C5E50] py-10"
+          data-aos="fade-up"
+        >
+          <span className="text-white text-[16px] font-libre">
+            1 Corinthians 13 : 7
+          </span>
+          <span className="text-white text-[12px] font-libre pt-2 text-center leading-6">
             “Love never gives up, never lose faith, is always helpful, and
             endures through every circumstance”
           </span>
         </div>
 
-        {/*   person   */}
-        <div data-aos="fade-up" className="flex w-full justify-center pb-10">
-          <Image
-            src="/assets/check-it.svg"
-            alt="check-it"
-            width={200}
-            height={300}
-          />
-        </div>
-
-        <div className="md:px-16 mb-10">
-          <div data-aos="fade-up" className="flex w-full justify-center">
-            <Image
-              src="/assets/bismillah.svg"
-              alt="check-it"
-              width={200}
-              height={300}
-            />
+        {/*   person 1   */}
+        <div className="flex flex-col relative p-8 bg-[#F2EDEB] text-[#504533] bg-bgPrimary22 bg-cover bg-no-repeat h-[80vh]">
+          <div className="md:px-16">
+            <p
+              data-aos="fade-down"
+              className="font-libre text-[#504533] text-[12px] p-4 text-center leading-6 pt-10"
+            >
+              God creates everything beautiful in His time. Beautiful when He
+              brings together and grows affection, We cordially invite you to
+              the wedding:
+            </p>
           </div>
-          <p
-            data-aos="fade-up"
-            className="font-libre text-[#504533] text-[12px] p-4 text-center"
-          >
-            Assalamualaikum Warahmatullahi Wabarakatuh, dengan berkah dan rahmat
-            dari Allah SWT, Kami dengan hormat mengundang Anda ke pernikahan:
-          </p>
+          <img src="/1/vania.svg" alt="vania" />
+        </div>
+        {/*   person 2   */}
+        <div className="flex flex-col relative p-8 bg-[#F2EDEB] text-[#504533] bg-bgPrimary23 bg-cover bg-no-repeat h-[80vh] top-[-4px]">
+          <img src="/1/win.svg" alt="vania" />
         </div>
 
         {/* bride  start*/}

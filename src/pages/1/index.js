@@ -14,7 +14,7 @@ const SecondSection = dynamic(import('@/components/sections/second'), { ssr: fal
 export default function Home() {
   const router = useRouter();
   const { load } = useGlobalAudioPlayer();
-  const [isOpenInvitation, setOpenInvitation] = useState(true);
+  const [isOpenInvitation, setOpenInvitation] = useState(false);
   const { title } = data;
 
   const recieverName = router.query.to || "-";
