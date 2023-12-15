@@ -16,13 +16,13 @@ export default function FooterSection() {
               />
             </div> */}
             <div className="text mt-16">
-              <p className="text-center font-libre text-[16px] text-[#B6968B]">
+              <p data-aos="fade-up" className="text-center font-libre text-[16px] text-[#B6968B]">
                 Wedding Invitation
               </p>
-              <p className="font-elwiss text-center text-[#507554] text-[40px]">
+              <p data-aos="fade-up" className="font-elwiss text-center text-[#507554] text-[40px]">
                 Win & Vania
               </p>
-              <p className="text-center font-libre text-[16px] text-[#B6968B]">
+              <p data-aos="fade-up" className="text-center font-libre text-[16px] text-[#B6968B]">
                 16 . 12 . 2023
               </p>
             </div>
@@ -30,7 +30,7 @@ export default function FooterSection() {
         </div>
         <div className="w-full flex m-auto justify-between"></div>
         <div className="bg-no-repeat bg-cover bg-center">
-          <div className="w-full flex justify-between">
+          <div data-aos="fade-up" className="w-full flex justify-between">
             <Image
               src="/1/footer-bottom.jpg"
               alt="breakout"

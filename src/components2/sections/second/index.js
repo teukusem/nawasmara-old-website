@@ -16,13 +16,13 @@ export default function SecondSection() {
 
   return (
     <>
-      <div className="md:px-[30vw]">
+      <div className="">
         {/* date */}
         <div
           data-aos="fade-up"
-          className="md:px-16 flex items-center justify-center py-2">
+          className="md:px-16 flex items-center justify-center py-4">
           <img src="/1/small-leaf.svg" alt="small-leaf" />
-          <span className="font-crimson text-center text-[#507554] text-[18px] !leading-10">
+          <span className="font-crimson text-center text-[#507554] text-[18px]s">
             December 16, 2023
           </span>
           <img
@@ -33,20 +33,20 @@ export default function SecondSection() {
         </div>
 
         {/* ayat */}
-        <div
-          className="flex items-center justify-center flex-col px-10 bg-[#3C5E50] py-10"
-          data-aos="fade-up">
-          <span className="text-white text-[16px] font-libre">
-            1 Corinthians 13 : 7
-          </span>
-          <span className="text-white text-[12px] font-libre pt-2 text-center leading-6">
-            “Love never gives up, never lose faith, is always helpful, and
-            endures through every circumstance”
-          </span>
+        <div className="flex items-center justify-center flex-col px-10 bg-[#3C5E50] py-10">
+          <div data-aos="fade-up" className="flex items-center justify-center flex-col ">
+            <span className="text-white text-[16px] font-libre">
+              1 Corinthians 13 : 7
+            </span>
+            <span className="text-white text-[12px] font-libre pt-2 text-center leading-6">
+              “Love never gives up, never lose faith, is always helpful, and
+              endures through every circumstance”
+            </span>
+          </div>
         </div>
 
         {/*   person 1   */}
-        <div className="flex flex-col relative bg-[#F2EDEB] text-[#504533] bg-bgPrimary22 bg-cover bg-no-repeat h-[80vh]">
+        <div className="flex flex-col relative bg-[#F2EDEB] text-[#504533] bg-bgPrimary22 bg-cover bg-no-repeat">
           <div className="w-full">
             <img src="/1/daun-atas.png" alt="daun" className="w-full" />
           </div>
@@ -89,14 +89,14 @@ export default function SecondSection() {
           </div>
           <h1
             data-aos="fade-up"
-            className="z-10 text-[#507554] text-6xl font-elwiss text-center pt-[180px]">
+            className="z-10 text-[#507554] text-6xl font-elwiss text-center pt-[150px]">
             &
           </h1>
         </div>
 
         {/*   person 2   */}
-        <div className="flex flex-col relative p-8 bg-[#F2EDEB] text-[#504533] bg-bgPrimary23 bg-cover bg-no-repeat h-[80vh] top-[-4px] justify-center">
-          <div className="relative">
+        <div className="flex flex-col relative p-8 bg-[#F2EDEB] text-[#504533] bg-bgPrimary23 bg-cover bg-no-repeat h-[600px] top-[-4px] justify-center">
+          <div className="relative top-[-50px]">
             <img
               data-aos="zoom-in"
               src="/1/win.svg"
@@ -201,39 +201,41 @@ export default function SecondSection() {
       {/* end save the date */}
 
       <div
-        style={{ paddingTop: 200, paddingBottom: 200, top: -8 }}
+        style={{ paddingTop: 200, paddingBottom: 250, top: -8 }}
         className="relative bg-theDay bg-home bg-no-repeat bg-cover">
-        <div>
+        <div data-aos="fade-up">
           <p className="text-[#3C5E50] text-[35px] font-elwiss text-center">
             It's The Day
           </p>
         </div>
-        <div className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-5">
+        <div data-aos="fade-up" className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-5">
           <Image src="/1/ring.svg" alt="ring" width={70} height={70} />
-          <h1 className="font-libre text-[20px] text-[#B6968B]">
+          <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
             Holy Matrimony
           </h1>
-          <p className="text-[12px] font-libre text-[#444343] pt-3">
+          <p className="text-[12px] font-libre text-[#444343] mt-2">
             Saturday, December 16 2023, 09.30 - 10.45 WIB
           </p>
         </div>
-        <div className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-10">
+        <div data-aos="fade-up" className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-10">
           <Image src="/1/cheers.svg" alt="ring" width={70} height={70} />
-          <h1 className="font-libre text-[20px] text-[#B6968B]">Reception</h1>
-          <p className="text-[12px] font-libre text-[#444343] pt-3">
+          <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
+            Cia Ciu
+          </h1>
+          <p className="text-[12px] font-libre text-[#444343] mt-2">
             Saturday, December 16 2023, 09.30 - 10.45 WIB
           </p>
         </div>
-        <div className="flex flex-col items-center text-[#504533] text-center md:px-16  pt-10 ">
+        <div data-aos="fade-up" className="flex flex-col items-center text-[#504533] text-center md:px-16  pt-10 ">
           <Image src="/1/place-map.svg" alt="ring" width={70} height={70} />
-          <h1 className="font-libre text-[20px] text-[#B6968B]">
+          <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
             Royal Dynasty Restaurant
           </h1>
-          <p className="text-[12px] font-libre text-[#444343] pt-3 px-16">
+          <p className="text-[12px] font-libre text-[#444343] mt-2 px-16">
             Gedung Graha Sudirman Lt. 1, Jl. Jend. Sudirman No.232A, Kb. Jeruk,
             Andir, Kota Bandung, Jawa Barat 40181
           </p>
-          <button className="!text-white mt-4 flex m-auto bg-[#3C5E50] px-5 py-1.5 mt-10s font-libre rounded-lg text-sm tracking-wide">
+          <button className="!text-white mt-4 flex m-auto bg-[#3C5E50] px-5 py-1.5 mt-[40px] font-libre rounded-lg text-sm tracking-wide">
             <a
               href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyDQgAEAAYgwEYsQMYgAQyBwgBEAAYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBggEEEUYOTIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABNIBCDMzMjVqMGoxqAIAsAIA&um=1&ie=UTF-8&fb=1&gl=id&sa=X&geocode=KbGLGJMi5mguMbVlabI2z4qP&daddr=Gedung+Graha+Sudirman+Lt.1,+Jl.+Jend.+Sudirman+No.232A,+Kb.+Jeruk,+Kec.+Andir,+Kota+Bandung,+Jawa+Barat+40181"
               target="_blank">
@@ -245,10 +247,10 @@ export default function SecondSection() {
 
       <div className="md:px-[35vw]">
         <div className="pt-20 relative pb-10 md:px-16">
-          <h1 className="text-[#507554] text-[35px] font-elwiss text-center">
+          <h1 data-aos="fade-up" className="text-[#507554] text-[35px] font-elwiss text-center">
             Our Gallery
           </h1>
-          <div className="px-4 mt-8">
+          <div data-aos="zoom-in" className="px-4 mt-8">
             <img
               src="/1/our-gallery.jpg"
               alt="Description of the image"
@@ -262,7 +264,7 @@ export default function SecondSection() {
       {/* start wedding gift */}
       <div className="md:px-[35vw]">
         <div className="pt-20 relative pb-10 md:px-16">
-          <h1 className="text-[#507554] text-[35px] font-elwiss text-center">
+          <h1 data-aos="fade-up" className="text-[#507554] text-[35px] font-elwiss text-center">
             Wedding Gift
           </h1>
           <p className="font-libre text-[#504533] text-[12px] px-8 text-center md:px-0 mt-2">
@@ -271,7 +273,7 @@ export default function SecondSection() {
             easier for you. Thank You
           </p>
 
-          <div className="border border-1 border-[#3C5E50] rounded-lg px-5 py-4 pb-8 mx-4 mt-12 text-[#504533]">
+          <div data-aos="fade-up" className="border border-1 border-[#3C5E50] rounded-lg px-5 py-4 pb-8 mx-4 mt-12 text-[#504533]">
             <div className="py-4">
               <p className="text-[#3C5E50] text-[20px] font-libre border border-1 rounded-lg border-[#3C5E50] w-full px-3 py-3">
                 BANK BCA
@@ -311,7 +313,7 @@ export default function SecondSection() {
               </div>
 
               <p className="font-libre text-[#9FAA8A] text-[14px] pt-2">
-                Vania Natali
+                Account Owner
               </p>
               <p className="font-libre text-[#9FAA8A] text-[14px]">
                 Vania Natali
