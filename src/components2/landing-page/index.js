@@ -22,7 +22,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
                 data-aos="zoom-in"
                 className="text-[#504533] text-lg font-bold font-libreCaslon text-center px-12 !text-white"
               >
-                Teruntuk <br />
+                Invite You To Celebrate Our Wedding <br />
                 {recieverName}
               </h1>
             )}
@@ -34,7 +34,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
                 data-aos="zoom-in"
                 className="text-[#504533] text-lg font-elwiss text-center !text-[18px] leading-[15px] !text-white"
               >
-                15 December 2023 <br />
+                16 December 2023 <br />
               </h1>
             </div>
 
@@ -43,7 +43,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
               onClick={handleOpenInvitations}
               className="mt-5 bg-[#507643] px-6 py-2 font-libreCaslon rounded-lg text-md tracking-wide !text-white"
             >
-              Buka Undangan
+              Open Invitation
             </button>
           </div>
         </div>
