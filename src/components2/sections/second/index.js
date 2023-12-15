@@ -114,7 +114,7 @@ export default function SecondSection() {
             </div>
             <img
               data-aos="zoom-in"
-              src="/1/vania.svg"
+              src="/1/vania.png"
               alt="vania"
               className="w-full"
             />
@@ -151,7 +151,7 @@ export default function SecondSection() {
           <div className="relative top-[-50px]">
             <img
               data-aos="zoom-in"
-              src="/1/win.svg"
+              src="/1/win.png"
               alt="vania"
               className="w-full"
             />

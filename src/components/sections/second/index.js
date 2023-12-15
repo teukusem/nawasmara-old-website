@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { useCountdown } from "@/hooks/useCountdown";
 import Image from "next/image";
 import Link from "next/link";
@@ -63,7 +64,7 @@ export default function SecondSection() {
             </div>
             <img
               data-aos="zoom-in"
-              src="/1/vania.svg"
+              src="/1/vania.png"
               alt="vania"
               className="w-full"
             />
