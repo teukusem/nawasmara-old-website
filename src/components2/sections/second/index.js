@@ -279,7 +279,7 @@ export default function SecondSection() {
             Cia Ciu
           </h1>
           <p className="text-[12px] font-libre text-[#444343] mt-2">
-            Saturday, December 16 2023, 09.30 - 10.45 WIB
+            Saturday, December 16 2023, 12.00 - 14.00 WIB
           </p>
         </div>
         <div
