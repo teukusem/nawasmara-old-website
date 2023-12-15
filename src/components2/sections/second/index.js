@@ -3,16 +3,66 @@
 import { useCountdown } from "@/hooks/useCountdown";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
+
+import { useGlobalAudioPlayer } from "react-use-audio-player";
 
 const googleCalendar =
   "https://calendar.google.com/calendar/u/0/r/eventedit?dates=20231216T023000Z/20231216T070000Z&details&location=Graha+Sudirman,+Jl.+Jend.+Sudirman+No.232+A,+Kb.+Jeruk,+Kec.+Andir,+Kota+Bandung,+Jawa+Barat+40181,+Indonesia&text=Wedding+day+of+Win+%26+Vania";
 
+
+const VideoPlayer = ({ src, width, height, onPlay, onPause }) => {
+  useEffect(() => {
+    const videoElement = document.getElementById("video-player"); // Add an id attribute to the video element
+
+    // Event listener for the "play" event
+    const handlePlay = () => {
+      if (onPlay && typeof onPlay === "function") {
+        onPlay();
+      }
+    };
+
+    // Event listener for the "pause" event
+    const handlePause = () => {
+      if (onPause && typeof onPause === "function") {
+        onPause();
+      }
+    };
+
+    // Add event listeners for the "play" and "pause" events
+    videoElement.addEventListener("play", handlePlay);
+    videoElement.addEventListener("pause", handlePause);
+
+    // Clean up the event listeners when the component unmounts
+    return () => {
+      videoElement.removeEventListener("play", handlePlay);
+      videoElement.removeEventListener("pause", handlePause);
+    };
+  }, [onPlay, onPause]);
+
+  return (
+    <video id="video-player" width={width} height={height} controls>
+      <source src={src} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  );
+};
+
 export default function SecondSection() {
+  const { togglePlayPause } = useGlobalAudioPlayer();
+
   const [days, hours, minutes, seconds] = useCountdown("2023-12-16");
   const [showGift, setShowGift] = useState(false);
   const [isCopied, setCopied] = useState(false);
+  
+  const handleVideoPause = () => {
+    togglePlayPause()
+  }
+
+  const handleVideoPlay = () => {
+    togglePlayPause()
+  }
 
   return (
     <>
@@ -34,7 +84,9 @@ export default function SecondSection() {
 
         {/* ayat */}
         <div className="flex items-center justify-center flex-col px-10 bg-[#3C5E50] py-10">
-          <div data-aos="fade-up" className="flex items-center justify-center flex-col ">
+          <div
+            data-aos="fade-up"
+            className="flex items-center justify-center flex-col ">
             <span className="text-white text-[16px] font-libre">
               1 Corinthians 13 : 7
             </span>
@@ -208,7 +260,9 @@ export default function SecondSection() {
             It's The Day
           </p>
         </div>
-        <div data-aos="fade-up" className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-5">
+        <div
+          data-aos="fade-up"
+          className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-5">
           <Image src="/1/ring.svg" alt="ring" width={70} height={70} />
           <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
             Holy Matrimony
@@ -217,7 +271,9 @@ export default function SecondSection() {
             Saturday, December 16 2023, 09.30 - 10.45 WIB
           </p>
         </div>
-        <div data-aos="fade-up" className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-10">
+        <div
+          data-aos="fade-up"
+          className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-10">
           <Image src="/1/cheers.svg" alt="ring" width={70} height={70} />
           <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
             Cia Ciu
@@ -226,7 +282,9 @@ export default function SecondSection() {
             Saturday, December 16 2023, 09.30 - 10.45 WIB
           </p>
         </div>
-        <div data-aos="fade-up" className="flex flex-col items-center text-[#504533] text-center md:px-16  pt-10 ">
+        <div
+          data-aos="fade-up"
+          className="flex flex-col items-center text-[#504533] text-center md:px-16  pt-10 ">
           <Image src="/1/place-map.svg" alt="ring" width={70} height={70} />
           <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
             Royal Dynasty Restaurant
@@ -247,7 +305,9 @@ export default function SecondSection() {
 
       <div className="md:px-[35vw]">
         <div className="pt-20 relative pb-10 md:px-16">
-          <h1 data-aos="fade-up" className="text-[#507554] text-[35px] font-elwiss text-center">
+          <h1
+            data-aos="fade-up"
+            className="text-[#507554] text-[35px] font-elwiss text-center">
             Our Gallery
           </h1>
           <div data-aos="zoom-in" className="px-4 mt-8">
@@ -261,10 +321,38 @@ export default function SecondSection() {
         </div>
       </div>
 
+      <div className="md:px-[35vw]">
+        <div className="pt-20 relative pb-10 md:px-16">
+          <h1
+            data-aos="fade-up"
+            className="text-[#507554] text-[35px] font-elwiss text-center">
+            Our Footage
+          </h1>
+          <div data-aos="zoom-in" className="px-4 mt-8">
+            <div>
+              <VideoPlayer
+                src="https://doc-08-20-docs.googleusercontent.com/docs/securesc/n0t0hh3i00848e76s7st7ni7fl11is2a/kf85u1iq9kihmnngb1k0vshkbi7dq4ie/1702616850000/10723442918683893223/10723442918683893223/1XgwbEH0Em0Li5lmJYrTKT1cVIWHw00vN?e=download&ax=AEqgLxllINwc5LmuhdcdLSPLGdZGTqDxN52m6lyTmVNX6ChdmdY06lDd0myZCiRmJWzcA1ngRp2zAuS3U9H_oXrmDDd6B-rkH7zjG8GF4wS9JR8hYLAja0x0TASq9mfVxaiOoV2CRM0XxkY1kwBrseCJY2SVwvQ99ulL03XIUXO9v8zP8Yv6i2A-4JqYJv7eUXoK7Yq3i4lxMWXQt2nwXMK4xuU7itbMuTTFJl39dKPgx84csMNDnLtnAAEt-K8GHRsSp8vOB1xUvsQHwr34kxdqg3eiaM8Bl5WTRI8pFg1ay_4ud2RDShSlVIs6YZaeYF3BU2UfS8lJYwVL0eGLZKo2vhj-pU7dqtoUJwhUYe_VZrRs1AquKmUCGdH4j52QvjkOUfrquE7_QStoVASXHJ7KJ-HRVRi1rwG-mLBNBXpJJuEh-3f11ReIWmHbRqxH95pWHF9nzelAMt6Lf-wfVZ0OciPsn1_DWOG4SbTvGKDsgz03g-9z_0T08PQ71tIp7KoCHCBYYS6dkOvDUHC1lzAVjRJqhme9WjKx-Do4zfDiV293ThSIZtQTefi9xAhXV7WXMvSw9WABn4tRcyG-eMFxDLFZwhuhZIEd5QW4349Bvv3QiLHCe6p5y7wWSdCRS4QBGKPaw7qShjB6nNTNbc9zC6-E6Oyq0AfDRUVJxoXZJMuNSOKzUfYHuCRpSuCDrGje2Xiy5vO5aQ_CHQruRVSdLD8HQD43aCeY1Lp08kaolG7B4D96JvNmxXRjkeNtMQyMmOdarMa1Z5b-NZ6rOUQlpDUMSzjbhndO_WwhCM73C2iGKaakITJcD0kGp9Bo5g4gU8RC6_gwltykE905VVe45nGkstVZq8lrl9jGaKzXmAxkiq3qoPGJGDhk-dY_FRiJUPDaq7kVcf9OUclowojkxKueobNqbClEfZotNQDsJJv1qh6Y4R1iLzyz2nx6gsGmNlI3vsbpEQmuKHgVIQz5xL4wydvd_dP_vHVqRzS3lAFrdjWGGvTq9VNZGumh8bjigRSZy3uPUqTbCiplDJ-DhX7USxnD6Yiq5lWNL0mmRMoWPXW24oxVBfrcaOxIpJ6j4q9byikK8JhsZr6gTMvD1MRZzliF9nJHhHYdOw&uuid=b6959edb-597c-4e4c-b998-ba5f35a20fe9&authuser=6&nonce=cj0675t9skac0&user=10723442918683893223&hash=18dgd6ef04ldapghga184usi3lnenjfj"
+                width={640}
+                height={360}
+                onPlay={handleVideoPlay}
+                onPause={handleVideoPause}
+              />
+            </div>
+          </div>
+          <div className="w-100 pt-5 flex justify-center">
+            <p className="w-100 stext-center text-[#3C5E50] font-playfair text-[12px]">
+              Win & Vania Prewedding
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* start wedding gift */}
       <div className="md:px-[35vw]">
         <div className="pt-20 relative pb-10 md:px-16">
-          <h1 data-aos="fade-up" className="text-[#507554] text-[35px] font-elwiss text-center">
+          <h1
+            data-aos="fade-up"
+            className="text-[#507554] text-[35px] font-elwiss text-center">
             Wedding Gift
           </h1>
           <p className="font-libre text-[#504533] text-[12px] px-8 text-center md:px-0 mt-2">
@@ -273,7 +361,9 @@ export default function SecondSection() {
             easier for you. Thank You
           </p>
 
-          <div data-aos="fade-up" className="border border-1 border-[#3C5E50] rounded-lg px-5 py-4 pb-8 mx-4 mt-12 text-[#504533]">
+          <div
+            data-aos="fade-up"
+            className="border border-1 border-[#3C5E50] rounded-lg px-5 py-4 pb-8 mx-4 mt-12 text-[#504533]">
             <div className="py-4">
               <p className="text-[#3C5E50] text-[20px] font-libre border border-1 rounded-lg border-[#3C5E50] w-full px-3 py-3">
                 BANK BCA
