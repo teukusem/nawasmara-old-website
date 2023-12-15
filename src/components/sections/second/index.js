@@ -116,7 +116,7 @@ export default function SecondSection() {
                 Win Iskandar
               </h1>
               <p className="absolute bottom-[-50px] px-24 text-center text-[#B6968B] text-[14px]">
-                First son of Mr. Iskandar Telu and mother Tan Tjun lan
+                First son of Mr. Iskandar Teluand mother Tan Tjun lan
               </p>
 
               <a

@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unescaped-entities */
+/* eslint-disable @next/next/no-img-element */
 import { useCountdown } from "@/hooks/useCountdown";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,7 +7,7 @@ import { useState } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 
 const googleCalendar =
-  "https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20231013T010000Z%2F20231013T020000Z&details=%20For%20more%20info%2C%20please%20visit%20-%3E%20https%3A%2F%2Fnawasmara.com&location=Masjid%20Raya%20Baiturrahman%20Banda%20Aceh&text=Akad%20Arief%20%26%20Nabilla";
+  "https://calendar.google.com/calendar/u/0/r/eventedit?dates=20231216T023000Z/20231216T070000Z&details&location=Graha+Sudirman,+Jl.+Jend.+Sudirman+No.232+A,+Kb.+Jeruk,+Kec.+Andir,+Kota+Bandung,+Jawa+Barat+40181,+Indonesia&text=Wedding+day+of+Win+%26+Vania";
 
 export default function SecondSection() {
   const [days, hours, minutes, seconds] = useCountdown("2023-12-16");
@@ -18,8 +20,7 @@ export default function SecondSection() {
         {/* date */}
         <div
           data-aos="fade-up"
-          className="md:px-16 flex items-center justify-center py-2"
-        >
+          className="md:px-16 flex items-center justify-center py-2">
           <img src="/1/small-leaf.svg" alt="small-leaf" />
           <span className="font-crimson text-center text-[#507554] text-[18px] !leading-10">
             December 16, 2023
@@ -34,8 +35,7 @@ export default function SecondSection() {
         {/* ayat */}
         <div
           className="flex items-center justify-center flex-col px-10 bg-[#3C5E50] py-10"
-          data-aos="fade-up"
-        >
+          data-aos="fade-up">
           <span className="text-white text-[16px] font-libre">
             1 Corinthians 13 : 7
           </span>
@@ -54,8 +54,7 @@ export default function SecondSection() {
             <div className="md:px-16">
               <p
                 data-aos="fade-down"
-                className="font-libre text-[#504533] text-[12px] p-4 text-center leading-6"
-              >
+                className="font-libre text-[#504533] text-[12px] p-4 text-center leading-6">
                 God creates everything beautiful in His time. Beautiful when He
                 brings together and grows affection, We cordially invite you to
                 the wedding:
@@ -70,31 +69,27 @@ export default function SecondSection() {
             <div className="flex justify-center">
               <h1
                 data-aos="fade-down"
-                className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center"
-              >
+                className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center">
                 Vania Natali
               </h1>
-              <p className="absolute bottom-[-50px] px-24 text-center text-[#B6968B] text-[14px]">
+              <p className="font-libre absolute bottom-[-40px] px-[80px] text-center text-[#B6968B] text-[12px]">
                 Only daughter the late (†) Mr. Lie Thian Kie and Lioe Kim Djin
               </p>
-
               <a
                 target="_blank"
                 data-aos="fade-up"
                 href="https://instagram.com/ms.vanili"
-                className="flex justify-center absolute bottom-[-70px] px-24 underline underline-offset-6"
-              >
+                className="flex justify-center absolute bottom-[-70px] px-24">
                 <Image src="/assets/ig.svg" alt="ig" width={12} height={20} />
-                <p className="text-center text-[#B6968B] font-playfair text-[12px]">
+                <span className="text-center text-[#B6968B] font-spanlayfair text-[12px] ml-[5px]">
                   ms.vanili
-                </p>
+                </span>
               </a>
             </div>
           </div>
           <h1
             data-aos="fade-up"
-            className="z-10 text-[#507554] text-6xl font-elwiss text-center pt-[180px]"
-          >
+            className="z-10 text-[#507554] text-6xl font-elwiss text-center pt-[180px]">
             &
           </h1>
         </div>
@@ -111,24 +106,22 @@ export default function SecondSection() {
             <div className="flex justify-center">
               <h1
                 data-aos="fade-down"
-                className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center"
-              >
+                className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center">
                 Win Iskandar
               </h1>
-              <p className="absolute bottom-[-50px] px-24 text-center text-[#B6968B] text-[14px]">
-                First son of Mr. Iskandar Telu and mother Tan Tjun lan
+              <p className="font-libre absolute bottom-[-40px] px-[80px] text-center text-[#B6968B] text-[12px]">
+                First son of Mr. Iskandar Teluand mother Tan Tjun lan
               </p>
 
               <a
                 target="_blank"
                 data-aos="fade-up"
                 href="https://instagram.com/win.rz"
-                className="flex justify-center absolute bottom-[-70px] px-24 underline underline-offset-6"
-              >
+                className="flex justify-center absolute bottom-[-70px] px-24">
                 <Image src="/assets/ig.svg" alt="ig" width={12} height={20} />
-                <p className="text-center text-[#B6968B] font-playfair text-[12px]">
+                <span className="text-center text-[#B6968B] font-spanlayfair text-[12px] ml-[5px]">
                   win.rz
-                </p>
+                </span>
               </a>
             </div>
           </div>
@@ -148,51 +141,49 @@ export default function SecondSection() {
         <div className="flex flex-col items-center justify-center">
           <h1
             data-aos="fade-up"
-            className="text-[#507554] text-4xl font-elwiss text-center pt-24"
-          >
+            className="text-[#507554] text-4xl font-elwiss text-center pt-24">
             Save The Date
           </h1>
-          <span className="font-crimson text-center text-[#507554] text-[18px] !leading-10">
+          <span className="font-crimson text-center text-[#231F20] text-[18px] !leading-10">
             December 16, 2023
           </span>
         </div>
 
         <div
           data-aos="fade-up"
-          className="flex gap-8 justify-center items-center relative"
-        >
+          className="flex gap-8 justify-center items-center relative">
           <div data-aos="fade-up">
-            <p className="font-elwiss text-[#504533] text-[32px] text-center">
+            <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
               {days}
             </p>
-            <p className="font-elwiss text-[#504533] text-[12px] text-center">
+            <p className="font-elwiss text-[#504533] text-[12px] text-center font-libre">
               Days
             </p>
           </div>
 
           <div data-aos="fade-down">
-            <p className="font-elwiss text-[#504533] text-[32px] text-center">
+            <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
               {hours}
             </p>
-            <p className="font-elwiss text-[#504533] text-[12px] text-center">
+            <p className="font-elwiss text-[#504533] text-[12px] text-center font-libre">
               Hours
             </p>
           </div>
 
           <div data-aos="fade-up">
-            <p className="font-elwiss text-[#504533] text-[32px] text-center">
+            <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
               {minutes}
             </p>
-            <p className="font-elwiss text-[#504533] text-[12px] text-center">
+            <p className="font-elwiss text-[#504533] text-[12px] text-center font-libre">
               Minutes
             </p>
           </div>
 
           <div data-aos="fade-down">
-            <p className="font-elwiss text-[#504533] text-[32px] text-center">
+            <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
               {seconds}
             </p>
-            <p className="font-elwiss text-[#504533] text-[12px] text-center">
+            <p className="font-elwiss text-[#504533] text-[12px] text-center font-libre">
               Seconds
             </p>
           </div>
@@ -203,136 +194,130 @@ export default function SecondSection() {
             Add to Calendar
           </a>
         </button>
-        <div className="w-full">
-        {/* <img src="/1/rumah.png" alt="daun" className="w-full" />
-        <img src="/1/poon.png" alt="daun" className="w-full" className="h-max" /> */}
-
-          <img src="/1/grass.png" alt="daun" className="w-full" />
-
+        <div className="w-full mt-10">
+          <img src="/1/grass.jpg" alt="daun" className="w-full" />
         </div>
       </div>
       {/* end save the date */}
 
-
-
-      {/* start event detail */}
-      <h1 className="text-[#504533] text-6xl font-bethaine text-center">
-        Wedding Day!
-      </h1>
-
-      <div className="flex flex-col md:px-[35vw] px-16">
-        <div className="flex flex-col items-center text-[#504533] text-center md:px-16">
-          <Image src="/assets/ring.svg" alt="ring" width={70} height={70} />
-          <h1 className="font-libre text-[20px]">Akad Nikah</h1>
-          <p>Jumat, 13 Oktober 2023</p>
-          <p>08:00 - 09:00 WIB</p>
-          <p>Mesjid Raya Baiturrahman, Banda Aceh</p>
+      <div
+        style={{ paddingTop: 200, paddingBottom: 200, top: -8 }}
+        className="relative bg-theDay bg-home bg-no-repeat bg-cover">
+        <div>
+          <p className="text-[#3C5E50] text-[35px] font-elwiss text-center">
+            It's The Day
+          </p>
         </div>
-
-        <div className="flex flex-col items-center text-[#504533] text-center pt-10 md:px-16">
-          <Image src="/assets/cheers.svg" alt="ring" width={70} height={70} />
-          <h1 className="font-libre text-[20px] text-[#504533]">Resepsi</h1>
-          <p className="!text-[#89565C] text-[16px] font-bold">
-            Preh Linto Baro:
+        <div className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-5">
+          <Image src="/1/ring.svg" alt="ring" width={70} height={70} />
+          <h1 className="font-libre text-[20px] text-[#B6968B]">
+            Holy Matrimony
+          </h1>
+          <p className="text-[12px] font-libre text-[#444343] pt-3">
+            Saturday, December 16 2023, 09.30 - 10.45 WIB
           </p>
-          <p>Sabtu, 14 Oktober 2023</p>
-          <p>11.00 - 13.00 WIB</p>
-          <p>
-            Jl. H. Bintang No. 152, Merpati V, Blang Oi, Meuraxa, Banda Aceh
+        </div>
+        <div className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-10">
+          <Image src="/1/cheers.svg" alt="ring" width={70} height={70} />
+          <h1 className="font-libre text-[20px] text-[#B6968B]">Reception</h1>
+          <p className="text-[12px] font-libre text-[#444343] pt-3">
+            Saturday, December 16 2023, 09.30 - 10.45 WIB
           </p>
-          <button className=" mt-4 flex m-auto !text-white bg-[#504533] px-5 py-1.5 !text-white font-libre rounded-lg text-sm tracking-wide">
-            <a href="https://maps.app.goo.gl/V1gseiETsT5RxHUKA" target="_blank">
-              View Map
-            </a>
-          </button>
-          <p className="!text-[#89565C] text-[16px] font-bold pt-10">
-            Preh Dara Baro:
+        </div>
+        <div className="flex flex-col items-center text-[#504533] text-center md:px-16  pt-10 ">
+          <Image src="/1/place-map.svg" alt="ring" width={70} height={70} />
+          <h1 className="font-libre text-[20px] text-[#B6968B]">
+            Royal Dynasty Restaurant
+          </h1>
+          <p className="text-[12px] font-libre text-[#444343] pt-3 px-16">
+            Gedung Graha Sudirman Lt. 1, Jl. Jend. Sudirman No.232A, Kb. Jeruk,
+            Andir, Kota Bandung, Jawa Barat 40181
           </p>
-          <p>Kamis, 19 Oktober 2023 </p>
-          <p>11.00-13.00 WIB </p>
-          <p>
-            Jl. Mutiara 14 No. 1, Komplek Mutiara Indah, Alue Awe, Lhokseumawe
-          </p>
-          <button className="!text-white mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide">
-            <a href="https://maps.app.goo.gl/kHnAQMpugTzHvzxS6" target="_blank">
+          <button className="!text-white mt-4 flex m-auto bg-[#3C5E50] px-5 py-1.5 mt-10s font-libre rounded-lg text-sm tracking-wide">
+            <a
+              href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyDQgAEAAYgwEYsQMYgAQyBwgBEAAYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBggEEEUYOTIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABNIBCDMzMjVqMGoxqAIAsAIA&um=1&ie=UTF-8&fb=1&gl=id&sa=X&geocode=KbGLGJMi5mguMbVlabI2z4qP&daddr=Gedung+Graha+Sudirman+Lt.1,+Jl.+Jend.+Sudirman+No.232A,+Kb.+Jeruk,+Kec.+Andir,+Kota+Bandung,+Jawa+Barat+40181"
+              target="_blank">
               View Map
             </a>
           </button>
         </div>
       </div>
-      {/* end event detail */}
+
+      <div className="md:px-[35vw]">
+        <div className="pt-20 relative pb-10 md:px-16">
+          <h1 className="text-[#507554] text-[35px] font-elwiss text-center">
+            Our Gallery
+          </h1>
+          <div className="px-4 mt-8">
+            <img
+              src="/1/our-gallery.jpg"
+              alt="Description of the image"
+              layout="fill" // Fill the parent container
+              objectFit="cover" // Maintain aspect ratio and cover the container
+            />
+          </div>
+        </div>
+      </div>
 
       {/* start wedding gift */}
       <div className="md:px-[35vw]">
-        <div className="pt-20 bg-keyboard bg-start bg-no-repeat relative pb-10 md:px-16">
-          <h1 className="text-[#504533] text-6xl font-bethaine text-center">
+        <div className="pt-20 relative pb-10 md:px-16">
+          <h1 className="text-[#507554] text-[35px] font-elwiss text-center">
             Wedding Gift
           </h1>
-          <p className="font-libre text-[#504533] text-[12px] px-8 text-center md:px-0">
-            Atas restu dan kedatangan kamu ke pesta pernikahan kami sudah cukup
-            bagi kami. Tapi jika kamu ingin memberi hadiah, kami menyediakan
-            Amplop Digital untuk memudahkan kamu. Terima kasih
+          <p className="font-libre text-[#504533] text-[12px] px-8 text-center md:px-0 mt-2">
+            Your blessing and presence at our wedding is enough for us. But if
+            you want to give a gift, we provide Digital Envelopes to make it
+            easier for you. Thank You
           </p>
-          <button
-            onClick={() => setShowGift((prev) => !prev)}
-            className=" mt-4 flex m-auto bg-[#504533] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide"
-          >
-            Kirim hadiah
-          </button>
-          {showGift && (
-            <div className="border border-1 border-[#504533] rounded-lg px-8 py-4 mx-4 mt-4 text-[#504533]">
-              <div className="py-4">
-                <Image src="assets/bca.svg" alt="bca" height={80} width={80} />
-              </div>
-              {isCopied && (
-                <div
-                  class="p-4 mb-4 text-sm text-white rounded-lg bg-[#504533]  text-white"
-                  role="alert"
-                >
-                  <span class="font-medium">Rekening berhasil disalin !</span>
-                </div>
-              )}
-              <div className="bg-white rounded-lg px-4 py-2">
-                <p className="font-libre text-[12px] pt-2">Nomor Rekening</p>
-                <div className="flex justify-between">
-                  <p>1280496037</p>
 
-                  <CopyToClipboard
-                    text="1280496037"
-                    onCopy={() => {
-                      setCopied(true);
-                      setTimeout(() => setCopied(false), 2000);
-                    }}
-                  >
-                    <Image
-                      src="/assets/copy.svg"
-                      alt="copy"
-                      height={25}
-                      width={25}
-                    />
-                  </CopyToClipboard>
-                </div>
-
-                <p className="font-libre text-[12px] pt-2">Pemilik Rekening</p>
-                <p>Arief Ramadhana</p>
-              </div>
-              <div className="py-4">
-                <Image
-                  src="/assets/linkaja.png"
-                  alt="linkaja"
-                  height={100}
-                  width={100}
-                />
-                <Image
-                  src="/assets/nabilla-linkaja.png"
-                  alt="linkaja"
-                  height={200}
-                  width={300}
-                  className=""
-                />
-              </div>
+          <div className="border border-1 border-[#3C5E50] rounded-lg px-5 py-4 pb-8 mx-4 mt-12 text-[#504533]">
+            <div className="py-4">
+              <p className="text-[#3C5E50] text-[20px] font-libre border border-1 rounded-lg border-[#3C5E50] w-full px-3 py-3">
+                BANK BCA
+              </p>
             </div>
-          )}
+
+            {isCopied && (
+              <div
+                class="p-4 mb-4 text-sm text-white rounded-lg bg-[#504533]  text-white"
+                role="alert">
+                <span class="font-medium">Rekening berhasil disalin !</span>
+              </div>
+            )}
+
+            <div className="bg-white rounded-lg px-4 py-4">
+              <p className="font-libre text-[#9FAA8A] text-[14px]">
+                Account Number
+              </p>
+              <div className="flex justify-between">
+                <p className="font-libre text-[#9FAA8A] text-[14px]">
+                  8380177421
+                </p>
+
+                <CopyToClipboard
+                  text="1280496037"
+                  onCopy={() => {
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 2000);
+                  }}>
+                  <Image
+                    src="/assets/copy.svg"
+                    alt="copy"
+                    height={25}
+                    width={25}
+                  />
+                </CopyToClipboard>
+              </div>
+
+              <p className="font-libre text-[#9FAA8A] text-[14px] pt-2">
+                Vania Natali
+              </p>
+              <p className="font-libre text-[#9FAA8A] text-[14px]">
+                Vania Natali
+              </p>
+            </div>
+          </div>
         </div>
       </div>
       {/* end wedding gift */}
