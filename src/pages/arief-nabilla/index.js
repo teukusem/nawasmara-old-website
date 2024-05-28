@@ -9,7 +9,9 @@ import FirstSection from "@/components/sections/first";
 import FooterSection from "@/components/footer";
 import dynamic from "next/dynamic";
 
-const SecondSection = dynamic(import('@/components/sections/second'), { ssr: false})
+const SecondSection = dynamic(import("@/components/sections/second"), {
+  ssr: false,
+});
 
 export default function Home() {
   const router = useRouter();

@@ -6,7 +6,5 @@ export const data_arief = {
 
 export const data = {
   title: "Nawasmara.com",
-  description:
-    "Custom online invitation",
+  description: "Custom online invitation",
 };
-
