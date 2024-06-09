@@ -16,7 +16,7 @@ const useCountdown = (targetDate, targetHours = 9, targetMinutes = 30) => {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [countDownDate]);
+  }, [countDownDate])
 
   return getReturnValues(countDown);
 };
