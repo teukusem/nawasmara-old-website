@@ -26,17 +26,31 @@ export function middleware(req) {
     ? cleanHost.split('.')[0]
     : cleanHost.replace(`.${domain}`, '')
 
+  // Debug logging
+  console.log('Middleware Debug:', {
+    host,
+    cleanHost,
+    domain,
+    subdomain,
+    isLocalhost,
+    pathname: req.nextUrl.pathname
+  })
+
   // Ignore root domain or reserved
   if (
     cleanHost === domain ||
     cleanHost === `www.${domain}` ||
-    subdomain === 'www'
+    subdomain === 'www' ||
+    subdomain === cleanHost // Handle cases where subdomain extraction fails
   ) {
+    console.log('Allowing request to pass through')
     return NextResponse.next()
   }
 
   // Rewrite to internal path
   const url = req.nextUrl.clone()
   url.pathname = `/_sites/${subdomain}${url.pathname}`
+  
+  console.log('Rewriting to:', url.pathname)
   return NextResponse.rewrite(url)
 }
