@@ -49,7 +49,7 @@ export function middleware(req) {
 
   // Rewrite to internal path
   const url = req.nextUrl.clone()
-  url.pathname = `/_sites/${subdomain}${url.pathname}`
+  url.pathname = `/${subdomain}${url.pathname}`
   
   console.log('Rewriting to:', url.pathname)
   return NextResponse.rewrite(url)
