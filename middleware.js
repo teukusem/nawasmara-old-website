@@ -16,7 +16,6 @@ export const config = {
 export function middleware(req) {
   const host = req.headers.get('host') || ''
   const domain = 'nawasmara.com'
-  
 
   // Remove port if exists (e.g., localhost:3000)
   const cleanHost = host.split(':')[0]
