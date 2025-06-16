@@ -8,9 +8,6 @@ import { CopyToClipboard } from "react-copy-to-clipboard";
 
 import { useGlobalAudioPlayer } from "react-use-audio-player";
 
-const googleCalendar =
-  "https://calendar.google.com/calendar/u/0/r/eventedit?dates=20231216T023000Z/20231216T070000Z&details&location=Graha+Sudirman,+Jl.+Jend.+Sudirman+No.232+A,+Kb.+Jeruk,+Kec.+Andir,+Kota+Bandung,+Jawa+Barat+40181,+Indonesia&text=Wedding+day+of+Win+%26+Vania";
-
 const VideoPlayer = ({ src, width, height, onPlay, onPause }) => {
   useEffect(() => {
     const videoElement = document.getElementById("video-player"); // Add an id attribute to the video element
@@ -48,10 +45,10 @@ const VideoPlayer = ({ src, width, height, onPlay, onPause }) => {
   );
 };
 
-export default function SecondSection() {
+export default function SecondSection({ data }) {
   const { togglePlayPause } = useGlobalAudioPlayer();
 
-  const [days, hours, minutes, seconds] = useCountdown("2023-12-16");
+  const [days, hours, minutes, seconds] = useCountdown(data?.weddingDate || "2023-12-16");
   const [showGift, setShowGift] = useState(false);
   const [isCopied, setCopied] = useState(false);
 
@@ -69,11 +66,11 @@ export default function SecondSection() {
         {/* date */}
         <div
           data-aos="fade-up"
-          className="md:px-16 flex items-center justify-center py-4"
+          className="flex justify-center items-center py-4 md:px-16"
         >
           <img src="/1/small-leaf.svg" alt="small-leaf" />
           <span className="font-crimson text-center text-[#507554] text-[18px]s">
-            December 16, 2023
+            {data?.displayDate || "December 16, 2023"}
           </span>
           <img
             src="/1/small-leaf.svg"
@@ -83,17 +80,16 @@ export default function SecondSection() {
         </div>
 
         {/* ayat */}
-        <div className="flex items-center justify-center flex-col px-10 bg-[#3C5E50] py-10">
+        <div  data-aos="fade-up" className="flex items-center justify-center flex-col px-10 bg-[#3C5E50] py-10">
           <div
-            data-aos="fade-up"
-            className="flex items-center justify-center flex-col "
+            data-aos="fade-down"
+            className="flex flex-col justify-center items-center"
           >
             <span className="text-white text-[16px] font-libre">
-              1 Corinthians 13 : 7
+              {data?.verse?.reference || "1 Corinthians 13 : 7"}
             </span>
             <span className="text-white text-[12px] font-libre pt-2 text-center leading-6">
-              “Love never gives up, never lose faith, is always helpful, and
-              endures through every circumstance”
+              "{data?.verse?.text || "Love never gives up, never lose faith, is always helpful, and endures through every circumstance"}"
             </span>
           </div>
         </div>
@@ -103,21 +99,20 @@ export default function SecondSection() {
           <div className="w-full">
             <img src="/1/daun-atas.png" alt="daun" className="w-full" />
           </div>
-          <div className="px-8 relative">
+          <div className="relative px-8">
             <div className="md:px-16">
               <p
                 data-aos="fade-down"
                 className="font-libre text-[#504533] text-[12px] p-4 text-center leading-6"
               >
-                God creates everything beautiful in His time. Beautiful when He
-                brings together and grows affection, We cordially invite you to
-                the wedding:
+                {data?.invitationText || "God creates everything beautiful in His time. Beautiful when He brings together and grows affection, We cordially invite you to the wedding:"}
               </p>
             </div>
             <img
               data-aos="zoom-in"
-              src="/1/vania.png"
-              alt="vania"
+              data-aos-delay="500"
+              src={data?.bride?.photo || "/1/vania.png"}
+              alt={data?.bride?.name || "bride"}
               className="w-full"
             />
             <div className="flex justify-center">
@@ -125,20 +120,20 @@ export default function SecondSection() {
                 data-aos="fade-down"
                 className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center"
               >
-                Vania Natali
+                {data?.bride?.name || "Vania Natali"}
               </h1>
               <p className="font-libre absolute bottom-[-40px] px-[80px] text-center text-[#B6968B] text-[12px]">
-                Only daughter the late (†) Mr. Lie Thian Kie and Lioe Kim Djin
+                {data?.bride?.parents || "Only daughter the late (†) Mr. Lie Thian Kie and Lioe Kim Djin"}
               </p>
               <a
                 target="_blank"
                 data-aos="fade-up"
-                href="https://instagram.com/ms.vanili"
+                href={data?.bride?.instagram?.url || "https://instagram.com/ms.vanili"}
                 className="flex justify-center absolute bottom-[-70px] px-24"
               >
                 <Image src="/assets/ig.svg" alt="ig" width={12} height={20} />
                 <span className="text-center text-[#B6968B] font-spanlayfair text-[12px] ml-[5px]">
-                  ms.vanili
+                  {data?.bride?.instagram?.username || "ms.vanili"}
                 </span>
               </a>
             </div>
@@ -156,8 +151,9 @@ export default function SecondSection() {
           <div className="relative top-[-50px]">
             <img
               data-aos="zoom-in"
-              src="/1/win.png"
-              alt="vania"
+              data-aos-delay="500"
+              src={data?.groom?.photo || "/1/win.png"}
+              alt={data?.groom?.name || "groom"}
               className="w-full"
             />
             <div className="flex justify-center">
@@ -165,28 +161,28 @@ export default function SecondSection() {
                 data-aos="fade-down"
                 className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center"
               >
-                Win Iskandar
+                {data?.groom?.name || "Win Iskandar"}
               </h1>
               <p className="font-libre absolute bottom-[-40px] px-[80px] text-center text-[#B6968B] text-[12px]">
-                First son of Mr. Iskandar Teluand mother Tan Tjun lan
+                {data?.groom?.parents || "First son of Mr. Iskandar Teluand mother Tan Tjun lan"}
               </p>
 
               <a
                 target="_blank"
                 data-aos="fade-up"
-                href="https://instagram.com/win.rz"
+                href={data?.groom?.instagram?.url || "https://instagram.com/win.rz"}
                 className="flex justify-center absolute bottom-[-70px] px-24"
               >
                 <Image src="/assets/ig.svg" alt="ig" width={12} height={20} />
                 <span className="text-center text-[#B6968B] font-spanlayfair text-[12px] ml-[5px]">
-                  win.rz
+                  {data?.groom?.instagram?.username || "win.rz"}
                 </span>
               </a>
             </div>
           </div>
         </div>
 
-        <div className="w-full relative">
+        <div className="relative w-full">
           <img
             src="/1/daun-atas.png"
             alt="daun"
@@ -197,23 +193,25 @@ export default function SecondSection() {
 
       {/* start save the date */}
       <div className="">
-        <div className="flex flex-col items-center justify-center">
+        <div className="flex flex-col justify-center items-center">
           <h1
             data-aos="fade-up"
+            data-aos-delay="800"
             className="text-[#507554] text-4xl font-elwiss text-center pt-24"
           >
             Save The Date
           </h1>
           <span className="font-crimson text-center text-[#231F20] text-[18px] !leading-10">
-            December 16, 2023
+            {data?.displayDate || "December 16, 2023"}
           </span>
         </div>
 
         <div
           data-aos="fade-up"
-          className="flex gap-8 justify-center items-center relative"
+          data-aos-delay="800"
+          className="flex relative gap-8 justify-center items-center"
         >
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" data-aos-delay="800">
             <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
               {days}
             </p>
@@ -222,7 +220,7 @@ export default function SecondSection() {
             </p>
           </div>
 
-          <div data-aos="fade-down">
+          <div data-aos="fade-down" data-aos-delay="800">
             <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
               {hours}
             </p>
@@ -231,7 +229,7 @@ export default function SecondSection() {
             </p>
           </div>
 
-          <div data-aos="fade-up">
+          <div data-aos="fade-up" data-aos-delay="800">
             <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
               {minutes}
             </p>
@@ -240,7 +238,7 @@ export default function SecondSection() {
             </p>
           </div>
 
-          <div data-aos="fade-down">
+          <div data-aos="fade-down" data-aos-delay="800">
             <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
               {seconds}
             </p>
@@ -251,11 +249,11 @@ export default function SecondSection() {
         </div>
 
         <button className=" mt-4 flex m-auto bg-[#3C5E50] px-5 py-1.5 font-libre rounded-lg text-sm tracking-wide !text-white">
-          <a href={googleCalendar} target="_blank">
+          <a href={data?.googleCalendarUrl || "#"} target="_blank">
             Add to Calendar
           </a>
         </button>
-        <div className="w-full mt-10">
+        <div className="mt-10 w-full">
           <img src="/1/grass.jpg" alt="daun" className="w-full" />
         </div>
       </div>
@@ -263,52 +261,54 @@ export default function SecondSection() {
 
       <div
         style={{ paddingTop: 200, paddingBottom: 250, top: -8 }}
-        className="relative bg-theDay bg-home bg-no-repeat bg-cover"
+        className="relative bg-no-repeat bg-cover bg-theDay"
       >
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" data-aos-delay="200">
           <p className="text-[#3C5E50] text-[35px] font-elwiss text-center">
             It's The Day
           </p>
         </div>
         <div
           data-aos="fade-up"
+          data-aos-delay="400"
           className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-5"
         >
           <Image src="/1/ring.svg" alt="ring" width={70} height={70} />
           <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
-            Holy Matrimony
+            {data?.events?.holyMatrimony?.title || "Holy Matrimony"}
           </h1>
           <p className="text-[12px] font-libre text-[#444343] mt-2">
-            Saturday, December 16 2023, 09.30 - 10.45 WIB
+            {data?.events?.holyMatrimony?.datetime || "Saturday, December 16 2023, 09.30 - 10.45 WIB"}
           </p>
         </div>
         <div
           data-aos="fade-up"
+          data-aos-delay="600"
           className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-10"
         >
           <Image src="/1/cheers.svg" alt="ring" width={70} height={70} />
           <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
-            Cia Ciu
+            {data?.events?.reception?.title || "Cia Ciu"}
           </h1>
           <p className="text-[12px] font-libre text-[#444343] mt-2">
-            Saturday, December 16 2023, 12.00 - 14.00 WIB
+            {data?.events?.reception?.datetime || "Saturday, December 16 2023, 12.00 - 14.00 WIB"}
           </p>
         </div>
         <div
           data-aos="fade-up"
+          data-aos-delay="800"
           className="flex flex-col items-center text-[#504533] text-center md:px-16  pt-10 "
         >
           <Image src="/1/place-map.svg" alt="ring" width={70} height={70} />
           <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
-            Royal Dynasty Restaurant
+            {data?.venue?.name || "Royal Dynasty Restaurant"}
           </h1>
           <p className="text-[12px] font-libre text-[#444343] mt-2 px-16">
-            Gedung Graha Sudirman Lt. 1, Jl. Jend. Sudirman No.232A, Kb. Jeruk,
-            Andir, Kota Bandung, Jawa Barat 40181
+            {data?.venue?.address || "Gedung Graha Sudirman Lt. 1, Jl. Jend. Sudirman No.232A, Kb. Jeruk, Andir, Kota Bandung, Jawa Barat 40181"}
           </p>
           <button className="!text-white mt-4 flex m-auto bg-[#3C5E50] px-5 py-1.5 mt-[40px] font-libre rounded-lg text-sm tracking-wide">
             <a
-              href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyDQgAEAAYgwEYsQMYgAQyBwgBEAAYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBggEEEUYOTIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABNIBCDMzMjVqMGoxqAIAsAIA&um=1&ie=UTF-8&fb=1&gl=id&sa=X&geocode=KbGLGJMi5mguMbVlabI2z4qP&daddr=Gedung+Graha+Sudirman+Lt.1,+Jl.+Jend.+Sudirman+No.232A,+Kb.+Jeruk,+Kec.+Andir,+Kota+Bandung,+Jawa+Barat+40181"
+              href={data?.venue?.mapUrl || "#"}
               target="_blank"
             >
               View Map
@@ -317,18 +317,19 @@ export default function SecondSection() {
         </div>
       </div>
 
-      <div className="md:px-[35vw]">
-        <div className="pt-20 relative pb-10 md:px-16">
+      <div className="md:px-[35vw]"  data-aos="fade-up" data-aos-delay="800">
+        <div className="relative pt-20 pb-10 md:px-16">
           <h1
             data-aos="fade-up"
+            data-aos-delay="800"
             className="text-[#507554] text-[35px] font-elwiss text-center"
           >
             Our Gallery
           </h1>
           <div data-aos="zoom-in" className="px-4 mt-8">
             <img
-              src="/1/our-gallery.jpg"
-              alt="Description of the image"
+              src={data?.gallery?.photo || "/1/our-gallery.jpg"}
+              alt="Gallery image"
               layout="fill" // Fill the parent container
               objectFit="cover" // Maintain aspect ratio and cover the container
             />
@@ -337,7 +338,7 @@ export default function SecondSection() {
       </div>
 
       <div className="md:px-[35vw]">
-        <div className="pt-20 relative pb-10 md:px-16">
+        <div className="relative pt-20 pb-10 md:px-16">
           <h1
             data-aos="fade-up"
             className="text-[#507554] text-[35px] font-elwiss text-center"
@@ -347,7 +348,7 @@ export default function SecondSection() {
           <div data-aos="zoom-in" className="px-4 mt-8">
             <div>
               <VideoPlayer
-                src="/video/win-vania.mp4"
+                src={data?.video?.src || "/video/win-vania.mp4"}
                 width={640}
                 height={360}
                 onPlay={handleVideoPlay}
@@ -355,9 +356,9 @@ export default function SecondSection() {
               />
             </div>
           </div>
-          <div className="w-100 pt-5 flex justify-center">
+          <div className="flex justify-center pt-5 w-100">
             <p className="w-100 stext-center text-[#3C5E50] font-playfair text-[12px]">
-              Win & Vania Prewedding
+              {data?.video?.caption || "Win & Vania Prewedding"}
             </p>
           </div>
         </div>
@@ -365,7 +366,7 @@ export default function SecondSection() {
 
       {/* start wedding gift */}
       <div className="md:px-[35vw]">
-        <div className="pt-20 relative pb-10 md:px-16">
+        <div className="relative pt-20 pb-10 md:px-16">
           <h1
             data-aos="fade-up"
             className="text-[#507554] text-[35px] font-elwiss text-center"
@@ -373,9 +374,7 @@ export default function SecondSection() {
             Wedding Gift
           </h1>
           <p className="font-libre text-[#504533] text-[12px] px-8 text-center md:px-0 mt-2">
-            Your blessing and presence at our wedding is enough for us. But if
-            you want to give a gift, we provide Digital Envelopes to make it
-            easier for you. Thank You
+            {data?.gift?.message || "Your blessing and presence at our wedding is enough for us. But if you want to give a gift, we provide Digital Envelopes to make it easier for you. Thank You"}
           </p>
 
           <div
@@ -384,7 +383,7 @@ export default function SecondSection() {
           >
             <div className="py-4">
               <p className="text-[#3C5E50] text-[20px] font-libre border border-1 rounded-lg border-[#3C5E50] w-full px-3 py-3">
-                BANK BCA
+                {data?.gift?.bank?.name || "BANK BCA"}
               </p>
             </div>
 
@@ -397,17 +396,17 @@ export default function SecondSection() {
               </div>
             )}
 
-            <div className="bg-white rounded-lg px-4 py-4">
+            <div className="px-4 py-4 bg-white rounded-lg">
               <p className="font-libre text-[#9FAA8A] text-[14px]">
                 Account Number
               </p>
               <div className="flex justify-between">
                 <p className="font-libre text-[#9FAA8A] text-[14px]">
-                  8380177421
+                  {data?.gift?.bank?.accountNumber || "8380177421"}
                 </p>
 
                 <CopyToClipboard
-                  text="8380177421"
+                  text={data?.gift?.bank?.accountNumber || "8380177421"}
                   onCopy={() => {
                     setCopied(true);
                     setTimeout(() => setCopied(false), 2000);
@@ -426,7 +425,7 @@ export default function SecondSection() {
                 Account Owner
               </p>
               <p className="font-libre text-[#9FAA8A] text-[14px]">
-                Vania Natali
+                {data?.gift?.bank?.accountOwner || "Vania Natali"}
               </p>
             </div>
           </div>
