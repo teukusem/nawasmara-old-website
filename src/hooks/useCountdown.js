@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const useCountdown = (targetDate, targetHours=9, targetMinutes=30) => {
+const useCountdown = (targetDate, targetHours = 9, targetMinutes = 30) => {
   // Set the target time to 9:30 AM on the given date
   const targetDateTime = new Date(targetDate);
   targetDateTime.setHours(targetHours, targetMinutes, 0, 0); // Set to 9:30 AM

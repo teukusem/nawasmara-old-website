@@ -11,7 +11,6 @@ import { useGlobalAudioPlayer } from "react-use-audio-player";
 const googleCalendar =
   "https://calendar.google.com/calendar/u/0/r/eventedit?dates=20231216T023000Z/20231216T070000Z&details&location=Graha+Sudirman,+Jl.+Jend.+Sudirman+No.232+A,+Kb.+Jeruk,+Kec.+Andir,+Kota+Bandung,+Jawa+Barat+40181,+Indonesia&text=Wedding+day+of+Win+%26+Vania";
 
-
 const VideoPlayer = ({ src, width, height, onPlay, onPause }) => {
   useEffect(() => {
     const videoElement = document.getElementById("video-player"); // Add an id attribute to the video element
@@ -55,14 +54,14 @@ export default function SecondSection() {
   const [days, hours, minutes, seconds] = useCountdown("2023-12-16");
   const [showGift, setShowGift] = useState(false);
   const [isCopied, setCopied] = useState(false);
-  
+
   const handleVideoPause = () => {
-    togglePlayPause()
-  }
+    togglePlayPause();
+  };
 
   const handleVideoPlay = () => {
-    togglePlayPause()
-  }
+    togglePlayPause();
+  };
 
   return (
     <>
@@ -70,7 +69,8 @@ export default function SecondSection() {
         {/* date */}
         <div
           data-aos="fade-up"
-          className="md:px-16 flex items-center justify-center py-4">
+          className="md:px-16 flex items-center justify-center py-4"
+        >
           <img src="/1/small-leaf.svg" alt="small-leaf" />
           <span className="font-crimson text-center text-[#507554] text-[18px]s">
             December 16, 2023
@@ -86,7 +86,8 @@ export default function SecondSection() {
         <div className="flex items-center justify-center flex-col px-10 bg-[#3C5E50] py-10">
           <div
             data-aos="fade-up"
-            className="flex items-center justify-center flex-col ">
+            className="flex items-center justify-center flex-col "
+          >
             <span className="text-white text-[16px] font-libre">
               1 Corinthians 13 : 7
             </span>
@@ -106,7 +107,8 @@ export default function SecondSection() {
             <div className="md:px-16">
               <p
                 data-aos="fade-down"
-                className="font-libre text-[#504533] text-[12px] p-4 text-center leading-6">
+                className="font-libre text-[#504533] text-[12px] p-4 text-center leading-6"
+              >
                 God creates everything beautiful in His time. Beautiful when He
                 brings together and grows affection, We cordially invite you to
                 the wedding:
@@ -121,7 +123,8 @@ export default function SecondSection() {
             <div className="flex justify-center">
               <h1
                 data-aos="fade-down"
-                className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center">
+                className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center"
+              >
                 Vania Natali
               </h1>
               <p className="font-libre absolute bottom-[-40px] px-[80px] text-center text-[#B6968B] text-[12px]">
@@ -131,7 +134,8 @@ export default function SecondSection() {
                 target="_blank"
                 data-aos="fade-up"
                 href="https://instagram.com/ms.vanili"
-                className="flex justify-center absolute bottom-[-70px] px-24">
+                className="flex justify-center absolute bottom-[-70px] px-24"
+              >
                 <Image src="/assets/ig.svg" alt="ig" width={12} height={20} />
                 <span className="text-center text-[#B6968B] font-spanlayfair text-[12px] ml-[5px]">
                   ms.vanili
@@ -141,7 +145,8 @@ export default function SecondSection() {
           </div>
           <h1
             data-aos="fade-up"
-            className="z-10 text-[#507554] text-6xl font-elwiss text-center pt-[150px]">
+            className="z-10 text-[#507554] text-6xl font-elwiss text-center pt-[150px]"
+          >
             &
           </h1>
         </div>
@@ -158,7 +163,8 @@ export default function SecondSection() {
             <div className="flex justify-center">
               <h1
                 data-aos="fade-down"
-                className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center">
+                className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center"
+              >
                 Win Iskandar
               </h1>
               <p className="font-libre absolute bottom-[-40px] px-[80px] text-center text-[#B6968B] text-[12px]">
@@ -169,7 +175,8 @@ export default function SecondSection() {
                 target="_blank"
                 data-aos="fade-up"
                 href="https://instagram.com/win.rz"
-                className="flex justify-center absolute bottom-[-70px] px-24">
+                className="flex justify-center absolute bottom-[-70px] px-24"
+              >
                 <Image src="/assets/ig.svg" alt="ig" width={12} height={20} />
                 <span className="text-center text-[#B6968B] font-spanlayfair text-[12px] ml-[5px]">
                   win.rz
@@ -193,7 +200,8 @@ export default function SecondSection() {
         <div className="flex flex-col items-center justify-center">
           <h1
             data-aos="fade-up"
-            className="text-[#507554] text-4xl font-elwiss text-center pt-24">
+            className="text-[#507554] text-4xl font-elwiss text-center pt-24"
+          >
             Save The Date
           </h1>
           <span className="font-crimson text-center text-[#231F20] text-[18px] !leading-10">
@@ -203,7 +211,8 @@ export default function SecondSection() {
 
         <div
           data-aos="fade-up"
-          className="flex gap-8 justify-center items-center relative">
+          className="flex gap-8 justify-center items-center relative"
+        >
           <div data-aos="fade-up">
             <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
               {days}
@@ -254,7 +263,8 @@ export default function SecondSection() {
 
       <div
         style={{ paddingTop: 200, paddingBottom: 250, top: -8 }}
-        className="relative bg-theDay bg-home bg-no-repeat bg-cover">
+        className="relative bg-theDay bg-home bg-no-repeat bg-cover"
+      >
         <div data-aos="fade-up">
           <p className="text-[#3C5E50] text-[35px] font-elwiss text-center">
             It's The Day
@@ -262,7 +272,8 @@ export default function SecondSection() {
         </div>
         <div
           data-aos="fade-up"
-          className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-5">
+          className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-5"
+        >
           <Image src="/1/ring.svg" alt="ring" width={70} height={70} />
           <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
             Holy Matrimony
@@ -273,7 +284,8 @@ export default function SecondSection() {
         </div>
         <div
           data-aos="fade-up"
-          className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-10">
+          className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-10"
+        >
           <Image src="/1/cheers.svg" alt="ring" width={70} height={70} />
           <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
             Cia Ciu
@@ -284,7 +296,8 @@ export default function SecondSection() {
         </div>
         <div
           data-aos="fade-up"
-          className="flex flex-col items-center text-[#504533] text-center md:px-16  pt-10 ">
+          className="flex flex-col items-center text-[#504533] text-center md:px-16  pt-10 "
+        >
           <Image src="/1/place-map.svg" alt="ring" width={70} height={70} />
           <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
             Royal Dynasty Restaurant
@@ -296,7 +309,8 @@ export default function SecondSection() {
           <button className="!text-white mt-4 flex m-auto bg-[#3C5E50] px-5 py-1.5 mt-[40px] font-libre rounded-lg text-sm tracking-wide">
             <a
               href="https://www.google.com/maps?gs_lcrp=EgZjaHJvbWUqBwgBEAAYgAQyDQgAEAAYgwEYsQMYgAQyBwgBEAAYgAQyBwgCEAAYgAQyBwgDEAAYgAQyBggEEEUYOTIHCAUQABiABDIHCAYQABiABDIHCAcQABiABDIHCAgQABiABNIBCDMzMjVqMGoxqAIAsAIA&um=1&ie=UTF-8&fb=1&gl=id&sa=X&geocode=KbGLGJMi5mguMbVlabI2z4qP&daddr=Gedung+Graha+Sudirman+Lt.1,+Jl.+Jend.+Sudirman+No.232A,+Kb.+Jeruk,+Kec.+Andir,+Kota+Bandung,+Jawa+Barat+40181"
-              target="_blank">
+              target="_blank"
+            >
               View Map
             </a>
           </button>
@@ -307,7 +321,8 @@ export default function SecondSection() {
         <div className="pt-20 relative pb-10 md:px-16">
           <h1
             data-aos="fade-up"
-            className="text-[#507554] text-[35px] font-elwiss text-center">
+            className="text-[#507554] text-[35px] font-elwiss text-center"
+          >
             Our Gallery
           </h1>
           <div data-aos="zoom-in" className="px-4 mt-8">
@@ -325,7 +340,8 @@ export default function SecondSection() {
         <div className="pt-20 relative pb-10 md:px-16">
           <h1
             data-aos="fade-up"
-            className="text-[#507554] text-[35px] font-elwiss text-center">
+            className="text-[#507554] text-[35px] font-elwiss text-center"
+          >
             Our Footage
           </h1>
           <div data-aos="zoom-in" className="px-4 mt-8">
@@ -352,7 +368,8 @@ export default function SecondSection() {
         <div className="pt-20 relative pb-10 md:px-16">
           <h1
             data-aos="fade-up"
-            className="text-[#507554] text-[35px] font-elwiss text-center">
+            className="text-[#507554] text-[35px] font-elwiss text-center"
+          >
             Wedding Gift
           </h1>
           <p className="font-libre text-[#504533] text-[12px] px-8 text-center md:px-0 mt-2">
@@ -363,7 +380,8 @@ export default function SecondSection() {
 
           <div
             data-aos="fade-up"
-            className="border border-1 border-[#3C5E50] rounded-lg px-5 py-4 pb-8 mx-4 mt-12 text-[#504533]">
+            className="border border-1 border-[#3C5E50] rounded-lg px-5 py-4 pb-8 mx-4 mt-12 text-[#504533]"
+          >
             <div className="py-4">
               <p className="text-[#3C5E50] text-[20px] font-libre border border-1 rounded-lg border-[#3C5E50] w-full px-3 py-3">
                 BANK BCA
@@ -373,7 +391,8 @@ export default function SecondSection() {
             {isCopied && (
               <div
                 class="p-4 mb-4 text-sm text-white rounded-lg bg-[#504533]  text-white"
-                role="alert">
+                role="alert"
+              >
                 <span class="font-medium">Rekening berhasil disalin !</span>
               </div>
             )}
@@ -392,7 +411,8 @@ export default function SecondSection() {
                   onCopy={() => {
                     setCopied(true);
                     setTimeout(() => setCopied(false), 2000);
-                  }}>
+                  }}
+                >
                   <Image
                     src="/assets/copy.svg"
                     alt="copy"

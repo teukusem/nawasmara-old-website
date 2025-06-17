@@ -6,7 +6,7 @@ export default function FooterSection() {
     <>
       <div className="bg-[#F4EFEC]">
         <div className="relative w-100">
-          <div style={{top: -60}} className="text-with-background">
+          <div style={{ top: -60 }} className="text-with-background">
             {/* <div className="background-image">
               <Image
                 src="/1/footer-bg.png"
@@ -16,13 +16,22 @@ export default function FooterSection() {
               />
             </div> */}
             <div className="text mt-16">
-              <p data-aos="fade-up" className="text-center font-libre text-[16px] text-[#B6968B]">
+              <p
+                data-aos="fade-up"
+                className="text-center font-libre text-[16px] text-[#B6968B]"
+              >
                 Wedding Invitation
               </p>
-              <p data-aos="fade-up" className="font-elwiss text-center text-[#507554] text-[40px]">
+              <p
+                data-aos="fade-up"
+                className="font-elwiss text-center text-[#507554] text-[40px]"
+              >
                 Win & Vania
               </p>
-              <p data-aos="fade-up" className="text-center font-libre text-[16px] text-[#B6968B]">
+              <p
+                data-aos="fade-up"
+                className="text-center font-libre text-[16px] text-[#B6968B]"
+              >
                 16 . 12 . 2023
               </p>
             </div>

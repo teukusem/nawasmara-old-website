@@ -43,7 +43,6 @@ const fonts = localFont({
   variable: "--font-bethaine",
 });
 
-
 const elsieSwashCaps = localFont({
   src: [
     {

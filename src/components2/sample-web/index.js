@@ -1,5 +1,5 @@
 export default function SampleWeb() {
-    const html = `<html lang="en"><head>
+  const html = `<html lang="en"><head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
@@ -1519,6 +1519,6 @@ export default function SampleWeb() {
     <script src="https://katsudoto.id/src/template/js/exclusive-palace.js?1693991595" type="text/javascript"></script>
     <script defer="" src="https://static.cloudflareinsights.com/beacon.min.js/v8b253dfea2ab4077af8c6f58422dfbfd1689876627854" integrity="sha512-bjgnUKX4azu3dLTVtie9u6TKqgx29RBwfj3QXYt5EKfWM/9hPSAI/4qcV5NACjwAo8UtTeWefx6Zq5PHcMm7Tg==" data-cf-beacon="{&quot;rayId&quot;:&quot;802598476eea1918&quot;,&quot;version&quot;:&quot;2023.8.0&quot;,&quot;r&quot;:1,&quot;token&quot;:&quot;d34aef250c654f31b6d9e017ec358062&quot;,&quot;si&quot;:100}" crossorigin="anonymous"></script>
     
-    </body></html>`
-    return <div dangerouslySetInnerHTML={{__html: html}} />
+    </body></html>`;
+  return <div dangerouslySetInnerHTML={{ __html: html }} />;
 }

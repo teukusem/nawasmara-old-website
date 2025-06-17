@@ -205,16 +205,13 @@ export default function SecondSection() {
           </a>
         </button>
         <div className="w-full">
-        {/* <img src="/1/rumah.png" alt="daun" className="w-full" />
+          {/* <img src="/1/rumah.png" alt="daun" className="w-full" />
         <img src="/1/poon.png" alt="daun" className="w-full" className="h-max" /> */}
 
           <img src="/1/grass.png" alt="daun" className="w-full" />
-
         </div>
       </div>
       {/* end save the date */}
-
-
 
       {/* start event detail */}
       <h1 className="text-[#504533] text-6xl font-bethaine text-center">

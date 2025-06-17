@@ -13,8 +13,8 @@ module.exports = {
           600: "#1E1E1E",
         },
         gree: {
-          600: '#507643'
-        }
+          600: "#507643",
+        },
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -35,7 +35,7 @@ module.exports = {
         bgPrimary21: "url('/1/bg21.png')",
         bgPrimary22: "url('/1/bg22.png')",
         bgPrimary23: "url('/1/bg23.png')",
-        theDay: "url('/1/its-the-day-bg.jpg')"
+        theDay: "url('/1/its-the-day-bg.jpg')",
       },
       fontFamily: {
         libreCaslon: [
@@ -47,7 +47,7 @@ module.exports = {
         bethaine: ["var(--font-bethaine)"],
         elwiss: ["var(--font-elwiss)"],
         playfair: ["var(--font-playfair)"],
-        crimson: ["var(--font-crimson)"]
+        crimson: ["var(--font-crimson)"],
       },
     },
   },
