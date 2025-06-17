@@ -19,7 +19,7 @@ export default function FirstSection() {
           data-aos="zoom-in"
           className="text-center text-[#3C5E50] leading-6 h-max w-full text-[40px] font-elwiss pt-24"
         >
-          Win & Vanilla
+          Win & Vania
         </p>
 
         <img  

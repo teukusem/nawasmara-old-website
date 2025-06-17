@@ -15,7 +15,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
               data-aos="fade-down"
               className="text-[#504533] text-5xl font-elwiss text-center !text-white"
             >
-              Arsell & Vanilla
+              Win & Vania
             </h1>
             {recieverName.length > 1 && (
               <h1
