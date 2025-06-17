@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function LandingPage({ handleOpenInvitations, recieverName }) {
   
   return (
-    <div className="md:px-[30vw]">
-      <div className="bg-arsellVanilla bg-contain bg-fixed bg-no-repeat h-screen relative">
+    // <div className="md:px-[30vw]">
+      <div className="bg-arsellVanilla bg-cover bg-fixed bg-no-repeat h-screen relative">
         <div className="flex flex-col absolute justify-between items-center w-full h-full pt-40">
           <div clas>
             <h1
@@ -44,6 +44,6 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
           </div>
         </div>
       </div>
-    </div>
+    // </div>
   );
 }
