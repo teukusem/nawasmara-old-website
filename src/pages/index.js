@@ -1,14 +1,18 @@
 import Head from "next/head";
 
-export default function Maintenance() {
+export default function Maintenance({ subdomain }) {
+  const title = subdomain ? `${subdomain} - Maintenance Mode` : 'Maintenance Mode';
+
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
       <Head>
         <title>{`Maintenance Mode`}</title>
+        <title>{title}</title>
       </Head>
       <div className="text-center">
         <h1 className="text-4xl font-bold text-gray-800 mb-4">
           {`We'll be back soon!`}
+          {title}
         </h1>
         <p className="text-lg text-gray-600">
           {`Sorry for the inconvenience but we're performing some maintenance at
@@ -23,7 +27,32 @@ export default function Maintenance() {
           </a>
           {`, otherwise, we'll be back online shortly!`}
         </p>
+        {subdomain && (
+          <p className="text-sm text-gray-500 mt-4">
+            Subdomain: {subdomain}
+          </p>
+        )}
       </div>
     </div>
   );
+}
+
+export async function getServerSideProps(context) {
+  const { req } = context;
+  const host = req.headers.host || '';
+
+  // Extract subdomain from host
+  const hostParts = host.split('.');
+  let subdomain = null;
+
+  // Check if we have a subdomain (more than 2 parts and not www)
+  if (hostParts.length > 2 && hostParts[0] !== 'www') {
+    subdomain = hostParts[0];
+  }
+
+  return {
+    props: {
+      subdomain,
+    },
+  };
 }
