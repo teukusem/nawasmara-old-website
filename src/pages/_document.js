@@ -1,5 +1,5 @@
 import { Html, Head, Main, NextScript } from "next/document";
-import { data } from "@/constants/ariefnabila";
+import { data } from "@/constants/meta";
 
 export default function Document() {
   const { title, description } = data;

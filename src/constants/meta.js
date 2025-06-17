@@ -4,7 +4,7 @@ export const data_arief = {
     "Hai, Kamu diundang pada acara pesta pernikahan kami - Pernikahan Arief &amp; Nabila - Jumat, 13 Oktober 2023",
 };
 
-export const data = {
+export const datas = {
   title: "Nawasmara.com",
   description: "Custom online invitation",
 };

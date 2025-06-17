@@ -4,14 +4,12 @@ import { useRouter } from "next/router";
 import { useGlobalAudioPlayer } from "react-use-audio-player";
 
 import { data } from "@/constants/meta";
-import LandingPage from "@/components/landing-page";
-import FirstSection from "@/components/sections/first";
-import FooterSection from "@/components/footer";
+import LandingPage from "@/components2/landing-page";
+import FirstSection from "@/components2/sections/first";
+import FooterSection from "@/components2/footer";
 import dynamic from "next/dynamic";
 
-const SecondSection = dynamic(import("@/components/sections/second"), {
-  ssr: false,
-});
+const SecondSection = dynamic(import('@/components/sections/second'), { ssr: false})
 
 export default function Home() {
   const router = useRouter();
@@ -22,7 +20,7 @@ export default function Home() {
   const recieverName = router.query.to || "-";
 
   function openInvitation() {
-    load("/audio/soundtrack.mp3", {
+    load("/audio/arsellvanilla.mp3", {
       autoplay: true,
     });
     setOpenInvitation(true);

@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components2/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
@@ -11,6 +12,9 @@ module.exports = {
         brown: {
           600: "#1E1E1E",
         },
+        gree: {
+          600: '#507643'
+        }
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
@@ -26,6 +30,7 @@ module.exports = {
         storyThree: "url('/assets/story-3.png')",
         keyboard: "url('/assets/keyboard.svg')",
         giftBox: "url('/assets/box-gift.svg')",
+        arsellVanilla: "url('/1/bg-front.png')",
       },
       fontFamily: {
         libreCaslon: [
@@ -35,6 +40,7 @@ module.exports = {
         ],
         libre: ["var(--font-libre)"],
         bethaine: ["var(--font-bethaine)"],
+        elwiss: ["var(--font-elwiss)"],
         playfair: ["var(--font-playfair)"],
       },
     },
