@@ -7,70 +7,50 @@ export const config = {
 }
 
 export function middleware(req) {
-  try {
-    const host = req.headers.get('host') || ''
-    const domain = 'nawasmara.com'
-    const vercelDomain = 'vercel.app'
-    const reservedSubdomains = ['www', 'app', 'admin', 'dashboard']
+  // const host = req.headers.get('host') || ''
+  // const domain = 'nawasmara.com'
 
-    // 1. Clean and parse host
-    const cleanHost = host.replace('www.', '').split(':')[0]
-    const isVercelPreview = cleanHost.endsWith(vercelDomain)
-    const isLocalhost = cleanHost === 'localhost'
-    
-    // 2. Extract subdomain
-    let subdomain = null
-    
-    if (isVercelPreview) {
-      subdomain = cleanHost.split('.')[0]
-    } 
-    else if (cleanHost.endsWith(`.${domain}`)) {
-      subdomain = cleanHost.replace(`.${domain}`, '')
-    }
-    else if (isLocalhost) {
-      // Optional: Handle local development subdomains
-      // subdomain = 'dev' // Uncomment if you want localhost to map to a specific subdomain
-      return NextResponse.next()
-    }
+  // // Remove port if exists (e.g., localhost:3000)
+  // const cleanHost = host.split(':')[0]
 
-    // 3. Validate subdomain
-    const isValidSubdomain = (sub) => {
-      return sub && 
-             /^[a-z0-9-]+$/.test(sub) && // Only allow letters, numbers, hyphens
-             !reservedSubdomains.includes(sub) &&
-             !sub.includes('.') &&
-             !sub.includes('/')
-    }
+  // // Extract subdomain (before domain)
+  // const isLocalhost = cleanHost.endsWith('localhost')
+  // const subdomain = isLocalhost
+  //   ? cleanHost.split('.')[0]
+  //   : cleanHost.replace(`.${domain}`, '')
 
-    // Debug logging
-    console.log('Middleware Debug:', {
-      host,
-      cleanHost,
-      subdomain,
-      isValid: isValidSubdomain(subdomain),
-      pathname: req.nextUrl.pathname
-    })
+  // // Debug logging
+  // console.log('Middleware Debug:', {
+  //   host,
+  //   cleanHost,
+  //   domain,
+  //   subdomain,
+  //   isLocalhost,
+  //   pathname: req.nextUrl.pathname
+  // })
 
-    // 4. Skip if no valid subdomain
-    if (!isValidSubdomain(subdomain)) {
-      console.log('Invalid subdomain - skipping rewrite')
-      return NextResponse.next()
-    }
+  // // Ignore localhost for development
+  // if (isLocalhost) {
+  //   console.log('Localhost detected - allowing request to pass through')
+  //   return NextResponse.next()
+  // }
 
-    // 5. Rewrite to internal path
-    const url = req.nextUrl.clone()
-    url.pathname = `/${subdomain}${url.pathname}`
-    
-    console.log('Rewriting to:', url.toString())
-    
-    // 6. Create response with cache control
-    const response = NextResponse.rewrite(url)
-    response.headers.set('Cache-Control', 'no-cache, no-store, max-age=0')
-    
-    return response
+  // // Ignore root domain or reserved
+  // if (
+  //   cleanHost === domain ||
+  //   cleanHost === `www.${domain}` ||
+  //   subdomain === 'www' ||
+  //   subdomain === cleanHost // Handle cases where subdomain extraction fails
+  // ) {
+  //   console.log('Allowing request to pass through')
+  //   return NextResponse.next()
+  // }
 
-  } catch (error) {
-    console.error('Middleware error:', error)
-    return NextResponse.next()
-  }
+  // // Rewrite to internal path
+  // const url = req.nextUrl.clone()
+  // url.pathname = `/${subdomain}${url.pathname}`
+  
+  // console.log('Rewriting to:', url.pathname)
+  // return NextResponse.rewrite(url)
+  return NextResponse.next()
 }
