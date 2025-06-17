@@ -1,7 +1,10 @@
+import Template001 from "@/components/template/001";
 import Head from "next/head";
 
 export default function Maintenance({ subdomain }) {
   const title = subdomain ? `${subdomain} - Maintenance Mode` : 'Maintenance Mode';
+
+  if (subdomain === 'arief-nabilla') return <Template001 />
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
