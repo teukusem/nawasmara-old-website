@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { useGlobalAudioPlayer } from "react-use-audio-player";
 
-import { data } from "@/constants/ariefnabila";
+//import { data } from "@/constants/ariefnabila";
 import LandingPage from "@/components/landing-page";
 import FirstSection from "@/components/sections/first";
 import FooterSection from "@/components/footer";
@@ -17,7 +17,7 @@ export default function Template001() {
   const router = useRouter();
   const { load } = useGlobalAudioPlayer();
   const [isOpenInvitation, setOpenInvitation] = useState(false);
-  const { title } = data;
+  const title = "Test"
 
   const recieverName = router.query.to || "-";
 
