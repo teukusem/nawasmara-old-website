@@ -10,7 +10,7 @@ export const datas = {
 };
 
 export const data = {
-  title: "Win & Vania | Nawasmara.com",
+  title: "Naufal & Liza | Nawasmara.com",
   description:
-    "Hai, Kamu diundang pada acara pesta pernikahan kami - Pernikahan Win &amp; Vania - Sabtu, 16 Desember 2023",
-};
+    "Hai, Kamu diundang pada acara pesta pernikahan kami - Pernikahan Naufal &amp; Liza - Sabtu, 16 Juli 2025",
+  };
