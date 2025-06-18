@@ -83,7 +83,6 @@ export default function Template002() {
   const router = useRouter();
   const { load } = useGlobalAudioPlayer();
   const [isOpenInvitation, setOpenInvitation] = useState(false);
-  const { title } = data;
 
   const recieverName = router.query.to || "-";
   const invitationId = router.query.invitationId || "-";
