@@ -23,6 +23,8 @@
     "react-dom": "18.2.0",
     "react-shimmer": "^3.2.0",
     "react-use-audio-player": "^2.1.1",
-    "tailwindcss": "3.3.3"
+    "tailwindcss": "3.3.3",
+    "uuid": "0.1.0",
+    "qrcode": "1.5.4"
   }
 }
