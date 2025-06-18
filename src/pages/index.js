@@ -5,6 +5,7 @@ export default function Maintenance({ subdomain }) {
   const title = subdomain ? `${subdomain} - Maintenance Mode` : 'Maintenance Mode';
 
   if (subdomain === 'arief-nabilla') return <Template001 />
+  if (subdomain === 'naufal-liza') return null
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
