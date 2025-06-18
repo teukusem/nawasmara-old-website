@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { useGlobalAudioPlayer } from "react-use-audio-player";
 
-import { data } from "@/constants/meta";
 import LandingPage from "@/components2/landing-page";
 import FirstSection from "@/components2/sections/first";
 import FooterSection from "@/components2/footer";
@@ -14,6 +13,9 @@ const SecondSection = dynamic(import("@/components2/sections/second"), {
 });
 
 const dummyData = {
+ meta : {
+  title: "Naufal & Liza | Nawasmara.com",
+ },
   title: 'Naufal & Liza',
   imageTogether: '/naufal-liza/first-content.png',
   weddingDate: '2025-07-16',
@@ -78,7 +80,7 @@ export default function Template002() {
   const router = useRouter();
   const { load } = useGlobalAudioPlayer();
   const [isOpenInvitation, setOpenInvitation] = useState(false);
-  const { title } = data;
+  const { meta } = dummyData;
   
   const recieverName = router.query.to || "-";
   const invitationId = router.query.invitationId || "-";
@@ -93,7 +95,7 @@ export default function Template002() {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{meta.title}</title>
       </Head>
       {!isOpenInvitation ? (
         <LandingPage
