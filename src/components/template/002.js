@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/router";
 import { useGlobalAudioPlayer } from "react-use-audio-player";
 
-import { data } from "@/constants/meta";
+//import { data } from "@/constants/meta";
 import LandingPage from "@/components2/landing-page";
 import FirstSection from "@/components2/sections/first";
 import FooterSection from "@/components2/footer";
@@ -14,10 +14,15 @@ const SecondSection = dynamic(import("@/components2/sections/second"), {
 });
 
 const dummyData = {
+  meta: {
+  title: "Naufal & Liza | Nawasmara.com",
+  description:
+    "Hai, Kamu diundang pada acara pesta pernikahan kami - Pernikahan Naufal &amp; Liza - Sabtu, 16 Juli 2025",
+  },
   title: 'Naufal & Liza',
   imageTogether: '/naufal-liza/first-content.png',
-  weddingDate: '2023-12-16',
-  displayDate: 'December 16, 2023',
+  weddingDate: '2025-07-16',
+  displayDate: 'July 16, 2025',
   verse: {
     reference: 'QS. Ar-Rum: 21',
     text: `“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu berpasang-pasangan dari jenismu sendiri, supaya kamu merasa tenang dan tentram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir."`
@@ -44,11 +49,11 @@ const dummyData = {
   events: {
     holyMatrimony: {
       title: 'Marriage ceremony',
-      datetime: 'Saturday, December 16 2023, 09.30 - 10.45 WIB'
+      datetime: 'Saturday, July 16 2025, 09.30 - 10.45 WIB'
     },
     reception: {
       title: 'Reception',
-      datetime: 'Saturday, December 16 2023, 12.00 - 14.00 WIB'
+      datetime: 'Saturday, July 16 2025, 12.00 - 14.00 WIB'
     }
   },
   venue: {
@@ -93,7 +98,7 @@ export default function Template002() {
   return (
     <>
       <Head>
-        <title>{title}</title>
+        <title>{dummyData.meta}</title>
       </Head>
       {!isOpenInvitation ? (
         <LandingPage
