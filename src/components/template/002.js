@@ -1,4 +1,5 @@
 import Head from "next/head";
+
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { useGlobalAudioPlayer } from "react-use-audio-player";
