@@ -378,57 +378,134 @@ export default function SecondSection({ data }) {
             {data?.gift?.message || "Your blessing and presence at our wedding is enough for us. But if you want to give a gift, we provide Digital Envelopes to make it easier for you. Thank You"}
           </p>
 
-          <div
-            data-aos="fade-up"
-            className="border border-1 border-[#3C5E50] rounded-lg px-5 py-4 pb-8 mx-4 mt-12 text-[#504533]"
-          >
-            <div className="py-4">
-              <p className="text-[#3C5E50] text-[20px] font-libre border border-1 rounded-lg border-[#3C5E50] w-full px-3 py-3">
-                {data?.gift?.bank?.name || "BANK BCA"}
-              </p>
-            </div>
+          {/* Tab Navigation */}
+          <div data-aos="fade-up" className="flex mx-4 mt-8 bg-white rounded-lg border border-[#3C5E50] p-1">
+            <button
+              onClick={() => setActiveTab("transfer")}
+              className={`flex-1 py-3 px-4 rounded-md text-sm font-libre transition-all duration-300 ${
+                activeTab === "transfer"
+                  ? "bg-[#3C5E50] text-white shadow-md"
+                  : "text-[#3C5E50] hover:bg-[#3C5E50]/10"
+              }`}
+            >
+              Transfer Bank
+            </button>
+            <button
+              onClick={() => setActiveTab("flower")}
+              className={`flex-1 py-3 px-4 rounded-md text-sm font-libre transition-all duration-300 ${
+                activeTab === "flower"
+                  ? "bg-[#3C5E50] text-white shadow-md"
+                  : "text-[#3C5E50] hover:bg-[#3C5E50]/10"
+              }`}
+            >
+              Flower Board
+            </button>
+          </div>
 
-            {isCopied && (
+          {/* Tab Content */}
+          <div className="mx-4 mt-6">
+            {/* Transfer Bank Tab */}
+            {activeTab === "transfer" && (
               <div
-                class="p-4 mb-4 text-sm text-white rounded-lg bg-[#504533]  text-white"
-                role="alert"
+                data-aos="fade-up"
+                className="border border-1 border-[#3C5E50] rounded-lg px-5 py-4 pb-8 text-[#504533]"
               >
-                <span class="font-medium">Rekening berhasil disalin !</span>
+                <div className="py-4">
+                  <p className="text-[#3C5E50] text-[20px] font-libre border border-1 rounded-lg border-[#3C5E50] w-full px-3 py-3">
+                    {data?.gift?.bank?.name || "BANK BCA"}
+                  </p>
+                </div>
+
+                {isCopied && (
+                  <div
+                    className="p-4 mb-4 text-sm text-white rounded-lg bg-[#504533]"
+                    role="alert"
+                  >
+                    <span className="font-medium">Rekening berhasil disalin !</span>
+                  </div>
+                )}
+
+                <div className="px-4 py-4 bg-white rounded-lg">
+                  <p className="font-libre text-[#9FAA8A] text-[14px]">
+                    Account Number
+                  </p>
+                  <div className="flex justify-between">
+                    <p className="font-libre text-[#9FAA8A] text-[14px]">
+                      {data?.gift?.bank?.accountNumber || "8380177421"}
+                    </p>
+
+                    <CopyToClipboard
+                      text={data?.gift?.bank?.accountNumber || "8380177421"}
+                      onCopy={() => {
+                        setCopied(true);
+                        setTimeout(() => setCopied(false), 2000);
+                      }}
+                    >
+                      <Image
+                        src="/assets/copy.svg"
+                        alt="copy"
+                        height={25}
+                        width={25}
+                      />
+                    </CopyToClipboard>
+                  </div>
+
+                  <p className="font-libre text-[#9FAA8A] text-[14px] pt-2">
+                    Account Owner
+                  </p>
+                  <p className="font-libre text-[#9FAA8A] text-[14px]">
+                    {data?.gift?.bank?.accountOwner || "Vania Natali"}
+                  </p>
+                </div>
               </div>
             )}
 
-            <div className="px-4 py-4 bg-white rounded-lg">
-              <p className="font-libre text-[#9FAA8A] text-[14px]">
-                Account Number
-              </p>
-              <div className="flex justify-between">
-                <p className="font-libre text-[#9FAA8A] text-[14px]">
-                  {data?.gift?.bank?.accountNumber || "8380177421"}
-                </p>
+            {/* Flower Board Tab */}
+            {activeTab === "flower" && (
+              <div
+                data-aos="fade-up"
+                className="border border-1 border-[#25D366] rounded-lg px-5 py-6 text-center bg-gradient-to-b from-green-50 to-white"
+              >
+                <div className="flex flex-col items-center space-y-4">
+                  {/* WhatsApp Icon */}
+                  <div className="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg">
+                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                    </svg>
+                  </div>
 
-                <CopyToClipboard
-                  text={data?.gift?.bank?.accountNumber || "8380177421"}
-                  onCopy={() => {
-                    setCopied(true);
-                    setTimeout(() => setCopied(false), 2000);
-                  }}
-                >
-                  <Image
-                    src="/assets/copy.svg"
-                    alt="copy"
-                    height={25}
-                    width={25}
-                  />
-                </CopyToClipboard>
+                  {/* Content */}
+                  <div className="space-y-3">
+                    <h3 className="text-[#25D366] text-[18px] font-libre font-semibold">
+                      Send Flowers via WhatsApp
+                    </h3>
+                    <p className="text-[#504533] text-[12px] font-libre leading-relaxed px-4">
+                      Contact our florist partner to send beautiful flower arrangements for our special day
+                    </p>
+                    
+                    {/* Phone Number Display */}
+                    <div className="bg-white rounded-lg p-4 border border-[#25D366]/20">
+                      <p className="text-[#25D366] text-[14px] font-libre font-medium">
+                        {data?.gift?.flowerBoard?.displayNumber || "0812-3456-7890"}
+                      </p>
+                    </div>
+
+                    {/* WhatsApp Button */}
+                    <a
+                      href={`https://wa.me/${data?.gift?.flowerBoard?.whatsappNumber || "+6281234567890"}?text=${encodeURIComponent(data?.gift?.flowerBoard?.message || "Hi, I would like to send flowers for the wedding! 🌸")}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center space-x-2 bg-[#25D366] hover:bg-[#20B358] text-white px-6 py-3 rounded-lg font-libre text-[14px] transition-colors duration-300 shadow-lg hover:shadow-xl"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+                      </svg>
+                      <span>Send Message</span>
+                    </a>
+                  </div>
+                </div>
               </div>
-
-              <p className="font-libre text-[#9FAA8A] text-[14px] pt-2">
-                Account Owner
-              </p>
-              <p className="font-libre text-[#9FAA8A] text-[14px]">
-                {data?.gift?.bank?.accountOwner || "Vania Natali"}
-              </p>
-            </div>
+            )}
           </div>
         </div>
       </div>
