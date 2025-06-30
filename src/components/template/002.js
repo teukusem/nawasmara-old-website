@@ -72,6 +72,11 @@ const dummyData = {
       name: 'BANK BCA',
       accountNumber: '1234567890',
       accountOwner: 'Liza'
+    },
+    flowerBoard: {
+      whatsappNumber: '+6281234567890',
+      displayNumber: '0812-3456-7890',
+      message: 'Hi, I would like to send flowers for Naufal & Liza wedding celebration! 🌸'
     }
   },
   googleCalendarUrl: 'https://calendar.google.com/calendar/...'
@@ -104,6 +109,7 @@ export default function Template002() {
           handleOpenInvitations={openInvitation}
           recieverName={recieverName}
           title={dummyData.title}
+          uuid={invitationId}
         />
       ) : (
         <>

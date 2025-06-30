@@ -1,18 +1,33 @@
 import { useState } from 'react';
+import QRCodeGenerator from "../../global/QrCodeGenerator";
 
-export default function LandingPage({ handleOpenInvitations, recieverName, title }) {
+export default function LandingPage({ handleOpenInvitations, recieverName, title, uuid }) {
   const [startY, setStartY] = useState(0);
   const [currentY, setCurrentY] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [hasMoved, setHasMoved] = useState(false);
+  const [showQRSheet, setShowQRSheet] = useState(false);
 
   const handleTouchStart = (e) => {
+    // Check if the touch started on a button or interactive element
+    if (e.target.closest('button')) {
+      return;
+    }
     setStartY(e.touches[0].clientY);
+    setCurrentY(e.touches[0].clientY);
     setIsDragging(true);
+    setHasMoved(false);
   };
 
   const handleTouchMove = (e) => {
     if (!isDragging) return;
-    setCurrentY(e.touches[0].clientY);
+    const newY = e.touches[0].clientY;
+    setCurrentY(newY);
+    
+    // Mark as moved if there's significant movement
+    if (Math.abs(newY - startY) > 10) {
+      setHasMoved(true);
+    }
   };
 
   const handleTouchEnd = () => {
@@ -21,24 +36,38 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
     const deltaY = startY - currentY;
     const threshold = 100; // Minimum swipe distance in pixels
     
-    if (deltaY > threshold) {
+    // Only trigger if user actually swiped (moved) and met the threshold
+    if (hasMoved && deltaY > threshold) {
       handleOpenInvitations();
     }
     
     setIsDragging(false);
+    setHasMoved(false);
     setStartY(0);
     setCurrentY(0);
   };
 
   // Mouse events for desktop testing
   const handleMouseDown = (e) => {
+    // Check if the mouse down started on a button or interactive element
+    if (e.target.closest('button')) {
+      return;
+    }
     setStartY(e.clientY);
+    setCurrentY(e.clientY);
     setIsDragging(true);
+    setHasMoved(false);
   };
 
   const handleMouseMove = (e) => {
     if (!isDragging) return;
-    setCurrentY(e.clientY);
+    const newY = e.clientY;
+    setCurrentY(newY);
+    
+    // Mark as moved if there's significant movement
+    if (Math.abs(newY - startY) > 10) {
+      setHasMoved(true);
+    }
   };
 
   const handleMouseUp = () => {
@@ -47,11 +76,13 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
     const deltaY = startY - currentY;
     const threshold = 100;
     
-    if (deltaY > threshold) {
+    // Only trigger if user actually moved (dragged/swiped) and met the threshold
+    if (hasMoved && deltaY > threshold) {
       handleOpenInvitations();
     }
     
     setIsDragging(false);
+    setHasMoved(false);
     setStartY(0);
     setCurrentY(0);
   };
@@ -101,6 +132,21 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
                 </h1>
               </div>
 
+              {/* QR Code Button */}
+              <div className="flex justify-center mb-4">
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowQRSheet(true);
+                  }}
+                  onTouchStart={(e) => e.stopPropagation()}
+                  onMouseDown={(e) => e.stopPropagation()}
+                  className="px-6 py-3 bg-[#507554] text-white rounded-lg font-libreCaslon text-[14px] hover:bg-[#3d5a41] transition-colors duration-300 shadow-md"
+                >
+                  Show QR Code
+                </button>
+              </div>
+
               {/* Swipe up indicator */}
               <div
                 data-aos="fade-up"
@@ -133,6 +179,50 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
           </div>
         </div>
       </div>
+
+      {/* Bottom Sheet for QR Code */}
+      {showQRSheet && (
+        <div className="flex fixed inset-0 z-50 justify-center items-end">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black bg-opacity-50"
+            onClick={() => setShowQRSheet(false)}
+          ></div>
+          
+          {/* Bottom Sheet */}
+          <div className="relative p-6 mb-0 w-full max-w-md bg-white rounded-t-3xl shadow-2xl animate-slide-up">
+            {/* Handle */}
+            <div className="mx-auto mb-4 w-12 h-1 bg-gray-300 rounded-full"></div>
+            
+            {/* Header */}
+            <div className="flex justify-center items-center mb-4">
+              <h3 className="text-lg text-center font-semibold text-[#507554]">Wedding Invitation QR Code</h3>
+            </div>
+            
+            {/* QR Code Generator */}
+            <div className="flex justify-center">
+              <QRCodeGenerator uuid={uuid} size={200} />
+            </div>
+          </div>
+        </div>
+      )}
+
+      <style>
+        {`
+          @keyframes slide-up {
+            from {
+              transform: translateY(100%);
+            }
+            to {
+              transform: translateY(0);
+            }
+          }
+          
+          .animate-slide-up {
+            animation: slide-up 0.3s ease-out;
+          }
+        `}
+      </style>
     </div>
   );
 }

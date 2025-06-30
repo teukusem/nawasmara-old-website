@@ -51,6 +51,7 @@ export default function SecondSection({ data }) {
   const [days, hours, minutes, seconds] = useCountdown(data?.weddingDate || "2023-12-16");
   const [showGift, setShowGift] = useState(false);
   const [isCopied, setCopied] = useState(false);
+  const [activeTab, setActiveTab] = useState("transfer");
 
   const handleVideoPause = () => {
     togglePlayPause();
