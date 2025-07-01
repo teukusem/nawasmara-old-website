@@ -89,7 +89,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
 
   return (
     <div 
-      className="fixed inset-0 bg-fixed bg-center bg-no-repeat bg-cover bg-naufalLiza cursor-pointer select-none"
+      className="fixed inset-0 bg-fixed bg-center bg-no-repeat bg-cover cursor-pointer select-none bg-naufalLiza"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -97,24 +97,24 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
       onMouseMove={handleMouseMove}
       onMouseUp={handleMouseUp}
     >
-      <div className="overflow-y-auto relative w-full h-full">
+      <div className="relative w-full h-full overflow-y-auto">
         <div className="flex flex-col min-h-screen">
           <div className="flex-shrink-0 w-full">
             <img src="/1/daun-atas.png" alt="daun" className="w-full h-auto" />
           </div>
 
-          <div className="flex flex-col flex-1 justify-between items-center px-4 py-8">
+          <div className="flex flex-col items-center justify-between flex-1 px-4 py-8">
             <div className="mb-8 text-center">
               <h1
                 data-aos="fade-down"
-                className="text-[#504533] text-5xl font-elwiss text-center !text-white mb-4"
+                className="text-[#504533] text-5xl font-elwiss text-center mb-4"
               >
                 {title}
               </h1>
               {recieverName.length > 1 && (
                 <h1
                   data-aos="zoom-in"
-                  className="text-[#504533] text-lg font-bold font-libreCaslon text-center px-12 !text-white"
+                  className="text-[#504533] text-lg font-bold font-libreCaslon text-center px-12"
                 >
                   Invite You To Celebrate Our Wedding <br />
                   {recieverName}
@@ -126,9 +126,9 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
               <div className="pb-10">
                 <h1
                   data-aos="zoom-in"
-                  className="text-[#504533] text-lg font-elwiss text-center !text-[18px] leading-[15px] !text-white"
+                  className="text-[#504533] text-lg font-elwiss text-center !text-[18px] leading-[15px]"
                 >
-                  16 December 2023 <br />
+                  20 juli 2025 <br />
                 </h1>
               </div>
 
@@ -150,7 +150,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
               {/* Swipe up indicator */}
               <div
                 data-aos="fade-up"
-                className="mt-5 flex flex-col items-center text-white"
+                className="flex flex-col items-center mt-5 text-[#504533]"
               >
                 <div className="mb-2">
                   <svg 
@@ -167,7 +167,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
                     />
                   </svg>
                 </div>
-                <p className="text-sm font-libreCaslon tracking-wide opacity-80">
+                <p className="text-sm tracking-wide font-libreCaslon opacity-80">
                   Swipe up to open invitation
                 </p>
               </div>
@@ -182,7 +182,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
 
       {/* Bottom Sheet for QR Code */}
       {showQRSheet && (
-        <div className="flex fixed inset-0 z-50 justify-center items-end">
+        <div className="fixed inset-0 z-50 flex items-end justify-center">
           {/* Backdrop */}
           <div 
             className="absolute inset-0 bg-black bg-opacity-50"
@@ -190,12 +190,12 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
           ></div>
           
           {/* Bottom Sheet */}
-          <div className="relative p-6 mb-0 w-full max-w-md bg-white rounded-t-3xl shadow-2xl animate-slide-up">
+          <div className="relative w-full max-w-md p-6 mb-0 bg-white shadow-2xl rounded-t-3xl animate-slide-up">
             {/* Handle */}
-            <div className="mx-auto mb-4 w-12 h-1 bg-gray-300 rounded-full"></div>
+            <div className="w-12 h-1 mx-auto mb-4 bg-gray-300 rounded-full"></div>
             
             {/* Header */}
-            <div className="flex justify-center items-center mb-4">
+            <div className="flex items-center justify-center mb-4">
               <h3 className="text-lg text-center font-semibold text-[#507554]">Wedding Invitation QR Code</h3>
             </div>
             

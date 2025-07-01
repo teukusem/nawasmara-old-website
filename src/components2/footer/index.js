@@ -27,7 +27,7 @@ export default function FooterSection({title, uuid}) {
                 data-aos="fade-up"
                 className="text-center font-libre text-[16px] text-[#B6968B]"
               >
-                16 . 12 . 2023
+                20 . 07 . 2025
               </p>
               
               {/* QR Code Button */}
@@ -42,7 +42,7 @@ export default function FooterSection({title, uuid}) {
             </div>
           </div>
         </div>
-        <div className="flex justify-between m-auto w-full"></div>
+        <div className="flex justify-between w-full m-auto"></div>
         <div className="bg-center bg-no-repeat bg-cover">
           <div data-aos="fade-up" className="flex justify-between w-full">
             <Image
@@ -57,7 +57,7 @@ export default function FooterSection({title, uuid}) {
 
       {/* Bottom Sheet for QR Code */}
       {showQRSheet && (
-        <div className="flex fixed inset-0 z-50 justify-center items-end">
+        <div className="fixed inset-0 z-50 flex items-end justify-center">
           {/* Backdrop */}
           <div 
             className="absolute inset-0 bg-black bg-opacity-50"
@@ -65,12 +65,12 @@ export default function FooterSection({title, uuid}) {
           ></div>
           
           {/* Bottom Sheet */}
-          <div className="relative p-6 mb-0 w-full max-w-md bg-white rounded-t-3xl shadow-2xl animate-slide-up">
+          <div className="relative w-full max-w-md p-6 mb-0 bg-white shadow-2xl rounded-t-3xl animate-slide-up">
             {/* Handle */}
-            <div className="mx-auto mb-4 w-12 h-1 bg-gray-300 rounded-full"></div>
+            <div className="w-12 h-1 mx-auto mb-4 bg-gray-300 rounded-full"></div>
             
             {/* Header */}
-            <div className="flex justify-center items-center mb-4">
+            <div className="flex items-center justify-center mb-4">
               <h3 className="text-lg text-center font-semibold text-[#507554]">Wedding Invitation QR Code</h3>
             </div>
             

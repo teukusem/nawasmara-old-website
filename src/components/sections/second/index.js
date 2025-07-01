@@ -9,7 +9,7 @@ const googleCalendar =
   "https://calendar.google.com/calendar/render?action=TEMPLATE&dates=20231013T010000Z%2F20231013T020000Z&details=%20For%20more%20info%2C%20please%20visit%20-%3E%20https%3A%2F%2Fnawasmara.com&location=Masjid%20Raya%20Baiturrahman%20Banda%20Aceh&text=Akad%20Arief%20%26%20Nabilla";
 
 export default function SecondSection() {
-  const [days, hours, minutes, seconds] = useCountdown("2023-12-16");
+  const [days, hours, minutes, seconds] = useCountdown("2025-07-20");
   const [showGift, setShowGift] = useState(false);
   const [isCopied, setCopied] = useState(false);
 
@@ -23,7 +23,7 @@ export default function SecondSection() {
         >
           <img src="/1/small-leaf.svg" alt="small-leaf" />
           <span className="font-crimson text-center text-[#507554] text-[18px] !leading-10">
-            December 16, 2023
+            20 juli 2025
           </span>
           <img
             src="/1/small-leaf.svg"
@@ -154,7 +154,7 @@ export default function SecondSection() {
             Save The Date
           </h1>
           <span className="font-crimson text-center text-[#507554] text-[18px] !leading-10">
-            December 16, 2023
+            20 juli 2025
           </span>
         </div>
 

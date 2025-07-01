@@ -48,7 +48,7 @@ const VideoPlayer = ({ src, width, height, onPlay, onPause }) => {
 export default function SecondSection({ data }) {
   const { togglePlayPause } = useGlobalAudioPlayer();
 
-  const [days, hours, minutes, seconds] = useCountdown(data?.weddingDate || "2023-12-16");
+  const [days, hours, minutes, seconds] = useCountdown(data?.weddingDate || "2025-07-20");
   const [showGift, setShowGift] = useState(false);
   const [isCopied, setCopied] = useState(false);
   const [activeTab, setActiveTab] = useState("transfer");
@@ -67,11 +67,11 @@ export default function SecondSection({ data }) {
         {/* date */}
         <div
           data-aos="fade-up"
-          className="flex justify-center items-center py-4 md:px-16"
+          className="flex items-center justify-center py-4 md:px-16"
         >
           <img src="/1/small-leaf.svg" alt="small-leaf" />
           <span className="font-crimson text-center text-[#507554] text-[18px]s">
-            {data?.displayDate || "December 16, 2023"}
+            {data?.displayDate || "20 juli 2025"}
           </span>
           <img
             src="/1/small-leaf.svg"
@@ -81,31 +81,31 @@ export default function SecondSection({ data }) {
         </div>
 
         {/* ayat */}
-        <div  data-aos="fade-up" className="flex items-center justify-center flex-col px-10 bg-[#3C5E50] py-10">
+        <div  data-aos="fade-up" className="flex items-center justify-center flex-col px-10 md:px-32 lg:px-64 bg-[#3C5E50] py-10 md:py-16">
           <div
             data-aos="fade-down"
-            className="flex flex-col justify-center items-center"
+            className="flex flex-col items-center justify-center"
           >
-            <span className="text-white text-[16px] font-libre">
+            <span className="text-white text-[16px] md:text-[20px] lg:text-[24px] font-libre">
               {data?.verse?.reference || "1 Corinthians 13 : 7"}
             </span>
-            <span className="text-white text-[12px] font-libre pt-2 text-center leading-6">
+            <span className="text-white text-[12px] md:text-[14px] lg:text-[16px] font-libre pt-2 text-center leading-6 md:leading-8">
               "{data?.verse?.text || "Love never gives up, never lose faith, is always helpful, and endures through every circumstance"}"
             </span>
           </div>
         </div>
 
         {/*   person 1   */}
-        <div className="flex flex-col relative bg-[#F2EDEB] text-[#504533] bg-bgPrimary22 bg-cover bg-no-repeat">
+        <div className="flex flex-col relative bg-[#F2EDEB] text-[#504533] bg-bgPrimary22 bg-cover bg-no-repeat max-w-4xl mx-auto">
           <div className="w-full">
             <img src="/1/daun-atas.png" alt="daun" className="w-full" />
           </div>
-          <div className="relative px-8">
+          <div className="relative px-8 md:px-16 lg:px-24">
             <div className="md:px-16">
               <p
                 data-aos="fade-down"
-                className="font-libre text-[#504533] text-[12px] p-4 text-center leading-6"
-              >
+                className="font-libre text-[#504533] text-[12px] md:text-[14px] lg:text-[16px] p-4 md:p-8 text-center leading-6 md:leading-8">
+              
                 {data?.invitationText || "God creates everything beautiful in His time. Beautiful when He brings together and grows affection, We cordially invite you to the wedding:"}
               </p>
             </div>
@@ -116,21 +116,22 @@ export default function SecondSection({ data }) {
               alt={data?.bride?.name || "bride"}
               className="w-full"
             />
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center justify-center mt-4 space-y-3">
               <h1
                 data-aos="fade-down"
-                className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center"
+                className="text-[#504533] text-4xl md:text-5xl lg:text-6xl font-elwiss text-center"
               >
                 {data?.bride?.name || "Vania Natali"}
               </h1>
-              <p className="font-libre absolute bottom-[-40px] px-[80px] text-center text-[#B6968B] text-[12px]">
+              <p className="font-libre px-[80px] md:px-[120px] lg:px-[160px] text-center text-[#B6968B] text-[12px] md:text-[14px] leading-relaxed">
                 {data?.bride?.parents || "Only daughter the late (†) Mr. Lie Thian Kie and Lioe Kim Djin"}
               </p>
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 data-aos="fade-up"
                 href={data?.bride?.instagram?.url || "https://instagram.com/ms.vanili"}
-                className="flex justify-center absolute bottom-[-70px] px-24"
+                className="z-20 flex items-center justify-center px-24 cursor-pointer"
               >
                 <Image src="/assets/ig.svg" alt="ig" width={12} height={20} />
                 <span className="text-center text-[#B6968B] font-spanlayfair text-[12px] ml-[5px]">
@@ -139,16 +140,18 @@ export default function SecondSection({ data }) {
               </a>
             </div>
           </div>
-          <h1
-            data-aos="fade-up"
-            className="z-10 text-[#507554] text-6xl font-elwiss text-center pt-[150px]"
-          >
-            &
-          </h1>
+          <div className="flex items-center justify-center py-8">
+            <h1
+              data-aos="fade-up"
+              className="z-10 text-[#507554] text-6xl font-elwiss text-center"
+            >
+              &
+            </h1>
+          </div>
         </div>
 
         {/*   person 2   */}
-        <div className="flex flex-col relative p-8 bg-[#F2EDEB] text-[#504533] bg-bgPrimary23 bg-cover bg-no-repeat h-[600px] top-[-4px] justify-center">
+        <div className="flex flex-col relative p-8 md:p-16 lg:p-24 bg-[#F2EDEB] text-[#504533] bg-bgPrimary23 bg-cover bg-no-repeat h-[600px] md:h-[700px] lg:h-[800px] top-[-4px] justify-center max-w-4xl mx-auto">
           <div className="relative top-[-50px]">
             <img
               data-aos="zoom-in"
@@ -157,22 +160,26 @@ export default function SecondSection({ data }) {
               alt={data?.groom?.name || "groom"}
               className="w-full"
             />
-            <div className="flex justify-center">
+            <div className="flex flex-col items-center justify-center mt-4 space-y-3">
               <h1
                 data-aos="fade-down"
-                className="absolute bottom-[10px] text-[#507554] text-4xl font-elwiss text-center"
+                className="text-[#504533] text-4xl md:text-5xl lg:text-6xl font-elwiss text-center"
               >
                 {data?.groom?.name || "Win Iskandar"}
               </h1>
-              <p className="font-libre absolute bottom-[-40px] px-[80px] text-center text-[#B6968B] text-[12px]">
-                {data?.groom?.parents || "First son of Mr. Iskandar Teluand mother Tan Tjun lan"}
-              </p>
+              <p 
+                className="font-libre px-[80px] md:px-[120px] lg:px-[160px] text-center text-[#B6968B] text-[12px] md:text-[14px] leading-relaxed"
+                dangerouslySetInnerHTML={{
+                  __html: data?.groom?.parents || "First son of Mr. Iskandar Teluand mother Tan Tjun lan"
+                }}
+              ></p>
 
               <a
                 target="_blank"
+                rel="noopener noreferrer"
                 data-aos="fade-up"
                 href={data?.groom?.instagram?.url || "https://instagram.com/win.rz"}
-                className="flex justify-center absolute bottom-[-70px] px-24"
+                className="z-20 flex items-center justify-center px-24 cursor-pointer"
               >
                 <Image src="/assets/ig.svg" alt="ig" width={12} height={20} />
                 <span className="text-center text-[#B6968B] font-spanlayfair text-[12px] ml-[5px]">
@@ -193,57 +200,56 @@ export default function SecondSection({ data }) {
       </div>
 
       {/* start save the date */}
-      <div className="">
-        <div className="flex flex-col justify-center items-center">
+      <div className="max-w-4xl px-4 mx-auto md:px-8">
+        <div className="flex flex-col items-center justify-center">
           <h1
             data-aos="fade-up"
             data-aos-delay="800"
-            className="text-[#507554] text-4xl font-elwiss text-center pt-24"
+            className="text-[#507554] text-4xl md:text-5xl lg:text-6xl font-elwiss text-center pt-24"
           >
             Save The Date
           </h1>
-          <span className="font-crimson text-center text-[#231F20] text-[18px] !leading-10">
-            {data?.displayDate || "December 16, 2023"}
+          <span className="font-crimson text-center text-[#231F20] text-[18px] md:text-[22px] lg:text-[26px] !leading-10">
+            {data?.displayDate || "20 juli 2025"}
           </span>
         </div>
 
         <div
           data-aos="fade-up"
           data-aos-delay="800"
-          className="flex relative gap-8 justify-center items-center"
-        >
+          className="relative flex items-center justify-center gap-8 md:gap-12 lg:gap-16">
           <div data-aos="fade-up" data-aos-delay="800">
-            <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
+            <p className="font-elwiss text-[#504533] text-[32px] md:text-[40px] lg:text-[48px] text-center font-libre">
               {days}
             </p>
-            <p className="font-elwiss text-[#504533] text-[12px] text-center font-libre">
+            <p className="font-elwiss text-[#504533] text-[12px] md:text-[14px] lg:text-[16px] text-center font-libre">
               Days
             </p>
           </div>
 
           <div data-aos="fade-down" data-aos-delay="800">
-            <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
+            <p className="font-elwiss text-[#504533] text-[32px] md:text-[40px] lg:text-[48px] text-center font-libre">
               {hours}
             </p>
-            <p className="font-elwiss text-[#504533] text-[12px] text-center font-libre">
+            <p className="font-elwiss text-[#504533] text-[12px] md:text-[14px] lg:text-[16px] text-center font-libre">
               Hours
             </p>
           </div>
 
           <div data-aos="fade-up" data-aos-delay="800">
-            <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
+            <p className="font-elwiss text-[#504533] text-[32px] md:text-[40px] lg:text-[48px] text-center font-libre">
               {minutes}
             </p>
-            <p className="font-elwiss text-[#504533] text-[12px] text-center font-libre">
+            <p className="font-elwiss text-[#504533] text-[12px] md:text-[14px] lg:text-[16px] text-center font-libre">
               Minutes
             </p>
           </div>
 
           <div data-aos="fade-down" data-aos-delay="800">
-            <p className="font-elwiss text-[#504533] text-[32px] text-center font-libre">
+            <p className="font-elwiss text-[#504533] text-[32px] md:text-[40px] lg:text-[48px] text-center font-libre">
               {seconds}
             </p>
-            <p className="font-elwiss text-[#504533] text-[12px] text-center font-libre">
+            <p className="font-elwiss text-[#504533] text-[12px] md:text-[14px] lg:text-[16px] text-center font-libre">
               Seconds
             </p>
           </div>
@@ -254,7 +260,7 @@ export default function SecondSection({ data }) {
             Add to Calendar
           </a>
         </button>
-        <div className="mt-10 w-full">
+        <div className="w-full mt-10">
           <img src="/1/grass.jpg" alt="daun" className="w-full" />
         </div>
       </div>
@@ -262,14 +268,14 @@ export default function SecondSection({ data }) {
 
       <div
         style={{ paddingTop: 200, paddingBottom: 250, top: -8 }}
-        className="relative bg-no-repeat bg-cover bg-theDay"
+        className="relative max-w-4xl mx-auto bg-no-repeat bg-cover bg-theDay"
       >
         <div data-aos="fade-up" data-aos-delay="200">
           <p className="text-[#3C5E50] text-[35px] font-elwiss text-center">
             It's The Day
           </p>
         </div>
-        <div
+        {/* <div
           data-aos="fade-up"
           data-aos-delay="400"
           className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-5"
@@ -279,20 +285,20 @@ export default function SecondSection({ data }) {
             {data?.events?.holyMatrimony?.title || "Holy Matrimony"}
           </h1>
           <p className="text-[12px] font-libre text-[#444343] mt-2">
-            {data?.events?.holyMatrimony?.datetime || "Saturday, December 16 2023, 09.30 - 10.45 WIB"}
+            {data?.events?.holyMatrimony?.datetime || "Sunday, 20 juli 2025, 09.30 - 10.45 WIB"}
           </p>
-        </div>
+        </div> */}
         <div
           data-aos="fade-up"
           data-aos-delay="600"
           className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-10"
         >
           <Image src="/1/cheers.svg" alt="ring" width={70} height={70} />
-          <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
+          <h1 className="font-libre text-[20px] md:text-[24px] text-[#B6968B] mt-2">
             {data?.events?.reception?.title || "Cia Ciu"}
           </h1>
-          <p className="text-[12px] font-libre text-[#444343] mt-2">
-            {data?.events?.reception?.datetime || "Saturday, December 16 2023, 12.00 - 14.00 WIB"}
+          <p className="text-[12px] md:text-[14px] font-libre text-[#444343] mt-2">
+            {data?.events?.reception?.datetime || "Sunday, 20 juli 2025, 12.00 - 14.00 WIB"}
           </p>
         </div>
         <div
@@ -301,13 +307,13 @@ export default function SecondSection({ data }) {
           className="flex flex-col items-center text-[#504533] text-center md:px-16  pt-10 "
         >
           <Image src="/1/place-map.svg" alt="ring" width={70} height={70} />
-          <h1 className="font-libre text-[20px] text-[#B6968B] mt-2">
+          <h1 className="font-libre text-[20px] md:text-[24px] text-[#B6968B] mt-2">
             {data?.venue?.name || "Royal Dynasty Restaurant"}
           </h1>
-          <p className="text-[12px] font-libre text-[#444343] mt-2 px-16">
+          <p className="text-[12px] md:text-[14px] font-libre text-[#444343] mt-2 px-16 max-w-md mx-auto">
             {data?.venue?.address || "Gedung Graha Sudirman Lt. 1, Jl. Jend. Sudirman No.232A, Kb. Jeruk, Andir, Kota Bandung, Jawa Barat 40181"}
           </p>
-          <button className="!text-white mt-4 flex m-auto bg-[#3C5E50] px-5 py-1.5 mt-[40px] font-libre rounded-lg text-sm tracking-wide">
+          <button className="!text-white mt-4 flex m-auto bg-[#3C5E50] px-5 py-1.5 mt-[40px] font-libre rounded-lg text-sm md:text-base tracking-wide">
             <a
               href={data?.venue?.mapUrl || "#"}
               target="_blank"
@@ -318,27 +324,8 @@ export default function SecondSection({ data }) {
         </div>
       </div>
 
-      <div className="md:px-[35vw]"  data-aos="fade-up" data-aos-delay="800">
-        <div className="relative pt-20 pb-10 md:px-16">
-          <h1
-            data-aos="fade-up"
-            data-aos-delay="800"
-            className="text-[#507554] text-[35px] font-elwiss text-center"
-          >
-            Our Gallery
-          </h1>
-          <div data-aos="zoom-in" className="px-4 mt-8">
-            <img
-              src={data?.gallery?.photo || "/1/our-gallery.jpg"}
-              alt="Gallery image"
-              layout="fill" // Fill the parent container
-              objectFit="cover" // Maintain aspect ratio and cover the container
-            />
-          </div>
-        </div>
-      </div>
 
-      <div className="md:px-[35vw]">
+      {/* <div className="md:px-[35vw]">
         <div className="relative pt-20 pb-10 md:px-16">
           <h1
             data-aos="fade-up"
@@ -363,23 +350,23 @@ export default function SecondSection({ data }) {
             </p>
           </div>
         </div>
-      </div>
+      </div> */}
 
       {/* start wedding gift */}
-      <div className="md:px-[35vw]">
-        <div className="relative pt-20 pb-10 md:px-16">
+      <div className="max-w-4xl px-4 mx-auto md:px-8">
+        <div className="relative pt-20 pb-10">
           <h1
             data-aos="fade-up"
-            className="text-[#507554] text-[35px] font-elwiss text-center"
+            className="text-[#507554] text-[35px] md:text-[40px] lg:text-[48px] font-elwiss text-center"
           >
             Wedding Gift
           </h1>
-          <p className="font-libre text-[#504533] text-[12px] px-8 text-center md:px-0 mt-2">
+          <p className="font-libre text-[#504533] text-[12px] md:text-[14px] lg:text-[16px] px-8 text-center md:px-0 mt-2 max-w-2xl mx-auto">
             {data?.gift?.message || "Your blessing and presence at our wedding is enough for us. But if you want to give a gift, we provide Digital Envelopes to make it easier for you. Thank You"}
           </p>
 
           {/* Tab Navigation */}
-          <div data-aos="fade-up" className="flex mx-4 mt-8 bg-white rounded-lg border border-[#3C5E50] p-1">
+          <div data-aos="fade-up" className="flex mt-8 bg-white rounded-lg border border-[#3C5E50] p-1 max-w-md mx-auto">
             <button
               onClick={() => setActiveTab("transfer")}
               className={`flex-1 py-3 px-4 rounded-md text-sm font-libre transition-all duration-300 ${
@@ -403,7 +390,7 @@ export default function SecondSection({ data }) {
           </div>
 
           {/* Tab Content */}
-          <div className="mx-4 mt-6">
+          <div className="max-w-md mx-auto mt-6">
             {/* Transfer Bank Tab */}
             {activeTab === "transfer" && (
               <div
@@ -411,7 +398,7 @@ export default function SecondSection({ data }) {
                 className="border border-1 border-[#3C5E50] rounded-lg px-5 py-4 pb-8 text-[#504533]"
               >
                 <div className="py-4">
-                  <p className="text-[#3C5E50] text-[20px] font-libre border border-1 rounded-lg border-[#3C5E50] w-full px-3 py-3">
+                  <p className="text-[#3C5E50] text-[20px] md:text-[24px] font-libre border border-1 rounded-lg border-[#3C5E50] w-full px-3 py-3 text-center">
                     {data?.gift?.bank?.name || "BANK BCA"}
                   </p>
                 </div>
