@@ -103,6 +103,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
             >
               &
             </h1>
+
             
             <h1
               data-aos="fade-up"
