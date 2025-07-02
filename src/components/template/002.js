@@ -23,7 +23,7 @@ const dummyData = {
     reference: 'QS. Ar-Rum: 21',
     text: `“Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu berpasang-pasangan dari jenismu sendiri, supaya kamu merasa tenang dan tentram kepadanya, dan dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda bagi kaum yang berfikir."`
   },
-  invitationText: 'God creates everything beautiful in His time. Beautiful when He brings together and grows affection, We cordially invite you to the wedding:',
+  invitationText: 'God creates everything beautiful in His time. Beautiful when He brings together and grows affection, We cordially invite you to the wedding',
   bride: {
     name: 'Liza Melya S.E M.M',
     photo: '/naufal-liza/liza.png',
