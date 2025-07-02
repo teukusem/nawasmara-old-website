@@ -135,6 +135,7 @@ export default function Home() {
           handleOpenInvitations={openInvitation}
           recieverName={recieverName}
           title={updatedDummyData.title}
+          uuid={invitationId}
         />
       ) : (
         <>
