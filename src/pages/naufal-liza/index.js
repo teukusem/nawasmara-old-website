@@ -82,6 +82,11 @@ const dummyData = {
   },
   gift: {
     message: 'Your custom gift message here',
+    flowerBoard: {
+      whatsappNumber: '+6282246914922',
+      displayNumber: '0822-4691-4922',
+      message: "Pengirim: \nUcapan:"
+    },
     bank: {
       name: 'Bank Mandiri',
       accountNumber: '1190007655010',
@@ -99,6 +104,18 @@ export default function Home() {
 
   const recieverName = router.query.to || "-";
   const invitationId = router.query.invitationId || "-";
+  
+  // Update gift message with sender name
+  const updatedDummyData = {
+    ...dummyData,
+    gift: {
+      ...dummyData.gift,
+      flowerBoard: {
+        ...dummyData.gift.flowerBoard,
+        message: `Pengirim: ${router.query.to || ""}\nUcapan:`
+      }
+    }
+  };
 
   function openInvitation() {
     load("/audio/arsellvanilla.mp3", {
@@ -117,12 +134,12 @@ export default function Home() {
           to={router.query.to}
           handleOpenInvitations={openInvitation}
           recieverName={recieverName}
-          title={dummyData.title}
+          title={updatedDummyData.title}
         />
       ) : (
         <>
-          <FirstSection title={dummyData.title} imageTogether={dummyData.imageTogether} />
-          <SecondSection data={dummyData}/>
+          <FirstSection title={updatedDummyData.title} imageTogether={updatedDummyData.imageTogether} />
+          <SecondSection data={updatedDummyData}/>
           <div 
             key="gallery-section"
             className="force-visible"
@@ -132,9 +149,9 @@ export default function Home() {
               visibility: 'visible'
             }}
           >
-            <GallerySection data={dummyData} showVideo={true} />
+            <GallerySection data={updatedDummyData} showVideo={true} />
           </div>
-          <FooterSection title={dummyData.title} uuid={invitationId} />
+          <FooterSection title={updatedDummyData.title} uuid={invitationId} />
         </>
       )}
     </>

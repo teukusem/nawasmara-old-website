@@ -473,13 +473,13 @@ export default function SecondSection({ data }) {
                     {/* Phone Number Display */}
                     <div className="bg-white rounded-lg p-4 border border-[#25D366]/20">
                       <p className="text-[#25D366] text-[14px] font-libre font-medium">
-                        {data?.gift?.flowerBoard?.displayNumber || "0812-3456-7890"}
+                        {data?.gift?.flowerBoard?.displayNumber}
                       </p>
                     </div>
 
                     {/* WhatsApp Button */}
                     <a
-                      href={`https://wa.me/${data?.gift?.flowerBoard?.whatsappNumber || "+6281234567890"}?text=${encodeURIComponent(data?.gift?.flowerBoard?.message || "Hi, I would like to send flowers for the wedding! 🌸")}`}
+                      href={`https://wa.me/${data?.gift?.flowerBoard?.whatsappNumber}?text=${encodeURIComponent(data?.gift?.flowerBoard?.message)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center space-x-2 bg-[#25D366] hover:bg-[#20B358] text-white px-6 py-3 rounded-lg font-libre text-[14px] transition-colors duration-300 shadow-lg hover:shadow-xl"
