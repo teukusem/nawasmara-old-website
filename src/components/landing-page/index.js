@@ -120,6 +120,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
               13 Oktober 2023 <br />
               Banda Aceh
             </h1>
+            
             {recieverName.length > 1 && (
               <h1
                 data-aos="zoom-in"
