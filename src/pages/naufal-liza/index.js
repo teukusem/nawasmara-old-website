@@ -45,11 +45,11 @@ const dummyData = {
   events: {
     holyMatrimony: {
       title: 'Marriage ceremony',
-      datetime: 'Sunday, 20 juli 2025'
+      datetime: 'Sunday, 20 juli 2025 10.00 WIB - 15.00 WIB'
     },
     reception: {
       title: 'Intat Linto',
-      datetime: 'Sunday, 20 juli 2025'
+      datetime: 'Sunday, 20 juli 2025 10.00 WIB - 15.00 WIB',
     }
   },
   venue: {
@@ -83,9 +83,9 @@ const dummyData = {
   gift: {
     message: 'Your custom gift message here',
     bank: {
-      name: 'BANK BCA',
-      accountNumber: '1234567890',
-      accountOwner: 'Liza'
+      name: 'Bank Mandiri',
+      accountNumber: '1190007655010',
+      accountOwner: 'NAUFAL AHSANUL MUHAM'
     }
   },
   googleCalendarUrl: 'https://calendar.google.com/calendar/...'
