@@ -111,6 +111,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName }) {
             >
               Nabilla
             </h1>
+
             
             <h1
               data-aos="zoom-in"
