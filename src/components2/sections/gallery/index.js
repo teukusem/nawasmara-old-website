@@ -76,6 +76,7 @@ const GallerySection = ({ data, previewMode, onOpenQRCode, showVideo = true }) =
       
       return () => {
         // Restore body scrolling when modal closes
+        
         document.body.style.overflow = 'unset';
         document.removeEventListener('keydown', handleKeyPress);
       };
