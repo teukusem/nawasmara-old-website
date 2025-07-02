@@ -27,16 +27,16 @@ const dummyData = {
   bride: {
     name: 'Liza Melya S.E M.M',
     photo: '/naufal-liza/liza.png',
-    parents: 'Anak dari Bapak Ir. Muhammad Kasim dan Ibu Riana S.H.',
+    parents: 'Anak dari Bapak Ir. Muhammad Kasim <br /> dan <br /> Ibu Riana S.H.',
     instagram: {
       username: '@lizamelyaa',
       url: 'https://instagram.com/lizamelyaa'
     }
   },
   groom: {
-    name: 'Naufal ahsanul muhammad B.Ec',
+    name: 'Naufal Ahsanul Muhammad B.Ec',
     photo: '/naufal-liza/naufal.png',
-    parents: 'Anak dari Bapak Drs.Muhammad,MM <br /> dan Ibu Isnaniah Ali Hasyim, SKM',
+    parents: 'Anak dari Bapak Drs.Muhammad,MM <br /> dan  <br /> Ibu Isnaniah Ali Hasyim, SKM',
     instagram: {
       username: '@noopz_',
       url: 'https://instagram.com/noopz_'
@@ -48,7 +48,7 @@ const dummyData = {
       datetime: 'Sunday, 20 juli 2025 10.00 WIB - 15.00 WIB'
     },
     reception: {
-      title: 'Intat Linto',
+      title: 'Tueng Dara Baro',
       datetime: 'Sunday, 20 juli 2025 10.00 WIB - 15.00 WIB',
     }
   },

@@ -106,7 +106,7 @@ export default function SecondSection({ data }) {
                 data-aos="fade-down"
                 className="font-libre text-[#504533] text-[12px] md:text-[14px] lg:text-[16px] p-4 md:p-8 text-center leading-6 md:leading-8">
               
-                {data?.invitationText || "God creates everything beautiful in His time. Beautiful when He brings together and grows affection, We cordially invite you to the wedding:"}
+                {data?.invitationText || "God creates everything beautiful in His time. Beautiful when He brings together and grows affection, We cordially invite you to the wedding"}
               </p>
             </div>
             <img
@@ -123,9 +123,12 @@ export default function SecondSection({ data }) {
               >
                 {data?.bride?.name || "Vania Natali"}
               </h1>
-              <p className="font-libre px-[80px] md:px-[120px] lg:px-[160px] text-center text-[#B6968B] text-[12px] md:text-[14px] leading-relaxed">
-                {data?.bride?.parents || "Only daughter the late (†) Mr. Lie Thian Kie and Lioe Kim Djin"}
-              </p>
+               <p 
+                className="font-libre px-[80px] md:px-[120px] lg:px-[160px] text-center text-[#B6968B] text-[12px] md:text-[14px] leading-relaxed"
+                dangerouslySetInnerHTML={{
+                  __html: data?.bride?.parents || "First son of Mr. Iskandar Teluand mother Tan Tjun lan"
+                }}
+              ></p>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
