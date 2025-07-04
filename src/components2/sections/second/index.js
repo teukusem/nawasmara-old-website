@@ -112,8 +112,8 @@ export default function SecondSection({ data }) {
             <img
               data-aos="zoom-in"
               data-aos-delay="500"
-              src={data?.bride?.photo || "/1/vania.png"}
-              alt={data?.bride?.name || "bride"}
+              src={data?.groom?.photo || "/1/win.png"}
+              alt={data?.groom?.name || "groom"}
               className="w-full"
             />
             <div className="flex flex-col items-center justify-center mt-4 space-y-3">
@@ -121,24 +121,24 @@ export default function SecondSection({ data }) {
                 data-aos="fade-down"
                 className="text-[#504533] text-4xl md:text-5xl lg:text-6xl font-elwiss text-center"
               >
-                {data?.bride?.name || "Vania Natali"}
+                {data?.groom?.name || "Win Iskandar"}
               </h1>
                <p 
                 className="font-libre px-[80px] md:px-[120px] lg:px-[160px] text-center text-[#B6968B] text-[12px] md:text-[14px] leading-relaxed"
                 dangerouslySetInnerHTML={{
-                  __html: data?.bride?.parents || "First son of Mr. Iskandar Teluand mother Tan Tjun lan"
+                  __html: data?.groom?.parents || "First son of Mr. Iskandar Teluand mother Tan Tjun lan"
                 }}
               ></p>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
                 data-aos="fade-up"
-                href={data?.bride?.instagram?.url || "https://instagram.com/ms.vanili"}
+                href={data?.groom?.instagram?.url || "https://instagram.com/win.rz"}
                 className="z-20 flex items-center justify-center px-24 cursor-pointer"
               >
                 <Image src="/assets/ig.svg" alt="ig" width={12} height={20} />
                 <span className="text-center text-[#B6968B] font-spanlayfair text-[12px] ml-[5px]">
-                  {data?.bride?.instagram?.username || "ms.vanili"}
+                  {data?.groom?.instagram?.username || "win.rz"}
                 </span>
               </a>
             </div>
@@ -159,8 +159,8 @@ export default function SecondSection({ data }) {
             <img
               data-aos="zoom-in"
               data-aos-delay="500"
-              src={data?.groom?.photo || "/1/win.png"}
-              alt={data?.groom?.name || "groom"}
+              src={data?.bride?.photo || "/1/vania.png"}
+              alt={data?.bride?.name || "bride"}
               className="w-full"
             />
             <div className="flex flex-col items-center justify-center mt-4 space-y-3">
@@ -168,12 +168,12 @@ export default function SecondSection({ data }) {
                 data-aos="fade-down"
                 className="text-[#504533] text-4xl md:text-5xl lg:text-6xl font-elwiss text-center"
               >
-                {data?.groom?.name || "Win Iskandar"}
+                {data?.bride?.name || "Vania Natali"}
               </h1>
               <p 
                 className="font-libre px-[80px] md:px-[120px] lg:px-[160px] text-center text-[#B6968B] text-[12px] md:text-[14px] leading-relaxed"
                 dangerouslySetInnerHTML={{
-                  __html: data?.groom?.parents || "First son of Mr. Iskandar Teluand mother Tan Tjun lan"
+                  __html: data?.bride?.parents || "First son of Mr. Iskandar Teluand mother Tan Tjun lan"
                 }}
               ></p>
 
@@ -181,12 +181,12 @@ export default function SecondSection({ data }) {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-aos="fade-up"
-                href={data?.groom?.instagram?.url || "https://instagram.com/win.rz"}
+                href={data?.bride?.instagram?.url || "https://instagram.com/ms.vanili"}
                 className="z-20 flex items-center justify-center px-24 cursor-pointer"
               >
                 <Image src="/assets/ig.svg" alt="ig" width={12} height={20} />
                 <span className="text-center text-[#B6968B] font-spanlayfair text-[12px] ml-[5px]">
-                  {data?.groom?.instagram?.username || "win.rz"}
+                  {data?.bride?.instagram?.username || "ms.vanili"}
                 </span>
               </a>
             </div>

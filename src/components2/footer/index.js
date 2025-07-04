@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useState } from "react";
 import QRCodeGenerator from "../../global/QrCodeGenerator";
 
-export default function FooterSection({title, uuid}) {
+export default function FooterSection({title, uuid, data}) {
   const [showQRSheet, setShowQRSheet] = useState(false);
 
   return (
@@ -11,9 +11,16 @@ export default function FooterSection({title, uuid}) {
         <div className="relative w-100">
           <div style={{ top: -60 }} className="text-with-background">
             <div className="mt-16 text">
-              <p
+                 {/* <p
                 data-aos="fade-up"
                 className="text-center font-libre text-[16px] text-[#B6968B]"
+              >
+                20 . 07 . 2025
+              </p>
+               */}
+              <p
+                // data-aos="fade-up"
+                className="text-center font-libre text-[16px] text-[#B6968B] mb-3"
               >
                 Wedding Invitation
               </p>
@@ -23,13 +30,36 @@ export default function FooterSection({title, uuid}) {
               >
                 {title}
               </p>
-              <p
-                data-aos="fade-up"
-                className="text-center font-libre text-[16px] text-[#B6968B]"
+                {/* <p
+                className="text-center font-libre text-[16px]   text-[#507554]"
               >
-                20 . 07 . 2025
-              </p>
-              
+               Kami yang berbahagia,
+              </p> */}
+              <div >
+                <div className="grid max-w-xl grid-cols-2 grid-rows-1 gap-3 mx-auto">
+                  {/* Groom Parents - Top Row */}
+                  <div className="text-center">
+                    <div 
+                      className="font-libre text-[#B6968B] text-[10px] md:text-[12px] leading-tight"
+                      dangerouslySetInnerHTML={{
+                        __html: data?.footer?.parents?.groom || ""
+                      }}
+                    ></div>
+                  </div>
+                  
+                  {/* Bride Parents - Top Row */}
+                  <div className="text-center">
+                    <div 
+                      className="font-libre text-[#B6968B] text-[10px] md:text-[12px] leading-tight"
+                      dangerouslySetInnerHTML={{
+                        __html: data?.footer?.parents?.bride || ""
+                      }}
+                    ></div>
+                  </div>
+                  
+                </div>
+              </div>
+           
               {/* QR Code Button */}
               <div className="flex justify-center mt-6">
                 <button
@@ -39,6 +69,8 @@ export default function FooterSection({title, uuid}) {
                   Show QR Code
                 </button>
               </div>
+
+            
             </div>
           </div>
         </div>
@@ -90,7 +122,7 @@ export default function FooterSection({title, uuid}) {
             align-items: center;
             justify-content: center;
             width: 100%;
-            height: 300px; /* Set the desired height */
+            height: 400px; /* Increased height to accommodate parents section */
           }
           
           .background-image {

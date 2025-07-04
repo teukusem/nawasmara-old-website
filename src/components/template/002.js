@@ -93,6 +93,12 @@ const dummyData = {
       accountOwner: 'NAUFAL AHSANUL MUHAM'
     }
   },
+   footer: {
+    parents: {
+      groom: 'Kel. Bapak Drs.Muhammad,MM <br /> &  Ibu Isnaniah Ali Hasyim, SKM',
+      bride: 'Kel. Bapak Ir. Muhammad Kasim <br /> & Ibu Riana S.H.'
+  }
+  },
   googleCalendarUrl: 'https://calendar.google.com/calendar/...'
 }
 
@@ -152,7 +158,7 @@ export default function Home() {
           >
             <GallerySection data={updatedDummyData} showVideo={true} />
           </div>
-          <FooterSection title={updatedDummyData.title} uuid={invitationId} />
+          <FooterSection title={updatedDummyData.title} uuid={invitationId} data={updatedDummyData} />
         </>
       )}
     </>
