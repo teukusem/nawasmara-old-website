@@ -27,7 +27,7 @@ const dummyData = {
   bride: {
     name: 'Liza Melya S.E M.M',
     photo: '/naufal-liza/liza.png',
-    parents: 'Anak dari Bapak Ir. Muhammad Kasim <br /> dan <br /> Ibu Riana S.H.',
+    parents: 'Putri dari Bapak Ir. Muhammad Kasim dan Ibu Riana S.H.',
     instagram: {
       username: '@lizamelyaa',
       url: 'https://instagram.com/lizamelyaa'
@@ -36,7 +36,7 @@ const dummyData = {
   groom: {
     name: 'Naufal Ahsanul Muhammad B.Ec',
     photo: '/naufal-liza/naufal.png',
-    parents: 'Anak dari Bapak Drs.Muhammad,MM <br /> dan  <br /> Ibu Isnaniah Ali Hasyim, SKM',
+    parents: 'Putra dari Bapak Drs.Muhammad,MM dan Ibu Isnaniah Ali Hasyim, SKM',
     instagram: {
       username: '@noopz_',
       url: 'https://instagram.com/noopz_'
@@ -87,13 +87,25 @@ const dummyData = {
       displayNumber: '0822-4691-4922',
       message: "Pengirim: \nUcapan:"
     },
-    bank: {
-      name: 'Bank Mandiri',
-      accountNumber: '1190007655010',
-      accountOwner: 'NAUFAL AHSANUL MUHAM'
-    }
+    bank: [
+      {
+        name: 'Bank Mandiri',
+        accountNumber: '1190007655010',
+        accountOwner: 'NAUFAL AHSANUL MUHAMMAD'
+      },
+      {
+        name: 'Bank BCA',
+        accountNumber: '5460385654',
+        accountOwner: 'NAUFAL AHSANUL MUHAMMAD'
+      },
+       {
+        name: 'Bank BSI',
+        accountNumber: '5688568856',
+        accountOwner: 'NAUFAL AHSANUL MUHAMMAD'
+      }
+    ]
   },
-   footer: {
+  footer: {
     parents: {
       groom: 'Kel. Bapak Drs.Muhammad,MM <br /> &  Ibu Isnaniah Ali Hasyim, SKM',
       bride: 'Kel. Bapak Ir. Muhammad Kasim <br /> & Ibu Riana S.H.'

@@ -19,7 +19,7 @@ export default function FooterSection({title, uuid, data}) {
               </p>
                */}
               <p
-                // data-aos="fade-up"
+                data-aos="fade-up"
                 className="text-center font-libre text-[16px] text-[#B6968B] mb-3"
               >
                 Wedding Invitation

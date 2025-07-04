@@ -50,7 +50,7 @@ export default function SecondSection({ data }) {
 
   const [days, hours, minutes, seconds] = useCountdown(data?.weddingDate || "2025-07-20");
   const [showGift, setShowGift] = useState(false);
-  const [isCopied, setCopied] = useState(false);
+  const [copiedIndex, setCopiedIndex] = useState(null);
   const [activeTab, setActiveTab] = useState("transfer");
 
   const handleVideoPause = () => {
@@ -124,7 +124,7 @@ export default function SecondSection({ data }) {
                 {data?.groom?.name || "Win Iskandar"}
               </h1>
                <p 
-                className="font-libre px-[80px] md:px-[120px] lg:px-[160px] text-center text-[#B6968B] text-[12px] md:text-[14px] leading-relaxed"
+                className="font-libre px-[40px] md:px-[80px] lg:px-[120px] text-center text-[#B6968B] text-[12px] md:text-[14px] leading-relaxed"
                 dangerouslySetInnerHTML={{
                   __html: data?.groom?.parents || "First son of Mr. Iskandar Teluand mother Tan Tjun lan"
                 }}
@@ -171,7 +171,7 @@ export default function SecondSection({ data }) {
                 {data?.bride?.name || "Vania Natali"}
               </h1>
               <p 
-                className="font-libre px-[80px] md:px-[120px] lg:px-[160px] text-center text-[#B6968B] text-[12px] md:text-[14px] leading-relaxed"
+                className="font-libre px-[40px] md:px-[80px] lg:px-[120px] text-center text-[#B6968B] text-[12px] md:text-[14px] leading-relaxed"
                 dangerouslySetInnerHTML={{
                   __html: data?.bride?.parents || "First son of Mr. Iskandar Teluand mother Tan Tjun lan"
                 }}
@@ -398,55 +398,62 @@ export default function SecondSection({ data }) {
             {activeTab === "transfer" && (
               <div
                 data-aos="fade-up"
-                className="border border-1 border-[#3C5E50] rounded-lg px-5 py-4 pb-8 text-[#504533]"
+                className="space-y-4"
               >
-                <div className="py-4">
-                  <p className="text-[#3C5E50] text-[20px] md:text-[24px] font-libre border border-1 rounded-lg border-[#3C5E50] w-full px-3 py-3 text-center">
-                    {data?.gift?.bank?.name || "BANK BCA"}
-                  </p>
-                </div>
-
-                {isCopied && (
+                {(data?.gift?.bank || []).map((bank, index) => (
                   <div
-                    className="p-4 mb-4 text-sm text-white rounded-lg bg-[#504533]"
-                    role="alert"
+                    key={index}
+                    className="border border-1 border-[#3C5E50] rounded-lg px-5 py-4 pb-8 text-[#504533]"
                   >
-                    <span className="font-medium">Rekening berhasil disalin !</span>
+                    <div className="py-4">
+                      <p className="text-[#3C5E50] text-[20px] md:text-[24px] font-libre border border-1 rounded-lg border-[#3C5E50] w-full px-3 py-3 text-center">
+                        {bank.name}
+                      </p>
+                    </div>
+
+                    {copiedIndex === index && (
+                      <div
+                        className="p-4 mb-4 text-sm text-white rounded-lg bg-[#504533]"
+                        role="alert"
+                      >
+                        <span className="font-medium">Rekening berhasil disalin !</span>
+                      </div>
+                    )}
+
+                    <div className="px-4 py-4 bg-white rounded-lg">
+                      <p className="font-libre text-[#9FAA8A] text-[14px]">
+                        Account Number
+                      </p>
+                      <div className="flex justify-between">
+                        <p className="font-libre text-[#9FAA8A] text-[14px]">
+                          {bank.accountNumber}
+                        </p>
+
+                        <CopyToClipboard
+                          text={bank.accountNumber}
+                          onCopy={() => {
+                            setCopiedIndex(index);
+                            setTimeout(() => setCopiedIndex(null), 2000);
+                          }}
+                        >
+                          <Image
+                            src="/assets/copy.svg"
+                            alt="copy"
+                            height={25}
+                            width={25}
+                          />
+                        </CopyToClipboard>
+                      </div>
+
+                      <p className="font-libre text-[#9FAA8A] text-[14px] pt-2">
+                        Account Owner
+                      </p>
+                      <p className="font-libre text-[#9FAA8A] text-[14px]">
+                        {bank.accountOwner}
+                      </p>
+                    </div>
                   </div>
-                )}
-
-                <div className="px-4 py-4 bg-white rounded-lg">
-                  <p className="font-libre text-[#9FAA8A] text-[14px]">
-                    Account Number
-                  </p>
-                  <div className="flex justify-between">
-                    <p className="font-libre text-[#9FAA8A] text-[14px]">
-                      {data?.gift?.bank?.accountNumber || "8380177421"}
-                    </p>
-
-                    <CopyToClipboard
-                      text={data?.gift?.bank?.accountNumber || "8380177421"}
-                      onCopy={() => {
-                        setCopied(true);
-                        setTimeout(() => setCopied(false), 2000);
-                      }}
-                    >
-                      <Image
-                        src="/assets/copy.svg"
-                        alt="copy"
-                        height={25}
-                        width={25}
-                      />
-                    </CopyToClipboard>
-                  </div>
-
-                  <p className="font-libre text-[#9FAA8A] text-[14px] pt-2">
-                    Account Owner
-                  </p>
-                  <p className="font-libre text-[#9FAA8A] text-[14px]">
-                    {data?.gift?.bank?.accountOwner || "Vania Natali"}
-                  </p>
-                </div>
+                ))}
               </div>
             )}
 
