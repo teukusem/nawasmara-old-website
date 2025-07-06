@@ -81,7 +81,7 @@ const dummyData = {
     caption: 'Naufal & Liza Prewedding'
   },
   gift: {
-    message: 'Your custom gift message here',
+    message: 'Your blessing and presence at our wedding is enough for us. But if you want to give a gift, we provide Digital Envelopes to make it easier for you. Thank You',
     flowerBoard: {
       whatsappNumber: '+6282246914922',
       displayNumber: '0822-4691-4922',
