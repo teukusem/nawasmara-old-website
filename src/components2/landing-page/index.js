@@ -117,7 +117,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
                   className="text-[#504533] text-lg font-bold font-libreCaslon text-center px-12"
                 >
                   Invite You To Celebrate Our Wedding <br />
-                  {recieverName}
+                  <span className="font-normal">{recieverName}</span>
                 </h1>
               )}
             </div>
