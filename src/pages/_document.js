@@ -23,12 +23,16 @@ export default function Document() {
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
+          content="http://naufal-liza.nawasmara.com/naufal-liza/front-hero.jpeg"
+        />
+        <meta
+          property="og:image:secure_url"
           content="https://naufal-liza.nawasmara.com/naufal-liza/front-hero.jpeg"
         />
         <meta property="og:locale" content="in_ID" />
         <meta
           property="twitter:card"
-          content="https://www.nawasmara.com/assets/cover2.png"
+          content="https://naufal-liza.nawasmara.com/naufal-liza/front-hero.jpeg"
         />
         <meta property="twitter:url" content="https://nawasmara.com" />
         <meta property="twitter:title" content={title} />
