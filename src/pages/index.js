@@ -8,6 +8,7 @@ export default function Maintenance({ subdomain }) {
 
   if (subdomain === 'arief-nabilla') return <Template001 />
   if (subdomain === 'naufal-liza') return <Template002 />
+  if (subdomain === 'iqbal-zahra') return <Template002 />
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
@@ -16,7 +17,7 @@ export default function Maintenance({ subdomain }) {
         <title>{title}</title>
       </Head>
       <div className="text-center">
-        <h1 className="text-4xl font-bold text-gray-800 mb-4">
+        <h1 className="mb-4 text-4xl font-bold text-gray-800">
           {`We'll be back soon!`}
           {title}
         </h1>
@@ -34,7 +35,7 @@ export default function Maintenance({ subdomain }) {
           {`, otherwise, we'll be back online shortly!`}
         </p>
         {subdomain && (
-          <p className="text-sm text-gray-500 mt-4">
+          <p className="mt-4 text-sm text-gray-500">
             Subdomain: {subdomain}
           </p>
         )}
