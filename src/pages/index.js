@@ -6,12 +6,16 @@ import Head from "next/head";
 
 export default function Maintenance({ subdomain }) {
   const title = subdomain ? `${subdomain} - Maintenance Mode` : 'Maintenance Mode';
-  console.log('Subdomain received:', subdomain);
   
   if (subdomain === 'arief-nabilla') return <Template001 />
   if (subdomain === 'naufal-liza') return <Template002 />
   if (subdomain === 'iqbal-zahra-nawasmara') {
-    console.log('Template003 should render');
+    return <Template003 />
+  }
+  
+  // Default to Template003 for Railway deployment when subdomain is null
+  if (!subdomain) {
+    console.log('No subdomain detected, defaulting to Template003');
     return <Template003 />
   }
 
@@ -51,30 +55,20 @@ export default function Maintenance({ subdomain }) {
 
 export async function getServerSideProps(context) {
   const { req } = context;
-  console.log('Request headers:', req.headers.host);
   const host = req.headers.host || '';
 
   // Extract subdomain from host
   const hostParts = host.split('.');
   let subdomain = null;
 
-  // Check for specific Railway domain
-  if (host === 'iqbal-zahra-nawasmara.up.railway.app') {
-    subdomain = 'iqbal-zahra-nawasmara';
-  }
   // Check for Railway domain format (fallback)
-  else if (host.includes('.up.railway.app')) {
+  if (host.includes('.up.railway.app')) {
     subdomain = hostParts[0];
   }
   // Check if we have a subdomain (more than 2 parts and not www)
   else if (hostParts.length > 2 && hostParts[0] !== 'www') {
     subdomain = hostParts[0];
   }
-
-  // Debug logging
-  console.log('Host:', host);
-  console.log('Host parts:', hostParts);
-  console.log('Extracted subdomain:', subdomain);
 
   return {
     props: {
