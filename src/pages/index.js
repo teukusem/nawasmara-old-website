@@ -52,8 +52,12 @@ export async function getServerSideProps(context) {
   const hostParts = host.split('.');
   let subdomain = null;
 
+  // Check for Railway domain format
+  if (host.includes('.up.railway.app')) {
+    subdomain = hostParts[0];
+  }
   // Check if we have a subdomain (more than 2 parts and not www)
-  if (hostParts.length > 2 && hostParts[0] !== 'www') {
+  else if (hostParts.length > 2 && hostParts[0] !== 'www') {
     subdomain = hostParts[0];
   }
 
