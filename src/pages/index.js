@@ -8,7 +8,7 @@ export default function Maintenance({ subdomain }) {
 
   if (subdomain === 'arief-nabilla') return <Template001 />
   if (subdomain === 'naufal-liza') return <Template002 />
-  if (subdomain === 'iqbal-zahra') return <Template002 />
+  if (subdomain === 'iqbal-zahra-nawasmara') return <Template002 />
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
