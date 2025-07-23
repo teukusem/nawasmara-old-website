@@ -10,8 +10,15 @@ export const datas = {
 };
 
 
+// export const data = {
+//   title: "Naufal & Liza | Nawasmara.com",
+//   description:
+//     "Hai, Kamu diundang pada acara pesta pernikahan kami - Pernikahan Naufal &amp; Liza - Sabtu, 16 Juli 2025",
+//   };
+
+
 export const data = {
-  title: "Naufal & Liza | Nawasmara.com",
+  title: "Iqbal & Zahra | Nawasmara.com",
   description:
-    "Hai, Kamu diundang pada acara pesta pernikahan kami - Pernikahan Naufal &amp; Liza - Sabtu, 16 Juli 2025",
-  };
+    "Hai, Kamu diundang pada acara pesta pernikahan kami - Pernikahan Iqbal &amp; Zahra - Sabtu, 6 September 2025",
+};

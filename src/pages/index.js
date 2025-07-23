@@ -1,14 +1,19 @@
 import Template001 from "@/components/template/001";
 import Template002 from "@/components/template/002";
+import Template003 from "@/components/template/003";
 
 import Head from "next/head";
 
 export default function Maintenance({ subdomain }) {
   const title = subdomain ? `${subdomain} - Maintenance Mode` : 'Maintenance Mode';
-  console.log('Subdomain:', subdomain);
+  console.log('Subdomain received:', subdomain);
+  
   if (subdomain === 'arief-nabilla') return <Template001 />
   if (subdomain === 'naufal-liza') return <Template002 />
-  if (subdomain === 'iqbal-zahra-nawasmara') return <Template002 />
+  if (subdomain === 'iqbal-zahra-nawasmara') {
+    console.log('Template003 should render');
+    return <Template003 />
+  }
 
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">
@@ -46,14 +51,19 @@ export default function Maintenance({ subdomain }) {
 
 export async function getServerSideProps(context) {
   const { req } = context;
+  console.log('Request headers:', req.headers.host);
   const host = req.headers.host || '';
 
   // Extract subdomain from host
   const hostParts = host.split('.');
   let subdomain = null;
 
-  // Check for Railway domain format
-  if (host.includes('.up.railway.app')) {
+  // Check for specific Railway domain
+  if (host === 'iqbal-zahra-nawasmara.up.railway.app') {
+    subdomain = 'iqbal-zahra-nawasmara';
+  }
+  // Check for Railway domain format (fallback)
+  else if (host.includes('.up.railway.app')) {
     subdomain = hostParts[0];
   }
   // Check if we have a subdomain (more than 2 parts and not www)
