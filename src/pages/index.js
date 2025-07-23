@@ -5,7 +5,7 @@ import Head from "next/head";
 
 export default function Maintenance({ subdomain }) {
   const title = subdomain ? `${subdomain} - Maintenance Mode` : 'Maintenance Mode';
-
+  console.log('Subdomain:', subdomain);
   if (subdomain === 'arief-nabilla') return <Template001 />
   if (subdomain === 'naufal-liza') return <Template002 />
   if (subdomain === 'iqbal-zahra-nawasmara') return <Template002 />
@@ -60,6 +60,11 @@ export async function getServerSideProps(context) {
   else if (hostParts.length > 2 && hostParts[0] !== 'www') {
     subdomain = hostParts[0];
   }
+
+  // Debug logging
+  console.log('Host:', host);
+  console.log('Host parts:', hostParts);
+  console.log('Extracted subdomain:', subdomain);
 
   return {
     props: {

@@ -89,7 +89,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
 
   return (
     <div 
-      className="fixed inset-0 bg-fixed bg-center bg-no-repeat bg-cover cursor-pointer select-none bg-naufalLiza"
+      className="fixed inset-0 bg-fixed bg-center bg-no-repeat bg-cover cursor-pointer select-none bg-iqbalZahra"
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
       onTouchEnd={handleTouchEnd}
@@ -128,7 +128,7 @@ export default function LandingPage({ handleOpenInvitations, recieverName, title
                   data-aos="zoom-in"
                   className="text-[#504533] text-lg font-elwiss text-center !text-[18px] leading-[15px]"
                 >
-                  20 juli 2025 <br />
+                  6 September 2025 <br />
                 </h1>
               </div>
 

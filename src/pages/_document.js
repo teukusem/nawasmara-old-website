@@ -23,23 +23,23 @@ export default function Document() {
         <meta property="og:description" content={description} />
         <meta
           property="og:image"
-          content="http://naufal-liza.nawasmara.com/naufal-liza/og-image.jpg"
+          content="https://iqbal-zahra-nawasmara.up.railway.app/og-image.png"
         />
         <meta
           property="og:image:secure_url"
-          content="https://naufal-liza.nawasmara.com/naufal-liza/og-image.jpg"
+          content="https://iqbal-zahra-nawasmara.up.railway.app/og-image.png"
         />
         <meta property="og:locale" content="in_ID" />
         <meta
           property="twitter:card"
-          content="https://naufal-liza.nawasmara.com/naufal-liza/og-image.jpg"
+          content="https://iqbal-zahra-nawasmara.up.railway.app/og-image.png"
         />
         <meta property="twitter:url" content="https://nawasmara.com" />
         <meta property="twitter:title" content={title} />
         <meta property="twitter:description" content={description} />
         <meta
           property="twitter:image"
-          content="https://naufal-liza.nawasmara.com/naufal-liza/og-image.jpg"
+          content="https://iqbal-zahra-nawasmara.up.railway.app/og-image.png"
         />
       </Head>
       <body>

@@ -37,6 +37,7 @@ module.exports = {
         bgPrimary23: "url('/1/bg23.png')",
         theDay: "url('/1/its-the-day-bg.jpg')",
         naufalLiza: "url('/naufal-liza/front-hero.jpeg')",
+        iqbalZahra: "url('/iqbal-zahra/splash-screen.jpeg')",
       },
       fontFamily: {
         libreCaslon: [

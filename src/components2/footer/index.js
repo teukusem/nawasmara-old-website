@@ -35,9 +35,8 @@ export default function FooterSection({title, uuid, data}) {
               >
                Kami yang berbahagia,
               </p> */}
-              <div >
+              {/* <div >
                 <div className="grid max-w-xl grid-cols-2 grid-rows-1 gap-3 mx-auto">
-                  {/* Groom Parents - Top Row */}
                   <div className="text-center">
                     <div 
                       className="font-libre text-[#B6968B] text-[10px] md:text-[12px] leading-tight"
@@ -47,7 +46,6 @@ export default function FooterSection({title, uuid, data}) {
                     ></div>
                   </div>
                   
-                  {/* Bride Parents - Top Row */}
                   <div className="text-center">
                     <div 
                       className="font-libre text-[#B6968B] text-[10px] md:text-[12px] leading-tight"
@@ -58,7 +56,7 @@ export default function FooterSection({title, uuid, data}) {
                   </div>
                   
                 </div>
-              </div>
+              </div> */}
            
               {/* QR Code Button */}
               <div className="flex justify-center mt-6">
