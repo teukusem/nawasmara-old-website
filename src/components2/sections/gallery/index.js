@@ -108,11 +108,10 @@ const GallerySection = ({ data, previewMode, onOpenQRCode, showVideo = true }) =
           {galleryImages.map((image, index) => (
             <div
               key={index}
-              className={`relative group cursor-pointer mb-4 ${getRandomHeight(index)}`}
+              className={`relative group cursor-pointer mb-4 ${getRandomHeight(index)} overflow-hidden`}
               data-aos="fade-up"
               data-aos-delay={index * 100}
               onClick={() => openLightbox(image)}
-              style={{ position: 'relative' }}
             >
               <Image
                 src={image}
@@ -123,6 +122,7 @@ const GallerySection = ({ data, previewMode, onOpenQRCode, showVideo = true }) =
                 onError={(e) => {
                   e.currentTarget.src = 'https://via.placeholder.com/400x600/cccccc/666666?text=Image+Not+Found';
                 }}
+                priority={index < 4}
               />
               <div className="absolute inset-0 flex items-center justify-center transition-all duration-300 bg-black bg-opacity-0 rounded-lg group-hover:bg-opacity-20">
                 <div className="transition-opacity duration-300 opacity-0 group-hover:opacity-100">
