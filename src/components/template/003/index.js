@@ -45,35 +45,36 @@ const dummyData = {
   events: {
     holyMatrimony: {
       title: 'Marriage ceremony',
-      datetime: 'Saturday, 06 September 2025 11.00 WIB'
+      datetime: 'Sabtu, 06 September 2025 11.00 WIB'
     },
     reception: {
       title: 'Tueng Dara Baro',
-      datetime: 'Saturday, 06 September 2025 11.00 WIB',
+      datetime: 'Sabtu, 06 September 2025 11.00 WIB',
     }
   },
   venue: {
     name: 'Kediaman Lintoe Baroe',
-    address: 'Dusun Tgk. Syeh, Desa Lheu Blang',
+    address: 'Desa Lheu Blang Kec.Darul Imarah Aceh besar',
     mapUrl: 'https://maps.app.goo.gl/WPHaJCTAYfiHdHGLA?g_st=aw'
   },
   gallery: {
     images: [
-      '/naufal-liza/gallery-1.png',
-      '/naufal-liza/gallery-2.jpeg',
-      '/naufal-liza/gallery-3.jpeg',
-      '/naufal-liza/gallery-4.jpeg',
-      '/naufal-liza/gallery-5.jpeg',
-      '/naufal-liza/gallery-6.jpeg',
-      '/naufal-liza/gallery-7.jpeg',
-      '/naufal-liza/gallery-8.jpeg',
-      '/naufal-liza/gallery-9.jpeg',
-      '/naufal-liza/gallery-10.jpeg',
-      '/naufal-liza/gallery-11.jpeg',
-      '/naufal-liza/gallery-12.jpeg',
-      '/naufal-liza/gallery-13.jpeg',
-      '/naufal-liza/gallery-14.jpeg',
-      '/naufal-liza/gallery-15.jpeg'
+      '/iqbal-zahra/gallery-1.jpeg',
+      '/iqbal-zahra/gallery-2.jpeg',
+      '/iqbal-zahra/gallery-3.jpeg',
+      '/iqbal-zahra/gallery-4.jpeg',
+      '/iqbal-zahra/gallery-5.jpeg',
+      '/iqbal-zahra/gallery-6.jpeg',
+      '/iqbal-zahra/gallery-7.jpeg',
+      '/iqbal-zahra/gallery-8.jpeg',
+      '/iqbal-zahra/gallery-9.jpeg',
+      '/iqbal-zahra/gallery-10.jpeg',
+      '/iqbal-zahra/gallery-11.jpeg',
+      '/iqbal-zahra/gallery-12.jpeg',
+      '/iqbal-zahra/gallery-13.jpeg',
+      '/iqbal-zahra/gallery-14.jpeg',
+      '/iqbal-zahra/gallery-15.jpeg',
+      '/iqbal-zahra/gallery-16.jpeg'
     ]
   },
   video: {
@@ -159,7 +160,7 @@ export default function Home() {
         <>
           <FirstSection title={updatedDummyData.title} imageTogether={updatedDummyData.imageTogether} />
           <SecondSection data={updatedDummyData}/>
-          {/* <div 
+          <div 
             key="gallery-section"
             className="force-visible"
             style={{ 
@@ -169,7 +170,7 @@ export default function Home() {
             }}
           >
             <GallerySection data={updatedDummyData} showVideo={true} />
-          </div> */}
+          </div>
           <FooterSection title={updatedDummyData.title} uuid={invitationId} data={updatedDummyData} />
         </>
       )}

@@ -123,8 +123,9 @@ export default function SecondSection({ data }) {
               >
                 {data?.groom?.name || "Win Iskandar"}
               </h1>
+              {/* B6968B */}
                <p 
-                className="font-libre px-[40px] md:px-[80px] lg:px-[120px] text-center text-[#B6968B] text-[12px] md:text-[14px] leading-relaxed"
+                className="font-libre px-[40px] md:px-[80px] lg:px-[120px] text-center text-[#504533] text-[12px] md:text-[14px] leading-relaxed"
                 dangerouslySetInnerHTML={{
                   __html: data?.groom?.parents || "First son of Mr. Iskandar Teluand mother Tan Tjun lan"
                 }}
@@ -171,7 +172,7 @@ export default function SecondSection({ data }) {
                 {data?.bride?.name || "Vania Natali"}
               </h1>
               <p 
-                className="font-libre px-[40px] md:px-[80px] lg:px-[120px] text-center text-[#B6968B] text-[12px] md:text-[14px] leading-relaxed"
+                className="font-libre px-[40px] md:px-[80px] lg:px-[120px] text-center text-[#504533] text-[12px] md:text-[14px] leading-relaxed"
                 dangerouslySetInnerHTML={{
                   __html: data?.bride?.parents || "First son of Mr. Iskandar Teluand mother Tan Tjun lan"
                 }}
@@ -297,7 +298,7 @@ export default function SecondSection({ data }) {
           className="flex flex-col items-center text-[#504533] text-center md:px-16 pt-10"
         >
           <Image src="/1/cheers.svg" alt="ring" width={70} height={70} />
-          <h1 className="font-libre text-[20px] md:text-[24px] text-[#B6968B] mt-2">
+          <h1 className="font-libre text-[20px] md:text-[24px] text-[#504533] mt-2">
             {data?.events?.reception?.title || "Cia Ciu"}
           </h1>
           <p className="text-[12px] md:text-[14px] font-libre text-[#444343] mt-2">
@@ -310,7 +311,7 @@ export default function SecondSection({ data }) {
           className="flex flex-col items-center text-[#504533] text-center md:px-16  pt-10 "
         >
           <Image src="/1/place-map.svg" alt="ring" width={70} height={70} />
-          <h1 className="font-libre text-[20px] md:text-[24px] text-[#B6968B] mt-2">
+          <h1 className="font-libre text-[20px] md:text-[24px] text-[#504533] mt-2">
             {data?.venue?.name || "Royal Dynasty Restaurant"}
           </h1>
           <p className="text-[12px] md:text-[14px] font-libre text-[#444343] mt-2 px-16 max-w-md mx-auto">
