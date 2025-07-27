@@ -67,19 +67,19 @@ const dummyData = {
       '/iqbal-zahra/gallery-6.jpeg',
       '/iqbal-zahra/gallery-7.jpeg',
       '/iqbal-zahra/gallery-8.jpeg',
-      '/iqbal-zahra/gallery-9.jpeg',
-      '/iqbal-zahra/gallery-10.jpeg',
-      '/iqbal-zahra/gallery-11.jpeg',
-      '/iqbal-zahra/gallery-12.jpeg',
-      '/iqbal-zahra/gallery-13.jpeg',
-      '/iqbal-zahra/gallery-14.jpeg',
-      '/iqbal-zahra/gallery-15.jpeg',
-      '/iqbal-zahra/gallery-16.jpeg'
+      // '/iqbal-zahra/gallery-9.jpeg',
+      // '/iqbal-zahra/gallery-10.jpeg',
+      // '/iqbal-zahra/gallery-11.jpeg',
+      // '/iqbal-zahra/gallery-12.jpeg',
+      // '/iqbal-zahra/gallery-13.jpeg',
+      // '/iqbal-zahra/gallery-14.jpeg',
+      // '/iqbal-zahra/gallery-15.jpeg',
+      // '/iqbal-zahra/gallery-16.jpeg'
     ]
   },
   video: {
-    src: '/naufal-liza/naufal-liza.mp4',
-    caption: 'Naufal & Liza Prewedding'
+    // src: '/naufal-liza/naufal-liza.mp4',
+    // caption: 'Naufal & Liza Prewedding'
   },
   gift: {
     message: 'Your blessing and presence at our wedding is enough for us. But if you want to give a gift, we provide Digital Envelopes to make it easier for you. Thank You',
