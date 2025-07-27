@@ -1,20 +1,20 @@
-// import Head from "next/head";
-// import { useState } from "react";
-// import { useRouter } from "next/router";
-// import { useGlobalAudioPlayer } from "react-use-audio-player";
+import Head from "next/head";
+import { useState } from "react";
+import { useRouter } from "next/router";
+import { useGlobalAudioPlayer } from "react-use-audio-player";
 
-// import { data } from "@/constants/meta";
-// import LandingPage from "@/components2/landing-page";
-// import FirstSection from "@/components2/sections/first";
-// import FooterSection from "@/components2/footer";
-// import GallerySection from "@/components2/sections/gallery";
-// import dynamic from "next/dynamic";
+import { data } from "@/constants/meta";
+import LandingPage from "@/components2/landing-page";
+import FirstSection from "@/components2/sections/first";
+import FooterSection from "@/components2/footer";
+import GallerySection from "@/components2/sections/gallery";
+import dynamic from "next/dynamic";
 
-// const SecondSection = dynamic(import("@/components2/sections/second"), {
-//   ssr: false,
-// });
+const SecondSection = dynamic(import("@/components2/sections/second"), {
+  ssr: false,
+});
 
-// const dummyData = {
+const dummyData = {
 //   title: 'Naufal & Liza',
 //   imageTogether: '/naufal-liza/first-content.png',
 //   weddingDate: '2025-07-20',
@@ -112,18 +112,18 @@
 //   }
 //   },
 //   googleCalendarUrl: 'https://calendar.google.com/calendar/...'
-// }
+}
 
-// export default function Home() {
-//   const router = useRouter();
-//   const { load } = useGlobalAudioPlayer();
-//   const [isOpenInvitation, setOpenInvitation] = useState(false);
-//   const { title } = data;
+export default function Home() {
+  const router = useRouter();
+  const { load } = useGlobalAudioPlayer();
+  const [isOpenInvitation, setOpenInvitation] = useState(false);
+  const { title } = data;
 
-//   const recieverName = router.query.to || "-";
-//   const invitationId = router.query.invitationId || "-";
+  const recieverName = router.query.to || "-";
+  const invitationId = router.query.invitationId || "-";
   
-//   // Update gift message with sender name
+  // Update gift message with sender name
 //   const updatedDummyData = {
 //     ...dummyData,
 //     gift: {
@@ -142,37 +142,37 @@
 //     setOpenInvitation(true);
 //   }
 
-//   return (
-//     <>
-//       <Head>
-//         <title>{title}</title>
-//       </Head>
-//       {!isOpenInvitation ? (
-//         <LandingPage
-//           to={router.query.to}
-//           handleOpenInvitations={openInvitation}
-//           recieverName={recieverName}
-//           title={updatedDummyData.title}
-//           uuid={invitationId}
-//         />
-//       ) : (
-//         <>
-//           <FirstSection title={updatedDummyData.title} imageTogether={updatedDummyData.imageTogether} />
-//           <SecondSection data={updatedDummyData}/>
-//           <div 
-//             key="gallery-section"
-//             className="force-visible"
-//             style={{ 
-//               opacity: 1, 
-//               transform: 'none',
-//               visibility: 'visible'
-//             }}
-//           >
-//             <GallerySection data={updatedDummyData} showVideo={true} />
-//           </div>
-//           <FooterSection title={updatedDummyData.title} uuid={invitationId} data={updatedDummyData} />
-//         </>
-//       )}
-//     </>
-//   );
-// }
+  return (
+    <>
+      <Head>
+        {/* <title>{title}</title> */}
+      </Head>
+      {/* {!isOpenInvitation ? (
+        <LandingPage
+          to={router.query.to}
+          handleOpenInvitations={openInvitation}
+          recieverName={recieverName}
+          title={updatedDummyData.title}
+          uuid={invitationId}
+        />
+      ) : (
+        <>
+          <FirstSection title={updatedDummyData.title} imageTogether={updatedDummyData.imageTogether} />
+          <SecondSection data={updatedDummyData}/>
+          <div 
+            key="gallery-section"
+            className="force-visible"
+            style={{ 
+              opacity: 1, 
+              transform: 'none',
+              visibility: 'visible'
+            }}
+          >
+            <GallerySection data={updatedDummyData} showVideo={true} />
+          </div>
+          <FooterSection title={updatedDummyData.title} uuid={invitationId} data={updatedDummyData} />
+        </>
+      )} */}
+    </>
+  );
+}
